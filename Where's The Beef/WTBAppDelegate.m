@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Craig Hughes. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "WTBAppDelegate.h"
 
-@interface AppDelegate ()
+@interface WTBAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation WTBAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

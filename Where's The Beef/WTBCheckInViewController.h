@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Craig Hughes. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 
-@interface FirstViewController : UIViewController
+@interface WTBCheckInViewController : UIViewController
 
 
 @end

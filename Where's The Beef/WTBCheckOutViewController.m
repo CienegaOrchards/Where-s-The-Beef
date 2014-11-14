@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Craig Hughes. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "WTBCheckOutViewController.h"
 
-@interface SecondViewController ()
+@interface WTBCheckOutViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation WTBCheckOutViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

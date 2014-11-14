@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Craig Hughes. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "WTBCheckInViewController.h"
 
-@interface FirstViewController ()
+@interface WTBCheckInViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation WTBCheckInViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
