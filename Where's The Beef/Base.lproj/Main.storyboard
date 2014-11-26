@@ -15,7 +15,7 @@
         <!--Receive-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="New Meat" id="9pv-A4-QxB" userLabel="Receive" customClass="WTBCheckInViewController" sceneMemberID="viewController">
+                <viewController title="New Meat" id="9pv-A4-QxB" userLabel="Receive" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -217,7 +217,7 @@
         <!--Eat/Take-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController title="Eat/Take Meat" id="8rJ-Kc-sve" userLabel="Eat/Take" customClass="WTBCheckOutViewController" sceneMemberID="viewController">
+                <viewController title="Eat/Take Meat" id="8rJ-Kc-sve" userLabel="Eat/Take" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>

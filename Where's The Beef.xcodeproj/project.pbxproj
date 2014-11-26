@@ -10,8 +10,6 @@
 		44D6B28A1A2666E000CAC42A /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44D6B2891A2666E000CAC42A /* FontAwesome.otf */; };
 		44EDD61A1A1673F400DCB65B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EDD6191A1673F400DCB65B /* main.m */; };
 		44EDD61D1A1673F400DCB65B /* WTBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EDD61C1A1673F400DCB65B /* WTBAppDelegate.m */; };
-		44EDD6201A1673F400DCB65B /* WTBCheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EDD61F1A1673F400DCB65B /* WTBCheckInViewController.m */; };
-		44EDD6231A1673F400DCB65B /* WTBCheckOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EDD6221A1673F400DCB65B /* WTBCheckOutViewController.m */; };
 		44EDD6261A1673F400DCB65B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44EDD6241A1673F400DCB65B /* Main.storyboard */; };
 		44EDD6281A1673F400DCB65B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44EDD6271A1673F400DCB65B /* Images.xcassets */; };
 		44EDD62B1A1673F400DCB65B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44EDD6291A1673F400DCB65B /* LaunchScreen.xib */; };
@@ -43,10 +41,6 @@
 		44EDD6191A1673F400DCB65B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		44EDD61B1A1673F400DCB65B /* WTBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTBAppDelegate.h; sourceTree = "<group>"; };
 		44EDD61C1A1673F400DCB65B /* WTBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTBAppDelegate.m; sourceTree = "<group>"; };
-		44EDD61E1A1673F400DCB65B /* WTBCheckInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTBCheckInViewController.h; sourceTree = "<group>"; };
-		44EDD61F1A1673F400DCB65B /* WTBCheckInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTBCheckInViewController.m; sourceTree = "<group>"; };
-		44EDD6211A1673F400DCB65B /* WTBCheckOutViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTBCheckOutViewController.h; sourceTree = "<group>"; };
-		44EDD6221A1673F400DCB65B /* WTBCheckOutViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTBCheckOutViewController.m; sourceTree = "<group>"; };
 		44EDD6251A1673F400DCB65B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44EDD6271A1673F400DCB65B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		44EDD62A1A1673F400DCB65B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -85,24 +79,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		44BB5B3F1A167E7E0004D764 /* Check In */ = {
-			isa = PBXGroup;
-			children = (
-				44EDD61E1A1673F400DCB65B /* WTBCheckInViewController.h */,
-				44EDD61F1A1673F400DCB65B /* WTBCheckInViewController.m */,
-			);
-			name = "Check In";
-			sourceTree = "<group>";
-		};
-		44BB5B401A167E900004D764 /* Check Out */ = {
-			isa = PBXGroup;
-			children = (
-				44EDD6211A1673F400DCB65B /* WTBCheckOutViewController.h */,
-				44EDD6221A1673F400DCB65B /* WTBCheckOutViewController.m */,
-			);
-			name = "Check Out";
-			sourceTree = "<group>";
-		};
 		44EDD60B1A1673F400DCB65B = {
 			isa = PBXGroup;
 			children = (
@@ -125,8 +101,6 @@
 		44EDD6161A1673F400DCB65B /* Where's The Beef */ = {
 			isa = PBXGroup;
 			children = (
-				44BB5B3F1A167E7E0004D764 /* Check In */,
-				44BB5B401A167E900004D764 /* Check Out */,
 				44EDD61B1A1673F400DCB65B /* WTBAppDelegate.h */,
 				44EDD61C1A1673F400DCB65B /* WTBAppDelegate.m */,
 				44EDD6241A1673F400DCB65B /* Main.storyboard */,
@@ -296,9 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44EDD6231A1673F400DCB65B /* WTBCheckOutViewController.m in Sources */,
 				44EDD61D1A1673F400DCB65B /* WTBAppDelegate.m in Sources */,
-				44EDD6201A1673F400DCB65B /* WTBCheckInViewController.m in Sources */,
 				44EDD61A1A1673F400DCB65B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
