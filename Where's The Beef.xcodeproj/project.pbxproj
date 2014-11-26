@@ -282,7 +282,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "GIT_REVISION=`git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" describe --tags --dirty`\nGIT_TAG=`git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" rev-parse --short=8 HEAD | tr 'a-f' 'A-F'`\n\nINFO_PLIST=\"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Info\"\n\ndefaults write \"${INFO_PLIST}\" CFBundleShortVersionString \"${GIT_REVISION}\"\ndefaults write \"${INFO_PLIST}\" CFBundleVersion \"${GIT_REVISION}\"\n\nif [ \"${CONFIGURATION}\" != \"AppStore\" ]; then\nif [ \"${GIT_REVISION}\" != \"${GIT_REVISION%%-dirty}\" ]; then COLOR=\"rgba(128,0,0,0.5)\"; else COLOR=\"rgba(0,128,0,0.5)\"; fi\npushd \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\"\nfor appIcon in AppIcon*.png; do\nwidth=`/opt/local/bin/identify -format %w ${appIcon}`\n/opt/local/bin/convert \"${appIcon}\" \\\n-size $(((${width} * 90) / 100))x -background \"${COLOR}\" -fill white \\\n-font /Library/Fonts/accid___.ttf -gravity center label:\"${GIT_TAG}\" \\\n-gravity south -geometry +0+4 -composite \"${appIcon}-out\"\nmv -f \"${appIcon}-out\" \"${appIcon}\"\ndone\npopd\nfi\n";
+			shellScript = "export PATH=\"/usr/local/bin:/opt/local/bin:${PATH/:\\/@(opt|usr)\\/local\\/bin/}\"\n\nGIT_REVISION=`git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" describe --tags --dirty`\nGIT_TAG=`git --git-dir=\"${PROJECT_DIR}/.git\" --work-tree=\"${PROJECT_DIR}\" rev-parse --short=8 HEAD | tr 'a-f' 'A-F'`\n\nINFO_PLIST=\"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/Info\"\n\ndefaults write \"${INFO_PLIST}\" CFBundleShortVersionString \"${GIT_REVISION}\"\ndefaults write \"${INFO_PLIST}\" CFBundleVersion \"${GIT_REVISION}\"\n\nif [ \"${CONFIGURATION}\" != \"AppStore\" ]; then\n   if [ \"${GIT_REVISION}\" != \"${GIT_REVISION%%-dirty}\" ]; then COLOR=\"rgba(128,0,0,0.5)\"; else COLOR=\"rgba(0,128,0,0.5)\"; fi\n   pushd \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}\"\n   for appIcon in AppIcon*.png; do\n      width=`identify -format %w ${appIcon}`\n      convert \"${appIcon}\" \\\n         -size $(((${width} * 90) / 100))x -background \"${COLOR}\" -fill white \\\n         -font /Library/Fonts/accid___.ttf -gravity center label:\"${GIT_TAG}\" \\\n         -gravity south -geometry +0+4 -composite \"${appIcon}-out\"\n      mv -f \"${appIcon}-out\" \"${appIcon}\"\n   done\n   popd\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -363,6 +363,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMPRESS_PNG_FILES = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -445,6 +446,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMPRESS_PNG_FILES = NO;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -501,6 +503,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COMPRESS_PNG_FILES = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
