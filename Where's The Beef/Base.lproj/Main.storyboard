@@ -2,8 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C68k" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="FontAwesome.otf">
@@ -370,53 +370,53 @@
                                 <rect key="frame" x="16" y="103" width="568" height="441"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7u-hQ-CCD" userLabel="Separator">
-                                        <rect key="frame" x="271" y="139.5" width="25" height="8"/>
+                                        <rect key="frame" x="271.5" y="38.5" width="25" height="8"/>
                                         <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="8"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meat Type:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jzS-kk-Lv7" userLabel="SpeciesLabel">
-                                        <rect key="frame" x="124.5" y="155.5" width="151" height="38"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meat Type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jzS-kk-Lv7" userLabel="SpeciesLabel">
+                                        <rect key="frame" x="20" y="59" width="85" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beef" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ldu-Dd-so2" userLabel="Species">
-                                        <rect key="frame" x="292" y="155.5" width="63" height="38"/>
+                                        <rect key="frame" x="20" y="88.5" width="63" height="38"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cut:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHN-ei-Jgt" userLabel="CutLabel">
-                                        <rect key="frame" x="217" y="202" width="58.5" height="38"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cut:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FHN-ei-Jgt" userLabel="CutLabel">
+                                        <rect key="frame" x="20" y="134.5" width="33" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outside Skirt Steak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GfH-id-2xk" userLabel="Cut">
+                                        <rect key="frame" x="20" y="164" width="265" height="38"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ribeye Steak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GfH-id-2xk" userLabel="Cut">
-                                        <rect key="frame" x="292" y="202" width="181.5" height="38"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h1M-PX-Kly" userLabel="QtyLabel">
-                                        <rect key="frame" x="152" y="247.5" width="123.5" height="38"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h1M-PX-Kly" userLabel="QtyLabel">
+                                        <rect key="frame" x="20" y="210" width="69.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5.6 lbs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i1v-6n-QBH" userLabel="Qty">
-                                        <rect key="frame" x="292" y="247.5" width="93.5" height="38"/>
+                                        <rect key="frame" x="20" y="239.5" width="93.5" height="38"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanned ID:" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rw4-JQ-zEf" userLabel="IDLabel">
-                                        <rect key="frame" x="106" y="294" width="170" height="38"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanned ID:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rw4-JQ-zEf" userLabel="IDLabel">
+                                        <rect key="frame" x="20" y="285.5" width="95.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q34y1TT7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDI-3B-heV" userLabel="ID">
-                                        <rect key="frame" x="292" y="294" width="145.5" height="38"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q34y1Tt7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDI-3B-heV" userLabel="ID">
+                                        <rect key="frame" x="20" y="315" width="137" height="38"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLR-aw-ZFq" userLabel="Separator">
-                                        <rect key="frame" x="271" y="339.5" width="25" height="8"/>
+                                        <rect key="frame" x="271.5" y="378.5" width="25" height="8"/>
                                         <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="8"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -424,27 +424,38 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Ldu-Dd-so2" firstAttribute="leading" secondItem="GfH-id-2xk" secondAttribute="leading" id="614-ql-ccY"/>
-                                    <constraint firstItem="i1v-6n-QBH" firstAttribute="leading" secondItem="Ldu-Dd-so2" secondAttribute="leading" id="8kz-kL-uMi"/>
-                                    <constraint firstAttribute="centerX" secondItem="h7u-hQ-CCD" secondAttribute="centerX" id="CZF-kP-nt1"/>
-                                    <constraint firstItem="FHN-ei-Jgt" firstAttribute="trailing" secondItem="jzS-kk-Lv7" secondAttribute="trailing" id="DHg-u4-SCm"/>
-                                    <constraint firstItem="Ldu-Dd-so2" firstAttribute="leading" secondItem="QDI-3B-heV" secondAttribute="leading" id="RQT-dT-uWO"/>
-                                    <constraint firstItem="Ldu-Dd-so2" firstAttribute="leading" secondItem="h7u-hQ-CCD" secondAttribute="centerX" constant="8" id="S67-1c-WvV"/>
-                                    <constraint firstItem="FHN-ei-Jgt" firstAttribute="top" secondItem="jzS-kk-Lv7" secondAttribute="bottom" constant="8" symbolic="YES" id="TmV-Zi-7W9"/>
+                                    <constraint firstItem="QDI-3B-heV" firstAttribute="leading" secondItem="Elf-Hs-djs" secondAttribute="leading" constant="20" symbolic="YES" id="1cL-jW-oMW"/>
+                                    <constraint firstItem="Ldu-Dd-so2" firstAttribute="leading" secondItem="Elf-Hs-djs" secondAttribute="leading" constant="20" symbolic="YES" id="3tf-bH-Ymu"/>
+                                    <constraint firstItem="gLR-aw-ZFq" firstAttribute="top" secondItem="QDI-3B-heV" secondAttribute="bottom" multiplier="1.05" constant="8" symbolic="YES" id="7AG-KN-F07"/>
+                                    <constraint firstItem="Rw4-JQ-zEf" firstAttribute="top" secondItem="i1v-6n-QBH" secondAttribute="bottom" constant="8" symbolic="YES" id="ENz-uf-2Zc"/>
+                                    <constraint firstItem="i1v-6n-QBH" firstAttribute="top" secondItem="h1M-PX-Kly" secondAttribute="bottom" constant="8" symbolic="YES" id="FT7-TD-2CE"/>
+                                    <constraint firstItem="jzS-kk-Lv7" firstAttribute="leading" secondItem="Elf-Hs-djs" secondAttribute="leading" constant="20" symbolic="YES" id="FVC-kQ-oUe"/>
+                                    <constraint firstItem="h1M-PX-Kly" firstAttribute="leading" secondItem="Elf-Hs-djs" secondAttribute="leading" constant="20" symbolic="YES" id="GyP-5S-12L"/>
+                                    <constraint firstItem="h1M-PX-Kly" firstAttribute="top" secondItem="GfH-id-2xk" secondAttribute="bottom" constant="8" symbolic="YES" id="KMd-kh-JGG"/>
+                                    <constraint firstAttribute="centerY" secondItem="GfH-id-2xk" secondAttribute="centerY" id="Mhi-J1-aqL"/>
+                                    <constraint firstItem="Ldu-Dd-so2" firstAttribute="top" secondItem="jzS-kk-Lv7" secondAttribute="bottom" constant="8" symbolic="YES" id="Mzo-R6-dTl"/>
+                                    <constraint firstItem="jzS-kk-Lv7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Elf-Hs-djs" secondAttribute="leading" constant="20" symbolic="YES" id="QX7-D3-wfm"/>
                                     <constraint firstItem="gLR-aw-ZFq" firstAttribute="top" secondItem="Rw4-JQ-zEf" secondAttribute="bottom" constant="8" symbolic="YES" id="V8n-n9-yTj"/>
-                                    <constraint firstItem="jzS-kk-Lv7" firstAttribute="baseline" secondItem="Ldu-Dd-so2" secondAttribute="baseline" id="VIO-o2-Kjw"/>
-                                    <constraint firstItem="Rw4-JQ-zEf" firstAttribute="top" secondItem="h1M-PX-Kly" secondAttribute="bottom" constant="8" symbolic="YES" id="WY9-x7-1Xb"/>
-                                    <constraint firstItem="h7u-hQ-CCD" firstAttribute="centerX" secondItem="jzS-kk-Lv7" secondAttribute="trailing" constant="8" id="aRN-xU-xax"/>
-                                    <constraint firstItem="h1M-PX-Kly" firstAttribute="baseline" secondItem="i1v-6n-QBH" secondAttribute="baseline" id="bgC-Gp-qE9"/>
-                                    <constraint firstItem="FHN-ei-Jgt" firstAttribute="baseline" secondItem="GfH-id-2xk" secondAttribute="baseline" id="cZK-d6-gN6"/>
-                                    <constraint firstItem="h1M-PX-Kly" firstAttribute="trailing" secondItem="jzS-kk-Lv7" secondAttribute="trailing" id="dxH-nZ-qEm"/>
+                                    <constraint firstItem="Rw4-JQ-zEf" firstAttribute="leading" secondItem="Elf-Hs-djs" secondAttribute="leading" constant="20" symbolic="YES" id="eJH-Qo-Pak"/>
+                                    <constraint firstItem="FHN-ei-Jgt" firstAttribute="leading" secondItem="Elf-Hs-djs" secondAttribute="leading" constant="20" symbolic="YES" id="efu-LZ-c74"/>
                                     <constraint firstAttribute="centerY" secondItem="FHN-ei-Jgt" secondAttribute="centerY" id="fcj-hj-TYp"/>
-                                    <constraint firstItem="Rw4-JQ-zEf" firstAttribute="trailing" secondItem="jzS-kk-Lv7" secondAttribute="trailing" id="jch-YW-3K3"/>
-                                    <constraint firstItem="Rw4-JQ-zEf" firstAttribute="baseline" secondItem="QDI-3B-heV" secondAttribute="baseline" id="o6a-OR-Ybx"/>
+                                    <constraint firstItem="GfH-id-2xk" firstAttribute="leading" secondItem="Elf-Hs-djs" secondAttribute="leading" constant="20" symbolic="YES" id="gRl-MU-27B"/>
+                                    <constraint firstAttribute="centerX" secondItem="h7u-hQ-CCD" secondAttribute="centerX" id="h1D-MB-fgy"/>
+                                    <constraint firstItem="GfH-id-2xk" firstAttribute="top" secondItem="FHN-ei-Jgt" secondAttribute="bottom" constant="8" symbolic="YES" id="kaL-Vy-vub"/>
+                                    <constraint firstItem="i1v-6n-QBH" firstAttribute="leading" secondItem="Elf-Hs-djs" secondAttribute="leading" constant="20" symbolic="YES" id="qsa-Ed-4qb"/>
                                     <constraint firstAttribute="centerX" secondItem="gLR-aw-ZFq" secondAttribute="centerX" id="slR-bM-MdC"/>
-                                    <constraint firstItem="h1M-PX-Kly" firstAttribute="top" secondItem="FHN-ei-Jgt" secondAttribute="bottom" constant="8" symbolic="YES" id="wYM-na-GJy"/>
-                                    <constraint firstItem="jzS-kk-Lv7" firstAttribute="top" secondItem="h7u-hQ-CCD" secondAttribute="bottom" constant="8" symbolic="YES" id="ykp-Mv-mdN"/>
+                                    <constraint firstAttribute="centerY" secondItem="h1M-PX-Kly" secondAttribute="centerY" id="yZL-XP-LmA"/>
+                                    <constraint firstItem="FHN-ei-Jgt" firstAttribute="top" secondItem="Ldu-Dd-so2" secondAttribute="bottom" constant="8" symbolic="YES" id="ygb-ru-Dgx"/>
+                                    <constraint firstItem="jzS-kk-Lv7" firstAttribute="top" secondItem="h7u-hQ-CCD" secondAttribute="bottom" multiplier="1.1" constant="8" symbolic="YES" id="ykp-Mv-mdN"/>
+                                    <constraint firstItem="QDI-3B-heV" firstAttribute="top" secondItem="Rw4-JQ-zEf" secondAttribute="bottom" constant="8" symbolic="YES" id="z7i-WW-RNI"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="fcj-hj-TYp"/>
+                                        <exclude reference="Mhi-J1-aqL"/>
+                                        <exclude reference="V8n-n9-yTj"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
