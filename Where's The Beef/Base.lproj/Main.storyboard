@@ -38,8 +38,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Print labels and enter in inventory" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b35-ub-3EE" userLabel="Subtitle">
-                                <rect key="frame" x="200" y="73.5" width="199.5" height="17"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <rect key="frame" x="171.5" y="73.5" width="256.5" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -145,17 +145,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Move meat into new location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCR-y1-fgt" userLabel="Subtitle">
-                                <rect key="frame" x="214" y="79" width="173.5" height="17"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <rect key="frame" x="189.5" y="79" width="223" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdf-LL-5Qh" userLabel="Camera">
-                                <rect key="frame" x="16" y="104" width="568" height="439"/>
+                                <rect key="frame" x="16" y="108.5" width="568" height="434.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Deposit Freezer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhM-VY-0VK" userLabel="Freezer">
-                                <rect key="frame" x="24" y="112" width="221.5" height="28.5"/>
+                                <rect key="frame" x="24" y="116.5" width="221.5" height="28.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                 <color key="highlightedColor" red="0.99215686270000003" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
@@ -213,8 +213,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Handle customer orders" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iXM-qz-VBG" userLabel="Subtitle">
-                                <rect key="frame" x="227" y="79" width="145.5" height="17"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <rect key="frame" x="206" y="79" width="187.5" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -267,17 +267,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Permanently remove non-ordered meat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan" userLabel="Subtitle">
-                                <rect key="frame" x="182" y="79" width="236.5" height="17"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <rect key="frame" x="148.5" y="79" width="304" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyC-3D-2od" userLabel="Camera">
-                                <rect key="frame" x="16" y="104" width="568" height="439"/>
+                                <rect key="frame" x="16" y="108.5" width="568" height="434.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Meat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njx-OO-xVK" userLabel="Meat">
-                                <rect key="frame" x="24" y="112" width="111.5" height="28.5"/>
+                                <rect key="frame" x="24" y="116.5" width="111.5" height="28.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                 <color key="highlightedColor" red="0.99215686270000003" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
@@ -339,8 +339,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm details below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="es6-7Q-nEw" userLabel="Subtitle">
-                                <rect key="frame" x="234.5" y="78" width="130" height="17"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                <rect key="frame" x="216" y="78" width="167.5" height="21.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -367,67 +367,67 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Elf-Hs-djs" userLabel="Meat Details">
-                                <rect key="frame" x="16" y="103" width="568" height="441"/>
+                                <rect key="frame" x="16" y="107.5" width="568" height="436.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7u-hQ-CCD" userLabel="Separator">
-                                        <rect key="frame" x="271.5" y="52.5" width="25" height="8"/>
+                                        <rect key="frame" x="271.5" y="50.5" width="25" height="8"/>
                                         <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="8"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meat Type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jzS-kk-Lv7" userLabel="SpeciesLabel">
-                                        <rect key="frame" x="20" y="75" width="85" height="21.5"/>
+                                        <rect key="frame" x="20" y="73" width="85" height="21.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beef" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ldu-Dd-so2" userLabel="Species">
-                                        <rect key="frame" x="20" y="96.5" width="63" height="38"/>
+                                        <rect key="frame" x="20" y="94.5" width="63" height="38"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cut:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHN-ei-Jgt" userLabel="CutLabel">
-                                        <rect key="frame" x="20" y="142.5" width="33" height="21.5"/>
+                                        <rect key="frame" x="20" y="140.5" width="33" height="21.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Outside Skirt Steak" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GfH-id-2xk" userLabel="Cut">
-                                        <rect key="frame" x="20" y="164" width="265" height="38"/>
+                                        <rect key="frame" x="20" y="162" width="265" height="38"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1M-PX-Kly" userLabel="QtyLabel">
-                                        <rect key="frame" x="20" y="210" width="69.5" height="21.5"/>
+                                        <rect key="frame" x="20" y="208" width="69.5" height="21.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Organic Chicken" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i1v-6n-QBH" userLabel="Qty">
-                                        <rect key="frame" x="20" y="231.5" width="256" height="38"/>
+                                        <rect key="frame" x="20" y="229.5" width="256" height="38"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$72.16" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FkZ-qK-spY" userLabel="Value">
-                                        <rect key="frame" x="450" y="231.5" width="98" height="38"/>
+                                        <rect key="frame" x="450" y="229.5" width="98" height="38"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanned ID:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rw4-JQ-zEf" userLabel="IDLabel">
-                                        <rect key="frame" x="20" y="277.5" width="95.5" height="21.5"/>
+                                        <rect key="frame" x="20" y="275.5" width="95.5" height="21.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q34y1Tt7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QDI-3B-heV" userLabel="ID">
-                                        <rect key="frame" x="20" y="299" width="137" height="38"/>
+                                        <rect key="frame" x="20" y="297" width="137" height="38"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="  " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gLR-aw-ZFq" userLabel="Separator">
-                                        <rect key="frame" x="271" y="362" width="25" height="8"/>
+                                        <rect key="frame" x="271" y="359.5" width="25" height="8"/>
                                         <fontDescription key="fontDescription" name="FontAwesome" family="FontAwesome" pointSize="8"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gh5-ll-abP" userLabel="ValueLabel">
-                                        <rect key="frame" x="450" y="210" width="46.5" height="21.5"/>
+                                        <rect key="frame" x="450" y="208" width="46.5" height="21.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                         <nil key="highlightedColor"/>
                                     </label>
