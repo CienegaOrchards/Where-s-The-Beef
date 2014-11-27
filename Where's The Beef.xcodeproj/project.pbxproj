@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */; };
 		44D6B28A1A2666E000CAC42A /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44D6B2891A2666E000CAC42A /* FontAwesome.otf */; };
+		44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6B28D1A26970500CAC42A /* WTBEatTakeViewController.m */; };
 		44EDD61A1A1673F400DCB65B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EDD6191A1673F400DCB65B /* main.m */; };
 		44EDD61D1A1673F400DCB65B /* WTBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EDD61C1A1673F400DCB65B /* WTBAppDelegate.m */; };
 		44EDD6261A1673F400DCB65B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44EDD6241A1673F400DCB65B /* Main.storyboard */; };
@@ -35,7 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		446516C11A269FA500A4B3F5 /* WTBConfirmMeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBConfirmMeatViewController.h; sourceTree = "<group>"; };
+		446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBConfirmMeatViewController.m; sourceTree = "<group>"; };
 		44D6B2891A2666E000CAC42A /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
+		44D6B28C1A26970500CAC42A /* WTBEatTakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBEatTakeViewController.h; sourceTree = "<group>"; };
+		44D6B28D1A26970500CAC42A /* WTBEatTakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBEatTakeViewController.m; sourceTree = "<group>"; };
 		44EDD6141A1673F400DCB65B /* Where's The Beef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where's The Beef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44EDD6181A1673F400DCB65B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44EDD6191A1673F400DCB65B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -79,6 +85,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		446516C01A269F8200A4B3F5 /* Confirm Meat Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				446516C11A269FA500A4B3F5 /* WTBConfirmMeatViewController.h */,
+				446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */,
+			);
+			name = "Confirm Meat Dialog";
+			sourceTree = "<group>";
+		};
+		44D6B28B1A2696B200CAC42A /* Eat/Take UI */ = {
+			isa = PBXGroup;
+			children = (
+				446516C01A269F8200A4B3F5 /* Confirm Meat Dialog */,
+				44D6B28C1A26970500CAC42A /* WTBEatTakeViewController.h */,
+				44D6B28D1A26970500CAC42A /* WTBEatTakeViewController.m */,
+			);
+			name = "Eat/Take UI";
+			sourceTree = "<group>";
+		};
 		44EDD60B1A1673F400DCB65B = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +126,7 @@
 		44EDD6161A1673F400DCB65B /* Where's The Beef */ = {
 			isa = PBXGroup;
 			children = (
+				44D6B28B1A2696B200CAC42A /* Eat/Take UI */,
 				44EDD61B1A1673F400DCB65B /* WTBAppDelegate.h */,
 				44EDD61C1A1673F400DCB65B /* WTBAppDelegate.m */,
 				44EDD6241A1673F400DCB65B /* Main.storyboard */,
@@ -271,6 +297,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				44EDD61D1A1673F400DCB65B /* WTBAppDelegate.m in Sources */,
+				44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */,
+				446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */,
 				44EDD61A1A1673F400DCB65B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
