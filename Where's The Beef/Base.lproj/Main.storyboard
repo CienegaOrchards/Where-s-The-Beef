@@ -150,7 +150,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdf-LL-5Qh" userLabel="Camera">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdf-LL-5Qh" userLabel="Camera">
                                 <rect key="frame" x="16" y="108.5" width="568" height="434.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                             </view>
@@ -272,15 +272,25 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyC-3D-2od" userLabel="Camera">
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyC-3D-2od" userLabel="Camera">
                                 <rect key="frame" x="16" y="108.5" width="568" height="434.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Meat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njx-OO-xVK" userLabel="Meat">
+                                        <rect key="frame" x="20" y="20" width="111.5" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                        <color key="highlightedColor" red="0.99215686270000003" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                    <view hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v8P-He-Gzr" userLabel="Highlight">
+                                        <rect key="frame" x="142" y="108.5" width="284" height="218"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="Njx-OO-xVK" firstAttribute="leading" secondItem="MyC-3D-2od" secondAttribute="leading" constant="20" symbolic="YES" id="Roo-up-sG9"/>
+                                    <constraint firstItem="Njx-OO-xVK" firstAttribute="top" secondItem="MyC-3D-2od" secondAttribute="top" constant="20" symbolic="YES" id="Xfq-36-5Db"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Meat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njx-OO-xVK" userLabel="Meat">
-                                <rect key="frame" x="24" y="116.5" width="111.5" height="28.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
-                                <color key="highlightedColor" red="0.99215686270000003" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -294,13 +304,11 @@
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
                             <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" symbolic="YES" id="Wqz-2r-5Oy"/>
                             <constraint firstItem="mLA-Zl-ZNR" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" id="Yx7-rF-U45"/>
-                            <constraint firstItem="Njx-OO-xVK" firstAttribute="top" secondItem="MyC-3D-2od" secondAttribute="top" constant="8" id="iqt-bl-UWH"/>
                             <constraint firstItem="mLA-Zl-ZNR" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="lPn-1S-OH4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MyC-3D-2od" secondAttribute="trailing" id="mz1-ad-w6Y"/>
                             <constraint firstItem="MyC-3D-2od" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="pXs-Bm-0b5"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
-                            <constraint firstItem="Njx-OO-xVK" firstAttribute="leading" secondItem="MyC-3D-2od" secondAttribute="leading" constant="8" id="vWe-5g-ZNZ"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -313,6 +321,7 @@
                     <tabBarItem key="tabBarItem" title="Eat/Take" image="Eat" id="cPa-gy-q4n"/>
                     <connections>
                         <outlet property="cameraView" destination="MyC-3D-2od" id="CNo-vx-3Vf"/>
+                        <outlet property="highlightView" destination="v8P-He-Gzr" id="XWX-NG-kpK"/>
                         <outlet property="meatLabel" destination="Njx-OO-xVK" id="t4G-A7-Ume"/>
                         <segue destination="2XW-lE-nJi" kind="presentation" identifier="ConfirmMeat" id="rns-re-pjE"/>
                     </connections>

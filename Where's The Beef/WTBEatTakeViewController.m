@@ -13,10 +13,10 @@
 
 @property (weak, nonatomic) IBOutlet UIView *cameraView;
 @property (weak, nonatomic) IBOutlet UILabel *meatLabel;
+@property (weak, nonatomic) IBOutlet UIView *highlightView;
 
 @property (strong, nonatomic) AVCaptureMetadataOutput *metadataCapture;
 
-@property (strong, nonatomic)  UIView *highlightView;
 
 @property (strong, nonatomic) NSString *lastScannedID;
 
@@ -28,15 +28,9 @@
 {
     [super viewDidLoad];
 
-    self.highlightView = [[UIView alloc] init];
     self.highlightView.hidden = YES;
-    self.highlightView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin |
-                                            UIViewAutoresizingFlexibleBottomMargin |
-                                            UIViewAutoresizingFlexibleLeftMargin |
-                                            UIViewAutoresizingFlexibleRightMargin;
     self.highlightView.layer.borderColor = [UIColor redColor].CGColor;
     self.highlightView.layer.borderWidth = 3.0;
-    [self.view addSubview:self.highlightView];
 
     // Create metadata capture
     self.metadataCapture = [[AVCaptureMetadataOutput alloc] init];
@@ -53,7 +47,7 @@
 
     // Hookup preview layer
     WTB_CAPTURE_PREVIEW.frame = self.cameraView.bounds;
-    [self.cameraView.layer addSublayer:WTB_CAPTURE_PREVIEW];
+    [self.cameraView.layer insertSublayer:WTB_CAPTURE_PREVIEW atIndex:0];
 
     [WTB_CAPTURE_SESSION startRunning];
 
@@ -80,46 +74,50 @@
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
 {
-    CGRect highlightViewRect = CGRectZero;
-    AVMetadataMachineReadableCodeObject *barcode;
-
     if(metadataObjects.count == 0)
     {
         self.lastScannedID = nil;
 
         dispatch_async(dispatch_get_main_queue(), ^{
             self.highlightView.hidden = YES;
-            self.meatLabel.text = NSLocalizedString(@"Scan meat", nil);
+            self.meatLabel.text = NSLocalizedString(@"Scan Meat", nil);
             self.meatLabel.highlighted = YES;
         });
 
         return;
     }
 
-    for (AVMetadataObject *metadata in metadataObjects) {
-        barcode = (AVMetadataMachineReadableCodeObject *)[WTB_CAPTURE_PREVIEW transformedMetadataObjectForMetadataObject:(AVMetadataMachineReadableCodeObject *)metadata];
-        highlightViewRect = [self.cameraView convertRect:barcode.bounds toView:self.view];
-        break;
-    }
+    AVMetadataMachineReadableCodeObject *barcode;
 
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.highlightView.hidden = NO;
-        self.highlightView.frame = highlightViewRect;
-    });
+    for (AVMetadataObject *metadata in metadataObjects)
+    {
+        barcode = (AVMetadataMachineReadableCodeObject *)[WTB_CAPTURE_PREVIEW transformedMetadataObjectForMetadataObject:metadata];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.highlightView.frame = barcode.bounds;
+            self.highlightView.hidden = NO;
+        });
+        break; // only use first barcode we see
+    }
 
     if(!self.lastScannedID || ![self.lastScannedID isEqualToString:barcode.stringValue])
     {
+        self.lastScannedID = barcode.stringValue;
+
         NSError *err;
         NSDictionary *decoded = [NSJSONSerialization JSONObjectWithData:[barcode.stringValue dataUsingEncoding:NSUTF8StringEncoding]
                                                                 options:0
                                                                   error:&err];
-        self.lastScannedID = [decoded valueForKey:@"id"];
 
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.meatLabel.text = [decoded valueForKey:@"desc"];
-            self.meatLabel.highlighted = NO;
-        });
+        [self scannedNewID:[decoded valueForKey:@"id"] withDescription:[decoded valueForKey:@"desc"]];
     }
+}
+
+- (void)scannedNewID:(NSString *)objID withDescription:(NSString *)desc
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.meatLabel.text = desc;
+        self.meatLabel.highlighted = NO;
+    });
 }
 
 @end

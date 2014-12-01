@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44160E7D1A2D261400A42BD6 /* Scanner Beep Yes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44160E7C1A2D261400A42BD6 /* Scanner Beep Yes.mp3 */; };
 		446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */; };
 		44D6B28A1A2666E000CAC42A /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44D6B2891A2666E000CAC42A /* FontAwesome.otf */; };
 		44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6B28D1A26970500CAC42A /* WTBEatTakeViewController.m */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44160E7C1A2D261400A42BD6 /* Scanner Beep Yes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Scanner Beep Yes.mp3"; sourceTree = "<group>"; };
 		446516C11A269FA500A4B3F5 /* WTBConfirmMeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBConfirmMeatViewController.h; sourceTree = "<group>"; };
 		446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBConfirmMeatViewController.m; sourceTree = "<group>"; };
 		44D6B2891A2666E000CAC42A /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
@@ -85,6 +87,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44160E791A2D246800A42BD6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				44160E7B1A2D249300A42BD6 /* Sounds */,
+				44EDD6241A1673F400DCB65B /* Main.storyboard */,
+				44EDD6271A1673F400DCB65B /* Images.xcassets */,
+				44EDD6291A1673F400DCB65B /* LaunchScreen.xib */,
+				44160E7A1A2D248A00A42BD6 /* Fonts */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		44160E7A1A2D248A00A42BD6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				44D6B2891A2666E000CAC42A /* FontAwesome.otf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		44160E7B1A2D249300A42BD6 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				44160E7C1A2D261400A42BD6 /* Scanner Beep Yes.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		446516C01A269F8200A4B3F5 /* Confirm Meat Dialog */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,13 +156,10 @@
 		44EDD6161A1673F400DCB65B /* Where's The Beef */ = {
 			isa = PBXGroup;
 			children = (
+				44160E791A2D246800A42BD6 /* Resources */,
 				44D6B28B1A2696B200CAC42A /* Eat/Take UI */,
 				44EDD61B1A1673F400DCB65B /* WTBAppDelegate.h */,
 				44EDD61C1A1673F400DCB65B /* WTBAppDelegate.m */,
-				44EDD6241A1673F400DCB65B /* Main.storyboard */,
-				44EDD6271A1673F400DCB65B /* Images.xcassets */,
-				44EDD6291A1673F400DCB65B /* LaunchScreen.xib */,
-				44D6B2891A2666E000CAC42A /* FontAwesome.otf */,
 				44EDD6171A1673F400DCB65B /* Supporting Files */,
 			);
 			path = "Where's The Beef";
@@ -258,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44160E7D1A2D261400A42BD6 /* Scanner Beep Yes.mp3 in Resources */,
 				44EDD6261A1673F400DCB65B /* Main.storyboard in Resources */,
 				44EDD62B1A1673F400DCB65B /* LaunchScreen.xib in Resources */,
 				44D6B28A1A2666E000CAC42A /* FontAwesome.otf in Resources */,
