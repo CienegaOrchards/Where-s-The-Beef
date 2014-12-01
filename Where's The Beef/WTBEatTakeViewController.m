@@ -18,7 +18,7 @@
 
 @property (strong, nonatomic)  UIView *highlightView;
 
-@property (strong, nonatomic) NSString *lastString;
+@property (strong, nonatomic) NSString *lastScannedID;
 
 @end
 
@@ -47,7 +47,7 @@
     [WTB_CAPTURE_SESSION addOutput:self.metadataCapture];
     self.metadataCapture.metadataObjectTypes = @[AVMetadataObjectTypeQRCode];
 
-    self.lastString = nil;
+    self.lastScannedID = nil;
     dispatch_queue_t queue = dispatch_queue_create("MetadataQueue", DISPATCH_QUEUE_SERIAL);
     [self.metadataCapture setMetadataObjectsDelegate:self queue:queue];
 
@@ -85,7 +85,7 @@
 
     if(metadataObjects.count == 0)
     {
-        self.lastString = nil;
+        self.lastScannedID = nil;
 
         dispatch_async(dispatch_get_main_queue(), ^{
             self.highlightView.hidden = YES;
@@ -107,16 +107,18 @@
         self.highlightView.frame = highlightViewRect;
     });
 
-    if(!self.lastString || ![self.lastString isEqualToString:barcode.stringValue])
+    if(!self.lastScannedID || ![self.lastScannedID isEqualToString:barcode.stringValue])
     {
-        self.lastString = barcode.stringValue;
+        NSError *err;
+        NSDictionary *decoded = [NSJSONSerialization JSONObjectWithData:[barcode.stringValue dataUsingEncoding:NSUTF8StringEncoding]
+                                                                options:0
+                                                                  error:&err];
+        self.lastScannedID = [decoded valueForKey:@"id"];
 
         dispatch_async(dispatch_get_main_queue(), ^{
-            self.meatLabel.text = barcode.stringValue;
+            self.meatLabel.text = [decoded valueForKey:@"desc"];
             self.meatLabel.highlighted = NO;
         });
-
-        NSLog(@"Saw: %@",barcode.stringValue);
     }
 }
 
