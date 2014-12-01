@@ -7,11 +7,16 @@
 //
 
 @import UIKit;
+@import AVFoundation;
 
 @interface WTBAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) AVCaptureSession *captureSession;
+@property (strong, nonatomic) AVCaptureVideoPreviewLayer *previewLayer;
 
 @end
 
+#define WTB_CAPTURE_SESSION (((WTBAppDelegate *)[UIApplication sharedApplication].delegate).captureSession)
+#define WTB_CAPTURE_PREVIEW (((WTBAppDelegate *)[UIApplication sharedApplication].delegate).previewLayer)

@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-119" y="-59"/>
+            <point key="canvasLocation" x="522" y="-59"/>
         </scene>
         <!--Move-->
         <scene sceneID="Abp-gA-Oce">
@@ -188,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="id3-O0-qsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="541" y="-59"/>
+            <point key="canvasLocation" x="-138" y="-59"/>
         </scene>
         <!--Orders-->
         <scene sceneID="NX3-S3-RNr">
@@ -272,7 +272,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyC-3D-2od" userLabel="Camera">
+                            <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyC-3D-2od" userLabel="Camera">
                                 <rect key="frame" x="16" y="108.5" width="568" height="434.5"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                             </view>
@@ -312,6 +312,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Eat/Take" image="Eat" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="cameraView" destination="MyC-3D-2od" id="CNo-vx-3Vf"/>
+                        <outlet property="meatLabel" destination="Njx-OO-xVK" id="t4G-A7-Ume"/>
                         <segue destination="2XW-lE-nJi" kind="presentation" identifier="ConfirmMeat" id="rns-re-pjE"/>
                     </connections>
                 </viewController>
@@ -498,8 +500,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="nfb-Pn-7Nj" kind="relationship" relationship="viewControllers" id="8Iy-hl-2ap"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="jnl-3K-ZRw" kind="relationship" relationship="viewControllers" id="I4A-mP-WHN"/>
                     </connections>
                 </tabBarController>
