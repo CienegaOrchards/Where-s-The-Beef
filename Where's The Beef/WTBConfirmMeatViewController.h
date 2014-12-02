@@ -10,4 +10,11 @@
 
 @interface WTBConfirmMeatViewController : UIViewController
 
+@property (strong, nonatomic) NSString *species;
+@property (strong, nonatomic) NSString *cut;
+@property (strong, nonatomic) NSString *quantity;
+@property (strong, nonatomic) NSString *scannedID;
+@property (strong, nonatomic) NSString *value;
+@property (strong, nonatomic) NSString *date;
+
 @end

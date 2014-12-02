@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4415BB7C1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4415BB7B1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.m */; };
+		4415BB7E1A2E612B007FF7CD /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB7D1A2E612B007FF7CD /* AudioToolbox.framework */; };
+		4415BB801A2E6130007FF7CD /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB7F1A2E6130007FF7CD /* CFNetwork.framework */; };
+		4415BB821A2E613C007FF7CD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB811A2E613C007FF7CD /* CoreGraphics.framework */; };
+		4415BB841A2E6140007FF7CD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB831A2E6140007FF7CD /* CoreLocation.framework */; };
+		4415BB861A2E6146007FF7CD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB851A2E6146007FF7CD /* libz.dylib */; };
+		4415BB881A2E6150007FF7CD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB871A2E6150007FF7CD /* MobileCoreServices.framework */; };
+		4415BB8A1A2E6161007FF7CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB891A2E6161007FF7CD /* QuartzCore.framework */; };
+		4415BB8C1A2E6166007FF7CD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB8B1A2E6166007FF7CD /* Security.framework */; };
+		4415BB8E1A2E616F007FF7CD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB8D1A2E616F007FF7CD /* StoreKit.framework */; };
+		4415BB901A2E6175007FF7CD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB8F1A2E6175007FF7CD /* SystemConfiguration.framework */; };
 		44160E801A2D605A00A42BD6 /* Beep No.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44160E7E1A2D605A00A42BD6 /* Beep No.mp3 */; };
 		44160E811A2D605A00A42BD6 /* Beep Yes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44160E7F1A2D605A00A42BD6 /* Beep Yes.mp3 */; };
 		446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */; };
@@ -39,6 +50,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4415BB7A1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBSoundLoaderPlayer.h; sourceTree = "<group>"; };
+		4415BB7B1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBSoundLoaderPlayer.m; sourceTree = "<group>"; };
+		4415BB7D1A2E612B007FF7CD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4415BB7F1A2E6130007FF7CD /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		4415BB811A2E613C007FF7CD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4415BB831A2E6140007FF7CD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4415BB851A2E6146007FF7CD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4415BB871A2E6150007FF7CD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		4415BB891A2E6161007FF7CD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		4415BB8B1A2E6166007FF7CD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4415BB8D1A2E616F007FF7CD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4415BB8F1A2E6175007FF7CD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		44160E7E1A2D605A00A42BD6 /* Beep No.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beep No.mp3"; sourceTree = "<group>"; };
 		44160E7F1A2D605A00A42BD6 /* Beep Yes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beep Yes.mp3"; sourceTree = "<group>"; };
 		446516C11A269FA500A4B3F5 /* WTBConfirmMeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBConfirmMeatViewController.h; sourceTree = "<group>"; };
@@ -68,6 +91,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4415BB901A2E6175007FF7CD /* SystemConfiguration.framework in Frameworks */,
+				4415BB8E1A2E616F007FF7CD /* StoreKit.framework in Frameworks */,
+				4415BB8C1A2E6166007FF7CD /* Security.framework in Frameworks */,
+				4415BB8A1A2E6161007FF7CD /* QuartzCore.framework in Frameworks */,
+				4415BB881A2E6150007FF7CD /* MobileCoreServices.framework in Frameworks */,
+				4415BB861A2E6146007FF7CD /* libz.dylib in Frameworks */,
+				4415BB841A2E6140007FF7CD /* CoreLocation.framework in Frameworks */,
+				4415BB821A2E613C007FF7CD /* CoreGraphics.framework in Frameworks */,
+				4415BB801A2E6130007FF7CD /* CFNetwork.framework in Frameworks */,
+				4415BB7E1A2E612B007FF7CD /* AudioToolbox.framework in Frameworks */,
 				44EDD6471A16765B00DCB65B /* Parse.framework in Frameworks */,
 				44EDD6451A16765B00DCB65B /* Bolts.framework in Frameworks */,
 				44EDD64B1A16765B00DCB65B /* ParseUI.framework in Frameworks */,
@@ -89,6 +122,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4415BB791A2E5594007FF7CD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				44EDD61B1A1673F400DCB65B /* WTBAppDelegate.h */,
+				44EDD61C1A1673F400DCB65B /* WTBAppDelegate.m */,
+				4415BB7A1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.h */,
+				4415BB7B1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.m */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
 		44160E791A2D246800A42BD6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,8 +205,7 @@
 			children = (
 				44160E791A2D246800A42BD6 /* Resources */,
 				44D6B28B1A2696B200CAC42A /* Eat/Take UI */,
-				44EDD61B1A1673F400DCB65B /* WTBAppDelegate.h */,
-				44EDD61C1A1673F400DCB65B /* WTBAppDelegate.m */,
+				4415BB791A2E5594007FF7CD /* App */,
 				44EDD6171A1673F400DCB65B /* Supporting Files */,
 			);
 			path = "Where's The Beef";
@@ -198,6 +241,16 @@
 		44EDD6401A16761300DCB65B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4415BB8F1A2E6175007FF7CD /* SystemConfiguration.framework */,
+				4415BB8D1A2E616F007FF7CD /* StoreKit.framework */,
+				4415BB8B1A2E6166007FF7CD /* Security.framework */,
+				4415BB891A2E6161007FF7CD /* QuartzCore.framework */,
+				4415BB871A2E6150007FF7CD /* MobileCoreServices.framework */,
+				4415BB851A2E6146007FF7CD /* libz.dylib */,
+				4415BB831A2E6140007FF7CD /* CoreLocation.framework */,
+				4415BB811A2E613C007FF7CD /* CoreGraphics.framework */,
+				4415BB7F1A2E6130007FF7CD /* CFNetwork.framework */,
+				4415BB7D1A2E612B007FF7CD /* AudioToolbox.framework */,
 				44EDD6411A16765B00DCB65B /* Bolts.framework */,
 				44EDD6421A16765B00DCB65B /* Parse.framework */,
 				44EDD6431A16765B00DCB65B /* ParseFacebookUtils.framework */,
@@ -330,6 +383,7 @@
 			files = (
 				44EDD61D1A1673F400DCB65B /* WTBAppDelegate.m in Sources */,
 				44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */,
+				4415BB7C1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.m in Sources */,
 				446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */,
 				44EDD61A1A1673F400DCB65B /* main.m in Sources */,
 			);

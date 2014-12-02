@@ -10,10 +10,28 @@
 
 @interface WTBConfirmMeatViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *speciesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cutLabel;
+@property (weak, nonatomic) IBOutlet UILabel *quantityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *scannedIDLabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+
 @end
 
 @implementation WTBConfirmMeatViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+
+    self.speciesLabel.text = self.species;
+    self.cutLabel.text = self.cut;
+    self.quantityLabel.text = self.quantity;
+    self.scannedIDLabel.text = self.scannedID;
+    self.valueLabel.text = self.value;
+    self.dateLabel.text = self.date;
+}
 
 - (IBAction)wrongButtonClicked
 {

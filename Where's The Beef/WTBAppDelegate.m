@@ -8,6 +8,8 @@
 
 #import "WTBAppDelegate.h"
 
+@import Parse;
+
 @interface WTBAppDelegate ()
 
 @end
@@ -16,8 +18,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Create the capture session
+    // Init Parse
+    [Parse setApplicationId:@"SR6puc3yY8fVouL0v8W7Zj7s3e3FugJY3Pljd0aG"
+                  clientKey:@"zvXGkyWwlAPkvgClTG0QeuIGlV3Pr5PQclm1ETtZ"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 
+    // Create the capture session
     self.captureSession = [[AVCaptureSession alloc] init];
     self.captureSession.sessionPreset = AVCaptureSessionPresetHigh;
 
@@ -34,19 +40,22 @@
     // Create preview layer
     self.previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:WTB_CAPTURE_SESSION];
     self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    if (self.previewLayer.connection.isVideoOrientationSupported) {
-        self.previewLayer.connection.videoOrientation = (AVCaptureVideoOrientation)application.statusBarOrientation;
-    }
+//    if (self.previewLayer.connection.isVideoOrientationSupported)
+//    {
+//        self.previewLayer.connection.videoOrientation = (AVCaptureVideoOrientation)application.statusBarOrientation;
+//    }
+
+    self.soundPlayer = [[WTBSoundLoaderPlayer alloc] init];
 
     return YES;
 }
 
 - (void)application:(UIApplication *)application willChangeStatusBarOrientation:(UIInterfaceOrientation)newStatusBarOrientation duration:(NSTimeInterval)duration
 {
-    if (self.previewLayer.connection.isVideoOrientationSupported) {
-        self.previewLayer.connection.videoOrientation = (AVCaptureVideoOrientation)newStatusBarOrientation;
-    }
-
+//    if (self.previewLayer.connection.isVideoOrientationSupported)
+//    {
+//        self.previewLayer.connection.videoOrientation = (AVCaptureVideoOrientation)newStatusBarOrientation;
+//    }
 }
 
 @end
