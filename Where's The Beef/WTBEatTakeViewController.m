@@ -104,8 +104,6 @@
 {
     if(metadataObjects.count == 0)
     {
-        NSLog(@"null");
-
         dispatch_async(dispatch_get_main_queue(), ^{
             self.highlightView.hidden = YES;
             self.meatLabel.text = NSLocalizedString(@"Scan Meat", nil);
@@ -136,7 +134,15 @@
                                                                 options:(NSJSONReadingOptions)0
                                                                   error:&err];
 
-        [self scannedNewID:[decoded valueForKey:@"id"] withDescription:[decoded valueForKey:@"desc"]];
+        if(err)
+        {
+            [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
+            NSLog(@"Error: %@\nWith: %@", err, barcode.stringValue);
+        }
+        else
+        {
+            [self scannedNewID:[decoded valueForKey:@"id"] withDescription:[decoded valueForKey:@"desc"]];
+        }
     }
 }
 
