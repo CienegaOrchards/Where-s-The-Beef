@@ -275,7 +275,7 @@
                             <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MyC-3D-2od" userLabel="Camera">
                                 <rect key="frame" x="16" y="108.5" width="568" height="434.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Meat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njx-OO-xVK" userLabel="Meat">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Meat" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Njx-OO-xVK" userLabel="Status">
                                         <rect key="frame" x="20" y="20" width="111.5" height="28.5"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
                                         <color key="highlightedColor" red="0.99215686270000003" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -322,7 +322,7 @@
                     <connections>
                         <outlet property="cameraView" destination="MyC-3D-2od" id="CNo-vx-3Vf"/>
                         <outlet property="highlightView" destination="v8P-He-Gzr" id="XWX-NG-kpK"/>
-                        <outlet property="meatLabel" destination="Njx-OO-xVK" id="t4G-A7-Ume"/>
+                        <outlet property="statusLabel" destination="Njx-OO-xVK" id="hbb-Gd-XWi"/>
                         <segue destination="2XW-lE-nJi" kind="presentation" identifier="ConfirmMeat" id="rns-re-pjE"/>
                     </connections>
                 </viewController>

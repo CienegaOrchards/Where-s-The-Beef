@@ -16,7 +16,7 @@
 @interface WTBEatTakeViewController () <AVCaptureMetadataOutputObjectsDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *cameraView;
-@property (weak, nonatomic) IBOutlet UILabel *meatLabel;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 @property (weak, nonatomic) IBOutlet UIView *highlightView;
 
 @property (strong, nonatomic) AVCaptureMetadataOutput *metadataCapture;
@@ -106,8 +106,8 @@
     {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.highlightView.hidden = YES;
-            self.meatLabel.text = NSLocalizedString(@"Scan Meat", nil);
-            self.meatLabel.highlighted = YES;
+            self.statusLabel.text = NSLocalizedString(@"Scan Meat", nil);
+            self.statusLabel.highlighted = YES;
         });
 
         return;
@@ -138,6 +138,8 @@
         {
             [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
             NSLog(@"Error: %@\nWith: %@", err, barcode.stringValue);
+            self.statusLabel.text = NSLocalizedString(@"Error parsing JSON", nil);
+            self.statusLabel.highlighted = YES;
         }
         else
         {
@@ -158,17 +160,23 @@
         if(error)
         {
             [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                self.statusLabel.text = NSLocalizedString(@"ID Not Found", nil);
+                self.statusLabel.highlighted = YES;
+            });
         }
         else
         {
             [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepYes];
-            [self performSegueWithIdentifier:@"ConfirmMeat" sender:meat];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self performSegueWithIdentifier:@"ConfirmMeat" sender:meat];
+            });
         }
     }];
 
     dispatch_async(dispatch_get_main_queue(), ^{
-        self.meatLabel.text = desc;
-        self.meatLabel.highlighted = NO;
+        self.statusLabel.text = desc;
+        self.statusLabel.highlighted = NO;
     });
 }
 
