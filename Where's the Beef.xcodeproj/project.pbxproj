@@ -16,11 +16,11 @@
 		4415BB881A2E6150007FF7CD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB871A2E6150007FF7CD /* MobileCoreServices.framework */; };
 		4415BB8A1A2E6161007FF7CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB891A2E6161007FF7CD /* QuartzCore.framework */; };
 		4415BB8C1A2E6166007FF7CD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB8B1A2E6166007FF7CD /* Security.framework */; };
-		4415BB8E1A2E616F007FF7CD /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB8D1A2E616F007FF7CD /* StoreKit.framework */; };
 		4415BB901A2E6175007FF7CD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4415BB8F1A2E6175007FF7CD /* SystemConfiguration.framework */; };
 		44160E801A2D605A00A42BD6 /* Beep No.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44160E7E1A2D605A00A42BD6 /* Beep No.mp3 */; };
 		44160E811A2D605A00A42BD6 /* Beep Yes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44160E7F1A2D605A00A42BD6 /* Beep Yes.mp3 */; };
 		446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */; };
+		4476EA851A2FBA69000C1375 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4476EA841A2FBA69000C1375 /* FacebookSDK.framework */; };
 		44D6B28A1A2666E000CAC42A /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44D6B2891A2666E000CAC42A /* FontAwesome.otf */; };
 		44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6B28D1A26970500CAC42A /* WTBEatTakeViewController.m */; };
 		44D7B4A41A2EA8BD00D98E92 /* WTBInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D7B4A31A2EA8BD00D98E92 /* WTBInitialViewController.m */; };
@@ -48,7 +48,7 @@
 			containerPortal = 44EDD60C1A1673F400DCB65B /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 44EDD6131A1673F400DCB65B;
-			remoteInfo = "Where's The Beef";
+			remoteInfo = "Where's the Beef";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -63,12 +63,13 @@
 		4415BB871A2E6150007FF7CD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		4415BB891A2E6161007FF7CD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4415BB8B1A2E6166007FF7CD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		4415BB8D1A2E616F007FF7CD /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		4415BB8F1A2E6175007FF7CD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		44160E7E1A2D605A00A42BD6 /* Beep No.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beep No.mp3"; sourceTree = "<group>"; };
 		44160E7F1A2D605A00A42BD6 /* Beep Yes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beep Yes.mp3"; sourceTree = "<group>"; };
 		446516C11A269FA500A4B3F5 /* WTBConfirmMeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBConfirmMeatViewController.h; sourceTree = "<group>"; };
 		446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBConfirmMeatViewController.m; sourceTree = "<group>"; };
+		4476EA831A2F9E2F000C1375 /* Where's the Beef.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Where's the Beef.entitlements"; sourceTree = "<group>"; };
+		4476EA841A2FBA69000C1375 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		44D6B2891A2666E000CAC42A /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 		44D6B28C1A26970500CAC42A /* WTBEatTakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBEatTakeViewController.h; sourceTree = "<group>"; };
 		44D6B28D1A26970500CAC42A /* WTBEatTakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBEatTakeViewController.m; sourceTree = "<group>"; };
@@ -76,7 +77,7 @@
 		44D7B4A31A2EA8BD00D98E92 /* WTBInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBInitialViewController.m; sourceTree = "<group>"; };
 		44D7B4A51A2EAE4A00D98E92 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		44D7B4A71A2EAE5000D98E92 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		44EDD6141A1673F400DCB65B /* Where's The Beef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where's The Beef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44EDD6141A1673F400DCB65B /* Where's the Beef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where's the Beef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44EDD6181A1673F400DCB65B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44EDD6191A1673F400DCB65B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		44EDD61B1A1673F400DCB65B /* WTBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTBAppDelegate.h; sourceTree = "<group>"; };
@@ -84,7 +85,7 @@
 		44EDD6251A1673F400DCB65B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		44EDD6271A1673F400DCB65B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		44EDD62A1A1673F400DCB65B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		44EDD6301A1673F400DCB65B /* Where's The Beef Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Where's The Beef Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		44EDD6301A1673F400DCB65B /* Where's the Beef Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Where's the Beef Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44EDD6351A1673F400DCB65B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44EDD6361A1673F400DCB65B /* Where_s_The_BeefTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Where_s_The_BeefTests.m; sourceTree = "<group>"; };
 		44EDD6411A16765B00DCB65B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 				44D7B4A81A2EAE5000D98E92 /* Accounts.framework in Frameworks */,
 				44D7B4A61A2EAE4A00D98E92 /* Social.framework in Frameworks */,
 				4415BB901A2E6175007FF7CD /* SystemConfiguration.framework in Frameworks */,
-				4415BB8E1A2E616F007FF7CD /* StoreKit.framework in Frameworks */,
 				4415BB8C1A2E6166007FF7CD /* Security.framework in Frameworks */,
 				4415BB8A1A2E6161007FF7CD /* QuartzCore.framework in Frameworks */,
 				4415BB881A2E6150007FF7CD /* MobileCoreServices.framework in Frameworks */,
@@ -112,6 +112,7 @@
 				4415BB7E1A2E612B007FF7CD /* AudioToolbox.framework in Frameworks */,
 				44EDD6471A16765B00DCB65B /* Parse.framework in Frameworks */,
 				44EDD6451A16765B00DCB65B /* Bolts.framework in Frameworks */,
+				4476EA851A2FBA69000C1375 /* FacebookSDK.framework in Frameworks */,
 				44EDD64B1A16765B00DCB65B /* ParseUI.framework in Frameworks */,
 				44EDD6491A16765B00DCB65B /* ParseFacebookUtils.framework in Frameworks */,
 			);
@@ -195,8 +196,8 @@
 		44EDD60B1A1673F400DCB65B = {
 			isa = PBXGroup;
 			children = (
-				44EDD6161A1673F400DCB65B /* Where's The Beef */,
-				44EDD6331A1673F400DCB65B /* Where's The Beef Tests */,
+				44EDD6161A1673F400DCB65B /* Where's the Beef */,
+				44EDD6331A1673F400DCB65B /* Where's the Beef Tests */,
 				44EDD6151A1673F400DCB65B /* Products */,
 				44EDD6401A16761300DCB65B /* Frameworks */,
 			);
@@ -205,13 +206,13 @@
 		44EDD6151A1673F400DCB65B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				44EDD6141A1673F400DCB65B /* Where's The Beef.app */,
-				44EDD6301A1673F400DCB65B /* Where's The Beef Tests.xctest */,
+				44EDD6141A1673F400DCB65B /* Where's the Beef.app */,
+				44EDD6301A1673F400DCB65B /* Where's the Beef Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		44EDD6161A1673F400DCB65B /* Where's The Beef */ = {
+		44EDD6161A1673F400DCB65B /* Where's the Beef */ = {
 			isa = PBXGroup;
 			children = (
 				44160E791A2D246800A42BD6 /* Resources */,
@@ -219,26 +220,27 @@
 				4415BB791A2E5594007FF7CD /* App */,
 				44EDD6171A1673F400DCB65B /* Supporting Files */,
 			);
-			path = "Where's The Beef";
+			path = "Where's the Beef";
 			sourceTree = "<group>";
 		};
 		44EDD6171A1673F400DCB65B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4476EA831A2F9E2F000C1375 /* Where's the Beef.entitlements */,
 				44EDD6181A1673F400DCB65B /* Info.plist */,
 				44EDD6191A1673F400DCB65B /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		44EDD6331A1673F400DCB65B /* Where's The Beef Tests */ = {
+		44EDD6331A1673F400DCB65B /* Where's the Beef Tests */ = {
 			isa = PBXGroup;
 			children = (
 				44EDD6361A1673F400DCB65B /* Where_s_The_BeefTests.m */,
 				44EDD6341A1673F400DCB65B /* Supporting Files */,
 			);
-			name = "Where's The Beef Tests";
-			path = "Where's The BeefTests";
+			name = "Where's the Beef Tests";
+			path = "Where's the BeefTests";
 			sourceTree = "<group>";
 		};
 		44EDD6341A1673F400DCB65B /* Supporting Files */ = {
@@ -252,10 +254,10 @@
 		44EDD6401A16761300DCB65B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4476EA841A2FBA69000C1375 /* FacebookSDK.framework */,
 				44D7B4A71A2EAE5000D98E92 /* Accounts.framework */,
 				44D7B4A51A2EAE4A00D98E92 /* Social.framework */,
 				4415BB8F1A2E6175007FF7CD /* SystemConfiguration.framework */,
-				4415BB8D1A2E616F007FF7CD /* StoreKit.framework */,
 				4415BB8B1A2E6166007FF7CD /* Security.framework */,
 				4415BB891A2E6161007FF7CD /* QuartzCore.framework */,
 				4415BB871A2E6150007FF7CD /* MobileCoreServices.framework */,
@@ -275,9 +277,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		44EDD6131A1673F400DCB65B /* Where's The Beef */ = {
+		44EDD6131A1673F400DCB65B /* Where's the Beef */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 44EDD63A1A1673F400DCB65B /* Build configuration list for PBXNativeTarget "Where's The Beef" */;
+			buildConfigurationList = 44EDD63A1A1673F400DCB65B /* Build configuration list for PBXNativeTarget "Where's the Beef" */;
 			buildPhases = (
 				44EDD6101A1673F400DCB65B /* Sources */,
 				44EDD6111A1673F400DCB65B /* Frameworks */,
@@ -288,14 +290,14 @@
 			);
 			dependencies = (
 			);
-			name = "Where's The Beef";
-			productName = "Where's The Beef";
-			productReference = 44EDD6141A1673F400DCB65B /* Where's The Beef.app */;
+			name = "Where's the Beef";
+			productName = "Where's the Beef";
+			productReference = 44EDD6141A1673F400DCB65B /* Where's the Beef.app */;
 			productType = "com.apple.product-type.application";
 		};
-		44EDD62F1A1673F400DCB65B /* Where's The Beef Tests */ = {
+		44EDD62F1A1673F400DCB65B /* Where's the Beef Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 44EDD63D1A1673F400DCB65B /* Build configuration list for PBXNativeTarget "Where's The Beef Tests" */;
+			buildConfigurationList = 44EDD63D1A1673F400DCB65B /* Build configuration list for PBXNativeTarget "Where's the Beef Tests" */;
 			buildPhases = (
 				44EDD62C1A1673F400DCB65B /* Sources */,
 				44EDD62D1A1673F400DCB65B /* Frameworks */,
@@ -306,9 +308,9 @@
 			dependencies = (
 				44EDD6321A1673F400DCB65B /* PBXTargetDependency */,
 			);
-			name = "Where's The Beef Tests";
-			productName = "Where's The BeefTests";
-			productReference = 44EDD6301A1673F400DCB65B /* Where's The Beef Tests.xctest */;
+			name = "Where's the Beef Tests";
+			productName = "Where's the BeefTests";
+			productReference = 44EDD6301A1673F400DCB65B /* Where's the Beef Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -323,6 +325,14 @@
 					44EDD6131A1673F400DCB65B = {
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = GVYZ6YPF25;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+							com.apple.OMC = {
+								enabled = 1;
+							};
+						};
 					};
 					44EDD62F1A1673F400DCB65B = {
 						CreatedOnToolsVersion = 6.1;
@@ -330,7 +340,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 44EDD60F1A1673F400DCB65B /* Build configuration list for PBXProject "Where's The Beef" */;
+			buildConfigurationList = 44EDD60F1A1673F400DCB65B /* Build configuration list for PBXProject "Where's the Beef" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -343,8 +353,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				44EDD6131A1673F400DCB65B /* Where's The Beef */,
-				44EDD62F1A1673F400DCB65B /* Where's The Beef Tests */,
+				44EDD6131A1673F400DCB65B /* Where's the Beef */,
+				44EDD62F1A1673F400DCB65B /* Where's the Beef Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -416,7 +426,7 @@
 /* Begin PBXTargetDependency section */
 		44EDD6321A1673F400DCB65B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 44EDD6131A1673F400DCB65B /* Where's The Beef */;
+			target = 44EDD6131A1673F400DCB65B /* Where's the Beef */;
 			targetProxy = 44EDD6311A1673F400DCB65B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -457,7 +467,6 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
@@ -466,7 +475,8 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "Where's the Beef/Where's the Beef.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COMPRESS_PNG_FILES = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -497,12 +507,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/craig/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "Where's The Beef/Info.plist";
+				INFOPLIST_FILE = "Where's the Beef/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -518,10 +528,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "Where's The BeefTests/Info.plist";
+				INFOPLIST_FILE = "Where's the BeefTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Where's The Beef.app/Where's The Beef";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Where's the Beef.app/Where's the Beef";
 			};
 			name = AppStore;
 		};
@@ -541,7 +551,6 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
@@ -550,7 +559,8 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "Where's the Beef/Where's the Beef.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -598,7 +608,6 @@
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
@@ -607,7 +616,8 @@
 				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = "Where's the Beef/Where's the Beef.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -638,12 +648,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/craig/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "Where's The Beef/Info.plist";
+				INFOPLIST_FILE = "Where's the Beef/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -654,12 +664,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					/Users/craig/Documents/FacebookSDK,
 				);
-				INFOPLIST_FILE = "Where's The Beef/Info.plist";
+				INFOPLIST_FILE = "Where's the Beef/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -679,10 +689,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Where's The BeefTests/Info.plist";
+				INFOPLIST_FILE = "Where's the BeefTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Where's The Beef.app/Where's The Beef";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Where's the Beef.app/Where's the Beef";
 			};
 			name = Debug;
 		};
@@ -695,17 +705,17 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				INFOPLIST_FILE = "Where's The BeefTests/Info.plist";
+				INFOPLIST_FILE = "Where's the BeefTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Where's The Beef.app/Where's The Beef";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Where's the Beef.app/Where's the Beef";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		44EDD60F1A1673F400DCB65B /* Build configuration list for PBXProject "Where's The Beef" */ = {
+		44EDD60F1A1673F400DCB65B /* Build configuration list for PBXProject "Where's the Beef" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				44EDD6381A1673F400DCB65B /* Debug */,
@@ -715,7 +725,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		44EDD63A1A1673F400DCB65B /* Build configuration list for PBXNativeTarget "Where's The Beef" */ = {
+		44EDD63A1A1673F400DCB65B /* Build configuration list for PBXNativeTarget "Where's the Beef" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				44EDD63B1A1673F400DCB65B /* Debug */,
@@ -725,7 +735,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		44EDD63D1A1673F400DCB65B /* Build configuration list for PBXNativeTarget "Where's The Beef Tests" */ = {
+		44EDD63D1A1673F400DCB65B /* Build configuration list for PBXNativeTarget "Where's the Beef Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				44EDD63E1A1673F400DCB65B /* Debug */,

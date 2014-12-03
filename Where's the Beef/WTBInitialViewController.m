@@ -20,8 +20,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    [PFUser logOut];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -40,7 +38,7 @@
                                         PFLogInFieldsPasswordForgotten |
                                         PFLogInFieldsTwitter |
                                         PFLogInFieldsFacebook;
-        logInViewController.facebookPermissions = @[ @"friends_about_me"];
+        logInViewController.facebookPermissions = @[ @"email", @"public_profile" ];
 
         // Create the sign up view controller
         PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
@@ -69,16 +67,14 @@
                didLogInUser:(PFUser *)user
 {
     NSLog(@"Logged in user: %@", user);
-    [self dismissViewControllerAnimated:YES completion:^{
-        [self performSegueWithIdentifier:@"loginCompleted" sender:self];
-    }];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 // Sent to the delegate when the log in attempt fails.
 - (void)logInViewController:(PFLogInViewController *)logInController
     didFailToLogInWithError:(NSError *)error
 {
-    NSLog(@"Failed to log in...");
+    NSLog(@"Failed to log in: %@", error);
 }
 
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController
@@ -119,16 +115,14 @@
 - (void)signUpViewController:(PFSignUpViewController *)signUpController
                didSignUpUser:(PFUser *)user
 {
-    [self dismissViewControllerAnimated:YES completion:^{
-        [self performSegueWithIdentifier:@"loginCompleted" sender:self];
-    }]; // Dismiss the PFSignUpViewController
+    [self dismissViewControllerAnimated:YES completion:nil]; // Dismiss the PFSignUpViewController
 }
 
 // Sent to the delegate when the sign up attempt fails.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController
     didFailToSignUpWithError:(NSError *)error
 {
-    NSLog(@"Failed to sign up...");
+    NSLog(@"Failed to sign up: %@", error);
 }
 
 // Sent to the delegate when the sign up screen is dismissed.
