@@ -281,7 +281,6 @@
                                         <color key="highlightedColor" red="0.99215686270000003" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </label>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v8P-He-Gzr" userLabel="Highlight">
-                                        <rect key="frame" x="142" y="108.5" width="284" height="218"/>
                                         <color key="backgroundColor" red="0.99215686270000003" green="0.12941176469999999" blue="0.14117647059999999" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
                                     </view>
                                 </subviews>
@@ -520,10 +519,10 @@
             </objects>
             <point key="canvasLocation" x="-797" y="668"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Start-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController title="Start" id="49e-Tb-3d3" customClass="WTBInitialViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>

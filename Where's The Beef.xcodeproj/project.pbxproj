@@ -23,6 +23,9 @@
 		446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */; };
 		44D6B28A1A2666E000CAC42A /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44D6B2891A2666E000CAC42A /* FontAwesome.otf */; };
 		44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6B28D1A26970500CAC42A /* WTBEatTakeViewController.m */; };
+		44D7B4A41A2EA8BD00D98E92 /* WTBInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D7B4A31A2EA8BD00D98E92 /* WTBInitialViewController.m */; };
+		44D7B4A61A2EAE4A00D98E92 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D7B4A51A2EAE4A00D98E92 /* Social.framework */; };
+		44D7B4A81A2EAE5000D98E92 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D7B4A71A2EAE5000D98E92 /* Accounts.framework */; };
 		44EDD61A1A1673F400DCB65B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EDD6191A1673F400DCB65B /* main.m */; };
 		44EDD61D1A1673F400DCB65B /* WTBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EDD61C1A1673F400DCB65B /* WTBAppDelegate.m */; };
 		44EDD6261A1673F400DCB65B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44EDD6241A1673F400DCB65B /* Main.storyboard */; };
@@ -69,6 +72,10 @@
 		44D6B2891A2666E000CAC42A /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 		44D6B28C1A26970500CAC42A /* WTBEatTakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBEatTakeViewController.h; sourceTree = "<group>"; };
 		44D6B28D1A26970500CAC42A /* WTBEatTakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBEatTakeViewController.m; sourceTree = "<group>"; };
+		44D7B4A21A2EA8BD00D98E92 /* WTBInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBInitialViewController.h; sourceTree = "<group>"; };
+		44D7B4A31A2EA8BD00D98E92 /* WTBInitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBInitialViewController.m; sourceTree = "<group>"; };
+		44D7B4A51A2EAE4A00D98E92 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		44D7B4A71A2EAE5000D98E92 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		44EDD6141A1673F400DCB65B /* Where's The Beef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where's The Beef.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		44EDD6181A1673F400DCB65B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44EDD6191A1673F400DCB65B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -91,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44D7B4A81A2EAE5000D98E92 /* Accounts.framework in Frameworks */,
+				44D7B4A61A2EAE4A00D98E92 /* Social.framework in Frameworks */,
 				4415BB901A2E6175007FF7CD /* SystemConfiguration.framework in Frameworks */,
 				4415BB8E1A2E616F007FF7CD /* StoreKit.framework in Frameworks */,
 				4415BB8C1A2E6166007FF7CD /* Security.framework in Frameworks */,
@@ -129,6 +138,8 @@
 				44EDD61C1A1673F400DCB65B /* WTBAppDelegate.m */,
 				4415BB7A1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.h */,
 				4415BB7B1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.m */,
+				44D7B4A21A2EA8BD00D98E92 /* WTBInitialViewController.h */,
+				44D7B4A31A2EA8BD00D98E92 /* WTBInitialViewController.m */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -241,6 +252,8 @@
 		44EDD6401A16761300DCB65B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44D7B4A71A2EAE5000D98E92 /* Accounts.framework */,
+				44D7B4A51A2EAE4A00D98E92 /* Social.framework */,
 				4415BB8F1A2E6175007FF7CD /* SystemConfiguration.framework */,
 				4415BB8D1A2E616F007FF7CD /* StoreKit.framework */,
 				4415BB8B1A2E6166007FF7CD /* Security.framework */,
@@ -382,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44EDD61D1A1673F400DCB65B /* WTBAppDelegate.m in Sources */,
+				44D7B4A41A2EA8BD00D98E92 /* WTBInitialViewController.m in Sources */,
 				44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */,
 				4415BB7C1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.m in Sources */,
 				446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */,

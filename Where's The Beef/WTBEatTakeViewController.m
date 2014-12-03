@@ -156,21 +156,41 @@
     [query includeKey:@"freezer"];
 
     [query getObjectInBackgroundWithId:objID block:^(PFObject *meat, NSError *error) {
-        // Do something with the returned PFObject in the gameScore variable.
-        if(error)
-        {
-            [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                self.statusLabel.text = NSLocalizedString(@"ID Not Found", nil);
-                self.statusLabel.highlighted = YES;
-            });
-        }
-        else
+        // Do something with the returned PFObject in the meat variable.
+        if(meat)
         {
             [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepYes];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self performSegueWithIdentifier:@"ConfirmMeat" sender:meat];
             });
+        }
+        else if(error)
+        {
+            [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
+            if(error.code == kPFErrorObjectNotFound)
+            {
+                NSLog(@"Uh oh, could not find meat: %@", objID);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.statusLabel.text = NSLocalizedString(@"ID Not Found", nil);
+                    self.statusLabel.highlighted = YES;
+                });
+            }
+            else if ([error code] == kPFErrorConnectionFailed) {
+                NSLog(@"Uh oh, we couldn't even connect to the Parse Cloud!");
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.statusLabel.text = NSLocalizedString(@"Network down", nil);
+                    self.statusLabel.highlighted = YES;
+                });
+            }
+            else
+            {
+                NSLog(@"Error: %@", [error userInfo][@"error"]);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    self.statusLabel.text = [error userInfo][@"error"];
+                    self.statusLabel.highlighted = YES;
+                });
+
+            }
         }
     }];
 

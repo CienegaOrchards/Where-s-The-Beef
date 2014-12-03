@@ -9,6 +9,7 @@
 #import "WTBAppDelegate.h"
 
 @import Parse;
+@import Twitter;
 
 @interface WTBAppDelegate ()
 
@@ -21,6 +22,10 @@
     // Init Parse
     [Parse setApplicationId:@"SR6puc3yY8fVouL0v8W7Zj7s3e3FugJY3Pljd0aG"
                   clientKey:@"zvXGkyWwlAPkvgClTG0QeuIGlV3Pr5PQclm1ETtZ"];
+    // Init Twitter
+    [PFTwitterUtils initializeWithConsumerKey:@"F5IdhrWfjyebOe4tdMTqcQ"
+                               consumerSecret:@"VYsrFqMsM7jUJU69YOrNJUpfdWB5HEsHKAN4ZaN1lc"];
+
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
 
     // Create the capture session
