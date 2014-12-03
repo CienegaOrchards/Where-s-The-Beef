@@ -18,7 +18,54 @@
 
 @implementation WTBAppDelegate
 
-#pragma mark - Facebook stuff
+#pragma mark - Remote Notifications
+
+- (void)application:(UIApplication *)application
+didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+{
+    NSLog(@"User notification register did");
+}
+
+- (void)application:(UIApplication *)application
+didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    NSLog(@"Failed to register: %@", error);
+}
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    NSLog(@"Did register");
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    currentInstallation.channels = @[ @"global" ];
+    [currentInstallation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+        if(succeeded)
+        {
+            NSLog(@"Register save succeeded");
+        }
+        else
+        {
+            NSLog(@"Register save failed: %@", error);
+        }
+    }];
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    NSLog(@"Received remote notification: %@", userInfo);
+    if (application.applicationState == UIApplicationStateInactive)
+    {
+        // The application was just brought from the background to the foreground,
+        // so we consider the app as having been "opened by a push notification."
+        [PFAnalytics trackAppOpenedWithRemoteNotificationPayload:userInfo];
+    }
+    [PFPush handlePush:userInfo];
+}
+
+#pragma mark - Facebook callbacks
 
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
@@ -32,30 +79,20 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
+    // Clear the badges
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    if (currentInstallation.badge != 0) {
+        NSLog(@"There were %ld badges", (long)currentInstallation.badge);
+        currentInstallation.badge = 0;
+        [currentInstallation saveEventually];
+    }
+
     // Logs 'install' and 'app activate' App Events.
     [FBAppEvents activateApp];
     [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
 }
 
-# pragma mark - Remote Notifications
-
-- (void)application:(UIApplication *)application
-didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
-{
-    // Store the deviceToken in the current installation and save it to Parse.
-    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-    [currentInstallation setDeviceTokenFromData:deviceToken];
-    currentInstallation.channels = @[ @"global" ];
-    [currentInstallation saveInBackground];
-}
-
-- (void)application:(UIApplication *)application
-didReceiveRemoteNotification:(NSDictionary *)userInfo
-{
-    [PFPush handlePush:userInfo];
-}
-
-# pragma mark - App startup
+#pragma mark - App startup
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -70,7 +107,19 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
     // Init FB
     [PFFacebookUtils initializeFacebook];
 
-    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    if (application.applicationState != UIApplicationStateBackground)
+    {
+        // Track an app open here if we launch with a push, unless
+        // "content_available" was used to trigger a background push (introduced
+        // in iOS 7). In that case, we skip tracking here to avoid double
+        // counting the app-open.
+        BOOL preBackgroundPush = ![application respondsToSelector:@selector(backgroundRefreshStatus)];
+        BOOL oldPushHandlerOnly = ![self respondsToSelector:@selector(application:didReceiveRemoteNotification:fetchCompletionHandler:)];
+        BOOL noPushPayload = ![launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
+        if (preBackgroundPush || oldPushHandlerOnly || noPushPayload) {
+            [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+        }
+    }
 
     // Register for Push Notifications
     UIUserNotificationType userNotificationTypes = (UIUserNotificationType)(UIUserNotificationTypeAlert |
@@ -103,6 +152,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
         self.previewLayer.connection.videoOrientation = (AVCaptureVideoOrientation)application.statusBarOrientation;
     }
 
+    // Create sound player
     self.soundPlayer = [[WTBSoundLoaderPlayer alloc] init];
 
     return YES;
