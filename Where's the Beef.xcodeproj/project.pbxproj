@@ -21,6 +21,7 @@
 		44160E811A2D605A00A42BD6 /* Beep Yes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44160E7F1A2D605A00A42BD6 /* Beep Yes.mp3 */; };
 		446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */; };
 		4476EA851A2FBA69000C1375 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4476EA841A2FBA69000C1375 /* FacebookSDK.framework */; };
+		44B88FAC1A31082A00D10248 /* WTBMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B88FAB1A31082A00D10248 /* WTBMoreViewController.m */; };
 		44D6B28A1A2666E000CAC42A /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44D6B2891A2666E000CAC42A /* FontAwesome.otf */; };
 		44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6B28D1A26970500CAC42A /* WTBEatTakeViewController.m */; };
 		44D7B4A41A2EA8BD00D98E92 /* WTBInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D7B4A31A2EA8BD00D98E92 /* WTBInitialViewController.m */; };
@@ -70,6 +71,8 @@
 		446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBConfirmMeatViewController.m; sourceTree = "<group>"; };
 		4476EA831A2F9E2F000C1375 /* Where's the Beef.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Where's the Beef.entitlements"; sourceTree = "<group>"; };
 		4476EA841A2FBA69000C1375 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		44B88FAA1A31082A00D10248 /* WTBMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBMoreViewController.h; sourceTree = "<group>"; };
+		44B88FAB1A31082A00D10248 /* WTBMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBMoreViewController.m; sourceTree = "<group>"; };
 		44D6B2891A2666E000CAC42A /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 		44D6B28C1A26970500CAC42A /* WTBEatTakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBEatTakeViewController.h; sourceTree = "<group>"; };
 		44D6B28D1A26970500CAC42A /* WTBEatTakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBEatTakeViewController.m; sourceTree = "<group>"; };
@@ -183,6 +186,15 @@
 			name = "Confirm Meat Dialog";
 			sourceTree = "<group>";
 		};
+		44B88FA91A31081000D10248 /* More... UI */ = {
+			isa = PBXGroup;
+			children = (
+				44B88FAA1A31082A00D10248 /* WTBMoreViewController.h */,
+				44B88FAB1A31082A00D10248 /* WTBMoreViewController.m */,
+			);
+			name = "More... UI";
+			sourceTree = "<group>";
+		};
 		44D6B28B1A2696B200CAC42A /* Eat/Take UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -216,8 +228,9 @@
 			isa = PBXGroup;
 			children = (
 				44160E791A2D246800A42BD6 /* Resources */,
-				44D6B28B1A2696B200CAC42A /* Eat/Take UI */,
 				4415BB791A2E5594007FF7CD /* App */,
+				44B88FA91A31081000D10248 /* More... UI */,
+				44D6B28B1A2696B200CAC42A /* Eat/Take UI */,
 				44EDD6171A1673F400DCB65B /* Supporting Files */,
 			);
 			path = "Where's the Beef";
@@ -409,6 +422,7 @@
 				44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */,
 				4415BB7C1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.m in Sources */,
 				446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */,
+				44B88FAC1A31082A00D10248 /* WTBMoreViewController.m in Sources */,
 				44EDD61A1A1673F400DCB65B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,8 +8,69 @@
 
 #import "WTBInitialViewController.h"
 
+#import "WTBAppDelegate.h"
+
 @import Parse;
 @import ParseUI;
+
+
+#pragma mark - Customized Login View
+
+@interface MyLogInViewController : PFLogInViewController
+
+@end
+
+@implementation MyLogInViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    UILabel *logoView = [[UILabel alloc] init];
+    logoView.text = @"Cienega\n   Orchards\n       Store";
+    logoView.numberOfLines = 3;
+    logoView.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:36];
+    self.logInView.logo = logoView; // logo can be any UIView
+
+    [self.view layoutSubviews];
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+
+    // Set frame for elements
+    self.logInView.logo.frame = CGRectMake(90.0, 70.0, 180.0, 150.0);
+}
+
+@end
+
+#pragma mark - Customized Signup View
+
+@interface MySignUpViewController : PFSignUpViewController
+
+@end
+
+@implementation MySignUpViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+
+    UILabel *logoView = [[UILabel alloc] init];
+    logoView.text = @"Cienega\n   Orchards\n       Store";
+    logoView.numberOfLines = 3;
+    logoView.font = [UIFont fontWithName:@"HelveticaNeue-Thin" size:36];
+    self.signUpView.logo = logoView; // logo can be any UIView
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+
+    // Set frame for elements
+    self.signUpView.logo.frame = CGRectMake(90.0, 70.0, 180.0, 150.0);
+}
+
+@end
 
 @interface WTBInitialViewController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
@@ -26,27 +87,34 @@
 {
     [super viewDidAppear:animated];
 
+    [self checkLoggedIn];
+}
+
+#pragma mark - Check login status and login if necessary
+- (void)checkLoggedIn
+{
     // Present login view controller
     if (![PFUser currentUser]) { // No user logged in
                                  // Create the log in view controller
-        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+        PFLogInViewController *logInViewController = [[MyLogInViewController alloc] init];
         logInViewController.delegate = self; // Set ourselves as the delegate
         logInViewController.delegate = self;
+        PFLogInFields allowTwitter = (WTB_APP_CONFIG[@"twitterConsumerKey"] != nil ? PFLogInFieldsTwitter : 0);
         logInViewController.fields = PFLogInFieldsUsernameAndPassword |
-                                        PFLogInFieldsLogInButton |
-                                        PFLogInFieldsSignUpButton |
-                                        PFLogInFieldsPasswordForgotten |
-                                        PFLogInFieldsTwitter |
-                                        PFLogInFieldsFacebook;
+        PFLogInFieldsLogInButton |
+        PFLogInFieldsSignUpButton |
+        PFLogInFieldsPasswordForgotten |
+        allowTwitter |
+        PFLogInFieldsFacebook;
         logInViewController.facebookPermissions = @[ @"email", @"public_profile" ];
 
         // Create the sign up view controller
-        PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
+        PFSignUpViewController *signUpViewController = [[MySignUpViewController alloc] init];
         signUpViewController.delegate = self; // Set ourselves as the delegate
         signUpViewController.fields = PFSignUpFieldsEmail |
-                                        PFSignUpFieldsSignUpButton |
-                                        PFSignUpFieldsDismissButton |
-                                        PFSignUpFieldsUsernameAndPassword;
+        PFSignUpFieldsSignUpButton |
+        PFSignUpFieldsDismissButton |
+        PFSignUpFieldsUsernameAndPassword;
 
 
         // Assign our sign up controller to be displayed from the login controller

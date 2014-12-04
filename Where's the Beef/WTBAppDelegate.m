@@ -21,19 +21,17 @@
 #pragma mark - Remote Notifications
 
 - (void)application:(UIApplication *)application
-didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+        didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
 {
     NSLog(@"User notification register did");
 }
 
-- (void)application:(UIApplication *)application
-didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
     NSLog(@"Failed to register: %@", error);
 }
 
-- (void)application:(UIApplication *)application
-didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     NSLog(@"Did register");
     // Store the deviceToken in the current installation and save it to Parse.
@@ -41,22 +39,21 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     [currentInstallation setDeviceTokenFromData:deviceToken];
     currentInstallation.channels = @[ @"global" ];
     [currentInstallation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-        if(succeeded)
-        {
-            NSLog(@"Register save succeeded");
-        }
-        else
-        {
-            NSLog(@"Register save failed: %@", error);
-        }
+            if(succeeded)
+            {
+                NSLog(@"Register save succeeded");
+            }
+            else
+            {
+                NSLog(@"Register save failed: %@", error);
+            }
     }];
 }
 
-- (void)application:(UIApplication *)application
-didReceiveRemoteNotification:(NSDictionary *)userInfo
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     NSLog(@"Received remote notification: %@", userInfo);
-    if (application.applicationState == UIApplicationStateInactive)
+    if(application.applicationState == UIApplicationStateInactive)
     {
         // The application was just brought from the background to the foreground,
         // so we consider the app as having been "opened by a push notification."
@@ -68,20 +65,19 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
 #pragma mark - Facebook callbacks
 
 - (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation
+                  openURL:(NSURL *)url
+        sourceApplication:(NSString *)sourceApplication
+               annotation:(id)annotation
 {
-    return [FBAppCall handleOpenURL:url
-                  sourceApplication:sourceApplication
-                        withSession:[PFFacebookUtils session]];
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication withSession:[PFFacebookUtils session]];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     // Clear the badges
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
-    if (currentInstallation.badge != 0) {
+    if(currentInstallation.badge != 0)
+    {
         NSLog(@"There were %ld badges", (long)currentInstallation.badge);
         currentInstallation.badge = 0;
         [currentInstallation saveEventually];
@@ -98,35 +94,59 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     // Init Parse
     [Parse setApplicationId:@"SR6puc3yY8fVouL0v8W7Zj7s3e3FugJY3Pljd0aG"
-                  clientKey:@"zvXGkyWwlAPkvgClTG0QeuIGlV3Pr5PQclm1ETtZ"];
+                   clientKey:@"zvXGkyWwlAPkvgClTG0QeuIGlV3Pr5PQclm1ETtZ"];
 
-    // Init Twitter
-    [PFTwitterUtils initializeWithConsumerKey:@"F5IdhrWfjyebOe4tdMTqcQ"
-                               consumerSecret:@"VYsrFqMsM7jUJU69YOrNJUpfdWB5HEsHKAN4ZaN1lc"];
+    // Use cached config until we read new config
+    self.config = [PFConfig currentConfig];
+
+    // Twitter init, if we can
+    if(self.config[@"twitterConsumerKey"])
+    {
+        [PFTwitterUtils initializeWithConsumerKey:self.config[@"twitterConsumerKey"]
+                                   consumerSecret:self.config[@"twitterConsumerSecret"]];
+    }
+
+    // Read new config if possible
+    [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
+            if(!error)
+            {
+                NSLog(@"Yay! Config was fetched from the server.");
+            }
+            else
+            {
+                NSLog(@"Failed to fetch. Using Cached Config.");
+                if(self.config[@"twitterConsumerKey"] == nil && config[@"twitterConsumerKey"] != nil) // Old config had no twitter info, so init twitter now
+                {
+                    [PFTwitterUtils initializeWithConsumerKey:config[@"twitterConsumerKey"]
+                                               consumerSecret:config[@"twitterConsumerSecret"]];
+                }
+                self.config = config;
+            }
+    }];
 
     // Init FB
     [PFFacebookUtils initializeFacebook];
 
-    if (application.applicationState != UIApplicationStateBackground)
+    if(application.applicationState != UIApplicationStateBackground)
     {
         // Track an app open here if we launch with a push, unless
         // "content_available" was used to trigger a background push (introduced
         // in iOS 7). In that case, we skip tracking here to avoid double
         // counting the app-open.
         BOOL preBackgroundPush = ![application respondsToSelector:@selector(backgroundRefreshStatus)];
-        BOOL oldPushHandlerOnly = ![self respondsToSelector:@selector(application:didReceiveRemoteNotification:fetchCompletionHandler:)];
+        BOOL oldPushHandlerOnly = ![self respondsToSelector:@selector(application:
+                                                                    didReceiveRemoteNotification:
+                                                                          fetchCompletionHandler:)];
         BOOL noPushPayload = ![launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
-        if (preBackgroundPush || oldPushHandlerOnly || noPushPayload) {
+        if(preBackgroundPush || oldPushHandlerOnly || noPushPayload)
+        {
             [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
         }
     }
 
     // Register for Push Notifications
-    UIUserNotificationType userNotificationTypes = (UIUserNotificationType)(UIUserNotificationTypeAlert |
-                                                    UIUserNotificationTypeBadge |
-                                                    UIUserNotificationTypeSound);
-    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes
-                                                                             categories:nil];
+    UIUserNotificationType userNotificationTypes = (UIUserNotificationType)(UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound);
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:userNotificationTypes categories:nil];
     [application registerUserNotificationSettings:settings];
     [application registerForRemoteNotifications];
 
@@ -147,7 +167,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
     // Create preview layer
     self.previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:WTB_CAPTURE_SESSION];
     self.previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
-    if (self.previewLayer.connection.isVideoOrientationSupported)
+    if(self.previewLayer.connection.isVideoOrientationSupported)
     {
         self.previewLayer.connection.videoOrientation = (AVCaptureVideoOrientation)application.statusBarOrientation;
     }
@@ -160,9 +180,11 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
 
 #pragma mark - Handle screen rotation
 
-- (void)application:(UIApplication *)application willChangeStatusBarOrientation:(UIInterfaceOrientation)newStatusBarOrientation duration:(NSTimeInterval)duration
+- (void)application:(UIApplication *)application
+        willChangeStatusBarOrientation:(UIInterfaceOrientation)newStatusBarOrientation
+                              duration:(NSTimeInterval)duration
 {
-    if (self.previewLayer.connection.isVideoOrientationSupported)
+    if(self.previewLayer.connection.isVideoOrientationSupported)
     {
         self.previewLayer.connection.videoOrientation = (AVCaptureVideoOrientation)newStatusBarOrientation;
     }

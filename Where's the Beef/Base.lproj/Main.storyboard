@@ -266,8 +266,8 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Permanently remove non-ordered meat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan" userLabel="Subtitle">
-                                <rect key="frame" x="148.5" y="79" width="304" height="21.5"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan meat to remove from inventory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan" userLabel="Subtitle">
+                                <rect key="frame" x="160" y="79" width="281.5" height="21.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -534,11 +534,79 @@
                         <segue destination="nfb-Pn-7Nj" kind="relationship" relationship="viewControllers" id="8Iy-hl-2ap"/>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="jnl-3K-ZRw" kind="relationship" relationship="viewControllers" id="I4A-mP-WHN"/>
+                        <segue destination="Cqd-GA-5zi" kind="relationship" relationship="viewControllers" id="jTL-DG-61R"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="207" y="-838"/>
+        </scene>
+        <!--More View Controller-->
+        <scene sceneID="THf-Vp-H7i">
+            <objects>
+                <viewController id="Cqd-GA-5zi" customClass="WTBMoreViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dTS-Us-J4Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="agR-J6-8mB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kpU-TB-rAt">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dusty Road" translatesAutoresizingMaskIntoConstraints="NO" id="0rx-FC-Go9" userLabel="Background">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logged in as:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l46-9x-boz">
+                                <rect key="frame" x="20" y="100.5" width="104" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Someone Q. User" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPo-Zc-L15">
+                                <rect key="frame" x="20" y="129.5" width="273" height="42.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XlO-UY-nbA">
+                                <rect key="frame" x="209" y="422" width="181" height="55"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="36"/>
+                                <state key="normal" title="Switch User">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutClicked" destination="Cqd-GA-5zi" eventType="touchUpInside" id="KkY-zE-vdN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="XlO-UY-nbA" secondAttribute="centerX" id="7YV-ap-LBs"/>
+                            <constraint firstItem="KPo-Zc-L15" firstAttribute="leading" secondItem="kpU-TB-rAt" secondAttribute="leading" constant="20" symbolic="YES" id="82G-6V-uCp"/>
+                            <constraint firstAttribute="trailing" secondItem="0rx-FC-Go9" secondAttribute="trailing" id="FZy-Mw-ew8"/>
+                            <constraint firstItem="XlO-UY-nbA" firstAttribute="centerY" secondItem="kpU-TB-rAt" secondAttribute="bottom" multiplier="3/4" id="GIQ-Z2-mbL"/>
+                            <constraint firstItem="KPo-Zc-L15" firstAttribute="leading" secondItem="l46-9x-boz" secondAttribute="leading" id="YSp-kj-wdx"/>
+                            <constraint firstItem="0rx-FC-Go9" firstAttribute="bottom" secondItem="kpU-TB-rAt" secondAttribute="bottomMargin" id="bUb-FS-So6"/>
+                            <constraint firstItem="KPo-Zc-L15" firstAttribute="centerY" secondItem="kpU-TB-rAt" secondAttribute="bottom" multiplier="1/4" id="d5H-Pb-kdy"/>
+                            <constraint firstItem="0rx-FC-Go9" firstAttribute="leading" secondItem="kpU-TB-rAt" secondAttribute="leading" id="dy5-N5-BN5"/>
+                            <constraint firstAttribute="centerX" secondItem="KPo-Zc-L15" secondAttribute="centerX" id="ocT-4H-SYt"/>
+                            <constraint firstItem="0rx-FC-Go9" firstAttribute="top" secondItem="kpU-TB-rAt" secondAttribute="topMargin" id="sfg-Q0-lE5"/>
+                            <constraint firstItem="KPo-Zc-L15" firstAttribute="top" secondItem="l46-9x-boz" secondAttribute="bottom" constant="8" symbolic="YES" id="suF-Ug-GCP"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="ocT-4H-SYt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="WT1-rt-Vcz"/>
+                    <connections>
+                        <outlet property="loggedInAsLabel" destination="KPo-Zc-L15" id="9pV-II-2il"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Mb-0u-8tZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="932" y="-838"/>
         </scene>
     </scenes>
     <resources>

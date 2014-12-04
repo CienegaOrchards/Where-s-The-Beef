@@ -106,8 +106,7 @@
     {
         dispatch_async(dispatch_get_main_queue(), ^{
             self.highlightView.hidden = YES;
-            self.statusLabel.text = NSLocalizedString(@"Scan Meat", nil);
-            self.statusLabel.highlighted = YES;
+            self.statusLabel.hidden = YES;
         });
 
         return;
@@ -139,6 +138,7 @@
             [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
             NSLog(@"Error: %@\nWith: %@", err, barcode.stringValue);
             self.statusLabel.text = NSLocalizedString(@"Error parsing JSON", nil);
+            self.statusLabel.hidden = NO;
             self.statusLabel.highlighted = YES;
         }
         else
@@ -172,6 +172,7 @@
                 NSLog(@"Uh oh, could not find meat: %@", objID);
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.statusLabel.text = NSLocalizedString(@"ID Not Found", nil);
+                    self.statusLabel.hidden = NO;
                     self.statusLabel.highlighted = YES;
                 });
             }
@@ -179,6 +180,7 @@
                 NSLog(@"Uh oh, we couldn't even connect to the Parse Cloud!");
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.statusLabel.text = NSLocalizedString(@"Network down", nil);
+                    self.statusLabel.hidden = NO;
                     self.statusLabel.highlighted = YES;
                 });
             }
@@ -187,6 +189,7 @@
                 NSLog(@"Error: %@", [error userInfo][@"error"]);
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.statusLabel.text = [error userInfo][@"error"];
+                    self.statusLabel.hidden = NO;
                     self.statusLabel.highlighted = YES;
                 });
 

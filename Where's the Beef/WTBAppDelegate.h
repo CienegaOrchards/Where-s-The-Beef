@@ -8,6 +8,7 @@
 
 @import UIKit;
 @import AVFoundation;
+@import Parse;
 
 #import "WTBSoundLoaderPlayer.h"
 
@@ -20,7 +21,10 @@
 
 @property (strong, nonatomic) WTBSoundLoaderPlayer *soundPlayer;
 
+@property (strong, nonatomic) PFConfig *config;
+
 @end
 
 #define WTB_CAPTURE_SESSION (((WTBAppDelegate *)[UIApplication sharedApplication].delegate).captureSession)
 #define WTB_CAPTURE_PREVIEW (((WTBAppDelegate *)[UIApplication sharedApplication].delegate).previewLayer)
+#define WTB_APP_CONFIG (((WTBAppDelegate *)[UIApplication sharedApplication].delegate).config)
