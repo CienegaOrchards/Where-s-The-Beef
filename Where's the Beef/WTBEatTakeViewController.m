@@ -40,7 +40,7 @@
     self.metadataCapture = [[AVCaptureMetadataOutput alloc] init];
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated
 {
     self.highlightView.hidden = YES;
 
@@ -56,24 +56,19 @@
 
     [WTB_CAPTURE_SESSION startRunning];
 
-    [super viewWillAppear:animated];
+    [super viewDidAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.highlightView.hidden = YES;
 
-    [super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
     [WTB_CAPTURE_SESSION stopRunning];
     [WTB_CAPTURE_SESSION removeOutput:self.metadataCapture];
 
     [WTB_CAPTURE_PREVIEW removeFromSuperlayer];
 
-    [super viewDidDisappear:animated];
+    [super viewWillDisappear:animated];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
