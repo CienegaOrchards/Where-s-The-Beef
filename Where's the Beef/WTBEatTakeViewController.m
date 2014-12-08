@@ -83,19 +83,9 @@
     PFObject *cut = (PFObject *)meat[@"cut"];
     PFObject *animal = (PFObject *)meat[@"animal"];
 
-    dest.species = cut[@"species"];
-    dest.cut = cut[@"cut"];
-    dest.quantity = [NSString stringWithFormat:@"%@ %@", meat[@"units"], cut[@"units"]];
-    dest.scannedID = meat.objectId;
-    dest.value = [NSString stringWithFormat:@"$%0.2f", ((NSNumber *)meat[@"units"]).floatValue * ((NSNumber *)cut[@"price"]).floatValue];
-    if(animal)
-    {
-        dest.date = [NSDateFormatter localizedStringFromDate:animal[@"slaughtered"] dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
-    }
-    else
-    {
-        dest.date = NSLocalizedString(@"UNKNOWN", nil);
-    }
+    dest.meat = meat;
+    dest.cut = cut;
+    dest.animal = animal;
 }
 
 #pragma mark - QR code capture

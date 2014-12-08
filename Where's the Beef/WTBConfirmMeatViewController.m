@@ -25,12 +25,19 @@
 {
     [super viewWillAppear:animated];
 
-    self.speciesLabel.text = self.species;
-    self.cutLabel.text = self.cut;
-    self.quantityLabel.text = self.quantity;
-    self.scannedIDLabel.text = self.scannedID;
-    self.valueLabel.text = self.value;
-    self.dateLabel.text = self.date;
+    self.speciesLabel.text = self.cut[@"species"];
+    self.cutLabel.text = self.cut[@"cut"];
+    self.quantityLabel.text = [NSString stringWithFormat:@"%@ %@", self.meat[@"units"], self.cut[@"units"]];
+    self.scannedIDLabel.text = self.meat.objectId;
+    self.valueLabel.text = [NSString stringWithFormat:@"$%0.2f", ((NSNumber *)self.meat[@"units"]).floatValue * ((NSNumber *)self.cut[@"price"]).floatValue];
+    if(self.animal)
+    {
+        self.dateLabel.text = [NSDateFormatter localizedStringFromDate:self.animal[@"slaughtered"] dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterNoStyle];
+    }
+    else
+    {
+        self.dateLabel.text = NSLocalizedString(@"UNKNOWN", nil);
+    }
 }
 
 - (IBAction)wrongButtonClicked
@@ -40,6 +47,22 @@
 
 - (IBAction)correctButtonClicked
 {
+    NSString *displayName = NSLocalizedString(@"Unknown User", nil);
+
+    if([PFUser currentUser])
+    {
+        displayName = [PFUser currentUser][@"realname"];
+        if(!displayName)
+        {
+            displayName = [PFUser currentUser].username;
+        }
+    }
+
+    self.meat[@"location"] = [NSString stringWithFormat:@"Eaten by %@", displayName];
+    self.meat[@"freezer"] = [NSNull null];
+
+    [self.meat saveEventually];
+
     [self dismissViewControllerAnimated:YES completion:^{}];
 }
 
