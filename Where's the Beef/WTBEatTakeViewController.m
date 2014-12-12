@@ -11,6 +11,10 @@
 
 #import "WTBConfirmMeatViewController.h"
 
+#import "DDLog.h"
+
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+
 @import Parse;
 
 @interface WTBEatTakeViewController () <AVCaptureMetadataOutputObjectsDelegate>
@@ -121,7 +125,7 @@
         if(err)
         {
             [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
-            NSLog(@"Error: %@\nWith: %@", err, barcode.stringValue);
+            DDLogError(@"Error: %@\nWith: %@", err, barcode.stringValue);
             self.statusLabel.text = NSLocalizedString(@"Error parsing JSON", nil);
             self.statusLabel.hidden = NO;
             self.statusLabel.highlighted = YES;
@@ -154,7 +158,7 @@
             [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
             if(error.code == kPFErrorObjectNotFound)
             {
-                NSLog(@"Uh oh, could not find meat: %@", objID);
+                DDLogError(@"Uh oh, could not find meat: %@", objID);
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.statusLabel.text = NSLocalizedString(@"ID Not Found", nil);
                     self.statusLabel.hidden = NO;
@@ -162,7 +166,7 @@
                 });
             }
             else if ([error code] == kPFErrorConnectionFailed) {
-                NSLog(@"Uh oh, we couldn't even connect to the Parse Cloud!");
+                DDLogError(@"Uh oh, we couldn't even connect to the Parse Cloud!");
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.statusLabel.text = NSLocalizedString(@"Network down", nil);
                     self.statusLabel.hidden = NO;
@@ -171,7 +175,7 @@
             }
             else
             {
-                NSLog(@"Eat/Take Error: %@ for %@ = %@", [error userInfo][@"error"], objID, desc);
+                DDLogError(@"Eat/Take Error: %@ for %@ = %@", [error userInfo][@"error"], objID, desc);
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.statusLabel.text = [error userInfo][@"error"];
                     self.statusLabel.hidden = NO;

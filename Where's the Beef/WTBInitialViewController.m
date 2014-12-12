@@ -10,6 +10,10 @@
 
 #import "WTBAppDelegate.h"
 
+#import "DDLog.h"
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+
+
 @import Parse;
 @import ParseUI;
 
@@ -125,7 +129,7 @@
     }
     else
     {
-        NSLog(@"We are logged in as: %@", [PFUser currentUser]);
+        DDLogInfo(@"We are logged in as: %@", [PFUser currentUser]);
     }
 }
 
@@ -134,7 +138,7 @@
 - (void)logInViewController:(PFLogInViewController *)controller
                didLogInUser:(PFUser *)user
 {
-    NSLog(@"Logged in user: %@", user);
+    DDLogInfo(@"Logged in user: %@", user);
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -142,12 +146,12 @@
 - (void)logInViewController:(PFLogInViewController *)logInController
     didFailToLogInWithError:(NSError *)error
 {
-    NSLog(@"Failed to log in: %@", error);
+    DDLogWarn(@"Failed to log in: %@", error);
 }
 
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController
 {
-    NSLog(@"Cancelled somehow??!?");
+    DDLogError(@"Cancelled somehow??!?");
 }
 
 #pragma mark - Signup delegates
@@ -190,13 +194,13 @@
 - (void)signUpViewController:(PFSignUpViewController *)signUpController
     didFailToSignUpWithError:(NSError *)error
 {
-    NSLog(@"Failed to sign up: %@", error);
+    DDLogWarn(@"Failed to sign up: %@", error);
 }
 
 // Sent to the delegate when the sign up screen is dismissed.
 - (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController
 {
-    NSLog(@"User dismissed the signUpViewController");
+    DDLogInfo(@"User dismissed the signUpViewController");
 }
 
 @end

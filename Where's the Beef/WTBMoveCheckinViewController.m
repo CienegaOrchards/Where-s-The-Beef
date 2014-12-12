@@ -10,6 +10,9 @@
 
 #import "WTBAppDelegate.h"
 
+#import "DDLog.h"
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+
 @import Parse;
 
 @interface WTBMoveCheckinViewController () <AVCaptureMetadataOutputObjectsDelegate>
@@ -119,7 +122,7 @@
         if(err)
         {
             [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
-            NSLog(@"Error: %@\nWith: %@", err, barcode.stringValue);
+            DDLogError(@"Error: %@\nWith: %@", err, barcode.stringValue);
             self.statusLabel.text = NSLocalizedString(@"Error parsing JSON", nil);
             self.statusLabel.hidden = NO;
             self.statusLabel.highlighted = YES;
@@ -133,12 +136,12 @@
 
 - (void)scannedNewID:(NSString *)objID withDescription:(NSString *)desc
 {
-    NSLog(@"Scanned: %@ - %@",objID, desc);
+    DDLogVerbose(@"Scanned: %@ - %@",objID, desc);
     // First, check if we're scanning a freezer
     PFQuery *query = [PFQuery queryWithClassName:@"Freezer"];
-    NSLog(@"Get freezer attempt");
+    DDLogVerbose(@"Get freezer attempt");
     [query getObjectInBackgroundWithId:objID block:^(PFObject *freezer, NSError *error) {
-        NSLog(@"Get freezer returned: %@, %@", freezer, error);
+        DDLogVerbose(@"Get freezer returned: %@, %@", freezer, error);
         if(freezer)
         {
             [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepYes];
@@ -156,15 +159,15 @@
             if(self.freezer) // Might be scanning meat into the freezer
             {
                 PFQuery *meatQuery = [PFQuery queryWithClassName:@"Meat"];
-                NSLog(@"Get meat attempt");
+                DDLogVerbose(@"Get meat attempt");
                 [meatQuery getObjectInBackgroundWithId:objID block:^(PFObject *meat, NSError *meatError) {
-                    NSLog(@"Get meat returned: %@, %@", meat, meatError);
+                    DDLogVerbose(@"Get meat returned: %@, %@", meat, meatError);
                     if(meat)
                     {
                         meat[@"freezer"] = self.freezer;
-                        NSLog(@"Going to save");
+                        DDLogVerbose(@"Going to save");
                         [meat saveEventually:^(BOOL succeeded, NSError *saveError) {
-                            NSLog(@"Save returned: %d, %@", succeeded, saveError);
+                            DDLogVerbose(@"Save returned: %d, %@", succeeded, saveError);
                             if(succeeded)
                             {
                                 [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepYes];
@@ -178,7 +181,7 @@
                                 [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
                                 if(saveError.code == kPFErrorObjectNotFound)
                                 {
-                                    NSLog(@"Uh oh, could not find meat: %@", objID);
+                                    DDLogWarn(@"Uh oh, could not find meat: %@", objID);
                                     dispatch_async(dispatch_get_main_queue(), ^{
                                         self.statusLabel.text = NSLocalizedString(@"Meat ID Not Found", nil);
                                         self.statusLabel.hidden = NO;
@@ -186,7 +189,7 @@
                                     });
                                 }
                                 else if (saveError.code == kPFErrorConnectionFailed) {
-                                    NSLog(@"Uh oh, we couldn't even connect to the Parse Cloud!");
+                                    DDLogWarn(@"Uh oh, we couldn't even connect to the Parse Cloud!");
                                     dispatch_async(dispatch_get_main_queue(), ^{
                                         self.statusLabel.text = NSLocalizedString(@"Network down", nil);
                                         self.statusLabel.hidden = NO;
@@ -195,7 +198,7 @@
                                 }
                                 else
                                 {
-                                    NSLog(@"Save Error: %@ for %@ = %@", [saveError userInfo][@"error"], objID, desc);
+                                    DDLogError(@"Save Error: %@ for %@ = %@", [saveError userInfo][@"error"], objID, desc);
                                     dispatch_async(dispatch_get_main_queue(), ^{
                                         self.statusLabel.text = [saveError userInfo][@"error"];
                                         self.statusLabel.hidden = NO;
@@ -211,7 +214,7 @@
                         [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
                         if(meatError.code == kPFErrorObjectNotFound)
                         {
-                            NSLog(@"Uh oh, could not find meat: %@", objID);
+                            DDLogWarn(@"Uh oh, could not find meat: %@", objID);
                             dispatch_async(dispatch_get_main_queue(), ^{
                                 self.statusLabel.text = NSLocalizedString(@"Meat ID Not Found", nil);
                                 self.statusLabel.hidden = NO;
@@ -219,7 +222,7 @@
                             });
                         }
                         else if ([meatError code] == kPFErrorConnectionFailed) {
-                            NSLog(@"Uh oh, we couldn't even connect to the Parse Cloud!");
+                            DDLogWarn(@"Uh oh, we couldn't even connect to the Parse Cloud!");
                             dispatch_async(dispatch_get_main_queue(), ^{
                                 self.statusLabel.text = NSLocalizedString(@"Network down", nil);
                                 self.statusLabel.hidden = NO;
@@ -228,7 +231,7 @@
                         }
                         else
                         {
-                            NSLog(@"Meat Error: %@ for %@ = %@", [meatError userInfo][@"error"], objID, desc);
+                            DDLogError(@"Meat Error: %@ for %@ = %@", [meatError userInfo][@"error"], objID, desc);
                             dispatch_async(dispatch_get_main_queue(), ^{
                                 self.statusLabel.text = [meatError userInfo][@"error"];
                                 self.statusLabel.hidden = NO;
@@ -244,7 +247,7 @@
                 [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
                 if(error.code == kPFErrorObjectNotFound)
                 {
-                    NSLog(@"Uh oh, could not find freezer: %@", objID);
+                    DDLogWarn(@"Uh oh, could not find freezer: %@", objID);
                     dispatch_async(dispatch_get_main_queue(), ^{
                         self.statusLabel.text = NSLocalizedString(@"Freezer ID Not Found", nil);
                         self.statusLabel.hidden = NO;
@@ -252,7 +255,7 @@
                     });
                 }
                 else if ([error code] == kPFErrorConnectionFailed) {
-                    NSLog(@"Uh oh, we couldn't even connect to the Parse Cloud!");
+                    DDLogWarn(@"Uh oh, we couldn't even connect to the Parse Cloud!");
                     dispatch_async(dispatch_get_main_queue(), ^{
                         self.statusLabel.text = NSLocalizedString(@"Network down", nil);
                         self.statusLabel.hidden = NO;
@@ -261,7 +264,7 @@
                 }
                 else
                 {
-                    NSLog(@"Freezer Error: %@ for %@ = %@", [error userInfo][@"error"], objID, desc);
+                    DDLogError(@"Freezer Error: %@ for %@ = %@", [error userInfo][@"error"], objID, desc);
                     dispatch_async(dispatch_get_main_queue(), ^{
                         self.statusLabel.text = [error userInfo][@"error"];
                         self.statusLabel.hidden = NO;

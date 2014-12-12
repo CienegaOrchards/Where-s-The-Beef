@@ -10,6 +10,9 @@
 
 #import "WTBSoundLoaderPlayer.h"
 
+#import "DDLog.h"
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+
 @interface WTBSoundLoaderPlayer ()
 
 @property (nonatomic, strong) AVAudioPlayer *player;
@@ -50,7 +53,7 @@ NSString *WTBSoundIDScanBeepNo = @"Beep No";
     }
     else
     {
-        NSLog(@"Could not locate sound: %@", theSound);
+        DDLogError(@"Could not locate sound: %@", theSound);
     }
 }
 

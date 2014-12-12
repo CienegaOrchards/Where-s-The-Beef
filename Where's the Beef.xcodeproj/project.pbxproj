@@ -22,6 +22,8 @@
 		444D80EF1A362CE90044201B /* WTBMoveCheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 444D80EE1A362CE90044201B /* WTBMoveCheckinViewController.m */; };
 		446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */; };
 		4476EA851A2FBA69000C1375 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4476EA841A2FBA69000C1375 /* FacebookSDK.framework */; };
+		447AFE681A3B7A3C00B0F028 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE661A3B7A3C00B0F028 /* DDLog.m */; };
+		447AFE731A3B7AC100B0F028 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE701A3B7AC100B0F028 /* DDTTYLogger.m */; };
 		44B88FAC1A31082A00D10248 /* WTBMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B88FAB1A31082A00D10248 /* WTBMoreViewController.m */; };
 		44D6B28A1A2666E000CAC42A /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44D6B2891A2666E000CAC42A /* FontAwesome.otf */; };
 		44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6B28D1A26970500CAC42A /* WTBEatTakeViewController.m */; };
@@ -74,6 +76,12 @@
 		446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBConfirmMeatViewController.m; sourceTree = "<group>"; };
 		4476EA831A2F9E2F000C1375 /* Where's the Beef.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Where's the Beef.entitlements"; sourceTree = "<group>"; };
 		4476EA841A2FBA69000C1375 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		447AFE651A3B7A3C00B0F028 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDLog.h; path = Classes/DDLog.h; sourceTree = "<group>"; };
+		447AFE661A3B7A3C00B0F028 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDLog.m; path = Classes/DDLog.m; sourceTree = "<group>"; };
+		447AFE671A3B7A3C00B0F028 /* DDLogMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDLogMacros.h; path = Classes/DDLogMacros.h; sourceTree = "<group>"; };
+		447AFE6E1A3B7AC100B0F028 /* DDAssertMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAssertMacros.h; path = Classes/DDAssertMacros.h; sourceTree = "<group>"; };
+		447AFE6F1A3B7AC100B0F028 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Classes/DDTTYLogger.h; sourceTree = "<group>"; };
+		447AFE701A3B7AC100B0F028 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Classes/DDTTYLogger.m; sourceTree = "<group>"; };
 		44B88FAA1A31082A00D10248 /* WTBMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBMoreViewController.h; sourceTree = "<group>"; };
 		44B88FAB1A31082A00D10248 /* WTBMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBMoreViewController.m; sourceTree = "<group>"; };
 		44D6B2891A2666E000CAC42A /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
@@ -198,6 +206,20 @@
 			name = "Confirm Meat Dialog";
 			sourceTree = "<group>";
 		};
+		447AFE641A3B79C100B0F028 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				447AFE651A3B7A3C00B0F028 /* DDLog.h */,
+				447AFE661A3B7A3C00B0F028 /* DDLog.m */,
+				447AFE671A3B7A3C00B0F028 /* DDLogMacros.h */,
+				447AFE6E1A3B7AC100B0F028 /* DDAssertMacros.h */,
+				447AFE6F1A3B7AC100B0F028 /* DDTTYLogger.h */,
+				447AFE701A3B7AC100B0F028 /* DDTTYLogger.m */,
+			);
+			name = Logging;
+			path = ../CocoaLumberjack;
+			sourceTree = SOURCE_ROOT;
+		};
 		44B88FA91A31081000D10248 /* More... UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +261,7 @@
 		44EDD6161A1673F400DCB65B /* Where's the Beef */ = {
 			isa = PBXGroup;
 			children = (
+				447AFE641A3B79C100B0F028 /* Logging */,
 				44160E791A2D246800A42BD6 /* Resources */,
 				4415BB791A2E5594007FF7CD /* App */,
 				44B88FA91A31081000D10248 /* More... UI */,
@@ -436,6 +459,8 @@
 				44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */,
 				4415BB7C1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.m in Sources */,
 				446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */,
+				447AFE681A3B7A3C00B0F028 /* DDLog.m in Sources */,
+				447AFE731A3B7AC100B0F028 /* DDTTYLogger.m in Sources */,
 				44B88FAC1A31082A00D10248 /* WTBMoreViewController.m in Sources */,
 				44EDD61A1A1673F400DCB65B /* main.m in Sources */,
 			);

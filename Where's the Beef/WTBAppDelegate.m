@@ -12,6 +12,12 @@
 @import Twitter;
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 
+#import "DDLog.h"
+#import "DDTTYLogger.h"
+
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+
+
 @interface WTBAppDelegate ()
 
 @end
@@ -27,12 +33,12 @@
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
-    NSLog(@"Failed to register: %@", error);
+    DDLogWarn(@"Failed to register: %@", error);
 }
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
-    NSLog(@"Did register");
+    DDLogInfo(@"Did register");
     // Store the deviceToken in the current installation and save it to Parse.
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     [currentInstallation setDeviceTokenFromData:deviceToken];
@@ -40,14 +46,14 @@
     [currentInstallation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
             if(!succeeded)
             {
-                NSLog(@"Register save failed: %@", error);
+                DDLogWarn(@"Register save failed: %@", error);
             }
     }];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
-    NSLog(@"Received remote notification: %@", userInfo);
+    DDLogInfo(@"Received remote notification: %@", userInfo);
     if(application.applicationState == UIApplicationStateInactive)
     {
         // The application was just brought from the background to the foreground,
@@ -86,6 +92,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+
     // Init Parse
     [Parse setApplicationId:@"SR6puc3yY8fVouL0v8W7Zj7s3e3FugJY3Pljd0aG"
                    clientKey:@"zvXGkyWwlAPkvgClTG0QeuIGlV3Pr5PQclm1ETtZ"];
@@ -104,7 +113,7 @@
     [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
             if(error)
             {
-                NSLog(@"Failed to fetch. Using cached config.");
+                DDLogWarn(@"Failed to fetch. Using cached config.");
                 if(self.config[@"twitterConsumerKey"] == nil && config[@"twitterConsumerKey"] != nil) // Old config had no twitter info, so init twitter now
                 {
                     [PFTwitterUtils initializeWithConsumerKey:config[@"twitterConsumerKey"]

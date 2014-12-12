@@ -9,6 +9,9 @@
 #import "WTBMoreViewController.h"
 #import "WTBInitialViewController.h"
 
+#import "DDLog.h"
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+
 @import Parse;
 @import ParseUI;
 
@@ -40,7 +43,7 @@
 
 - (IBAction)logoutClicked
 {
-    NSLog(@"Logout clicked");
+    DDLogInfo(@"Logout clicked");
     [PFUser logOut];
 
     [((WTBInitialViewController *)self.tabBarController) checkLoggedIn];
