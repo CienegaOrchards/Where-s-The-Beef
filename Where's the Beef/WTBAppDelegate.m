@@ -23,7 +23,6 @@
 - (void)application:(UIApplication *)application
         didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
 {
-    NSLog(@"User notification register did");
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
@@ -39,11 +38,7 @@
     [currentInstallation setDeviceTokenFromData:deviceToken];
     currentInstallation.channels = @[ @"global" ];
     [currentInstallation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if(succeeded)
-            {
-                NSLog(@"Register save succeeded");
-            }
-            else
+            if(!succeeded)
             {
                 NSLog(@"Register save failed: %@", error);
             }
@@ -78,7 +73,6 @@
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
     if(currentInstallation.badge != 0)
     {
-        NSLog(@"There were %ld badges", (long)currentInstallation.badge);
         currentInstallation.badge = 0;
         [currentInstallation saveEventually];
     }
@@ -108,13 +102,9 @@
 
     // Read new config if possible
     [PFConfig getConfigInBackgroundWithBlock:^(PFConfig *config, NSError *error) {
-            if(!error)
+            if(error)
             {
-                NSLog(@"Yay! Config was fetched from the server.");
-            }
-            else
-            {
-                NSLog(@"Failed to fetch. Using Cached Config.");
+                NSLog(@"Failed to fetch. Using cached config.");
                 if(self.config[@"twitterConsumerKey"] == nil && config[@"twitterConsumerKey"] != nil) // Old config had no twitter info, so init twitter now
                 {
                     [PFTwitterUtils initializeWithConsumerKey:config[@"twitterConsumerKey"]

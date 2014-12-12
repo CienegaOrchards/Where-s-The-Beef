@@ -171,7 +171,7 @@
             }
             else
             {
-                NSLog(@"Error: %@", [error userInfo][@"error"]);
+                NSLog(@"Eat/Take Error: %@ for %@ = %@", [error userInfo][@"error"], objID, desc);
                 dispatch_async(dispatch_get_main_queue(), ^{
                     self.statusLabel.text = [error userInfo][@"error"];
                     self.statusLabel.hidden = NO;
