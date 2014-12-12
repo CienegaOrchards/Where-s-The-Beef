@@ -125,7 +125,7 @@
         <!--Move-->
         <scene sceneID="Abp-gA-Oce">
             <objects>
-                <viewController title="Move Meat" id="nfb-Pn-7Nj" userLabel="Move" sceneMemberID="viewController">
+                <viewController title="Move Meat" id="nfb-Pn-7Nj" userLabel="Move" customClass="WTBMoveCheckinViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="22Q-qQ-avK"/>
                         <viewControllerLayoutGuide type="bottom" id="x9u-EH-OSN"/>
@@ -152,18 +152,35 @@
                             </label>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdf-LL-5Qh" userLabel="Camera">
                                 <rect key="frame" x="16" y="108.5" width="568" height="434.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="drh-un-BmM" userLabel="Highlight">
+                                        <color key="backgroundColor" red="0.99215686270000003" green="0.12941176469999999" blue="0.14117647059999999" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Deposit Freezer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhM-VY-0VK" userLabel="Status">
+                                        <rect key="frame" x="20" y="20" width="221.5" height="28.5"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                        <color key="highlightedColor" red="0.99215686270000003" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unknown Freezer" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7E0-53-9FJ" userLabel="Freezer">
+                                        <rect key="frame" x="367" y="386" width="181" height="28.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                        <color key="highlightedColor" red="0.99215686270000003" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7E0-53-9FJ" secondAttribute="trailing" constant="20" symbolic="YES" id="0hq-3i-ixi"/>
+                                    <constraint firstItem="jhM-VY-0VK" firstAttribute="top" secondItem="mdf-LL-5Qh" secondAttribute="top" constant="20" symbolic="YES" id="7xK-3k-Mc1"/>
+                                    <constraint firstItem="jhM-VY-0VK" firstAttribute="leading" secondItem="mdf-LL-5Qh" secondAttribute="leading" constant="20" symbolic="YES" id="S9z-Fn-MLk"/>
+                                    <constraint firstAttribute="bottom" secondItem="7E0-53-9FJ" secondAttribute="bottom" constant="20" symbolic="YES" id="ZT2-QL-4J3"/>
+                                    <constraint firstItem="7E0-53-9FJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mdf-LL-5Qh" secondAttribute="leading" constant="20" symbolic="YES" id="v6d-hb-d2I"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan Deposit Freezer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhM-VY-0VK" userLabel="Freezer">
-                                <rect key="frame" x="24" y="116.5" width="221.5" height="28.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
-                                <color key="highlightedColor" red="0.99215686270000003" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="x9u-EH-OSN" firstAttribute="top" secondItem="mdf-LL-5Qh" secondAttribute="bottom" constant="8" symbolic="YES" id="4ed-H8-rUr"/>
-                            <constraint firstItem="jhM-VY-0VK" firstAttribute="leading" secondItem="mdf-LL-5Qh" secondAttribute="leading" constant="8" id="5kz-EK-Osr"/>
                             <constraint firstItem="mdf-LL-5Qh" firstAttribute="trailing" secondItem="fE4-S1-gZB" secondAttribute="trailingMargin" id="Eew-pD-vsr"/>
                             <constraint firstItem="5FJ-YR-uQE" firstAttribute="bottom" secondItem="fE4-S1-gZB" secondAttribute="bottomMargin" id="MQM-1g-AP3"/>
                             <constraint firstItem="5FJ-YR-uQE" firstAttribute="leading" secondItem="fE4-S1-gZB" secondAttribute="leading" id="Mwz-mG-6DD"/>
@@ -176,7 +193,6 @@
                             <constraint firstAttribute="centerX" secondItem="OUe-WW-bi2" secondAttribute="centerX" id="s7x-4A-u9b"/>
                             <constraint firstAttribute="centerY" secondItem="OUe-WW-bi2" secondAttribute="centerY" id="tr9-I3-SFc"/>
                             <constraint firstItem="OUe-WW-bi2" firstAttribute="top" secondItem="22Q-qQ-avK" secondAttribute="bottom" constant="8" symbolic="YES" id="waz-Ir-qvq"/>
-                            <constraint firstItem="jhM-VY-0VK" firstAttribute="top" secondItem="mdf-LL-5Qh" secondAttribute="top" constant="8" id="z45-y2-Qrx"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -185,6 +201,12 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Move" image="Cycle" id="YIm-rt-zJU"/>
+                    <connections>
+                        <outlet property="cameraView" destination="mdf-LL-5Qh" id="Vh7-Ea-qiq"/>
+                        <outlet property="freezerLabel" destination="7E0-53-9FJ" id="7qd-iK-ehX"/>
+                        <outlet property="highlightView" destination="drh-un-BmM" id="H3n-ig-8RB"/>
+                        <outlet property="statusLabel" destination="jhM-VY-0VK" id="kVr-VO-gMq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="id3-O0-qsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
