@@ -24,6 +24,7 @@
 		4476EA851A2FBA69000C1375 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4476EA841A2FBA69000C1375 /* FacebookSDK.framework */; };
 		447AFE681A3B7A3C00B0F028 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE661A3B7A3C00B0F028 /* DDLog.m */; };
 		447AFE731A3B7AC100B0F028 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE701A3B7AC100B0F028 /* DDTTYLogger.m */; };
+		447AFE771A3B83D600B0F028 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE761A3B83D600B0F028 /* DDDispatchQueueLogFormatter.m */; };
 		44B88FAC1A31082A00D10248 /* WTBMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B88FAB1A31082A00D10248 /* WTBMoreViewController.m */; };
 		44D6B28A1A2666E000CAC42A /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44D6B2891A2666E000CAC42A /* FontAwesome.otf */; };
 		44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6B28D1A26970500CAC42A /* WTBEatTakeViewController.m */; };
@@ -82,6 +83,8 @@
 		447AFE6E1A3B7AC100B0F028 /* DDAssertMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDAssertMacros.h; path = Classes/DDAssertMacros.h; sourceTree = "<group>"; };
 		447AFE6F1A3B7AC100B0F028 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDTTYLogger.h; path = Classes/DDTTYLogger.h; sourceTree = "<group>"; };
 		447AFE701A3B7AC100B0F028 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDTTYLogger.m; path = Classes/DDTTYLogger.m; sourceTree = "<group>"; };
+		447AFE751A3B83D600B0F028 /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DDDispatchQueueLogFormatter.h; path = Classes/Extensions/DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
+		447AFE761A3B83D600B0F028 /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DDDispatchQueueLogFormatter.m; path = Classes/Extensions/DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
 		44B88FAA1A31082A00D10248 /* WTBMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBMoreViewController.h; sourceTree = "<group>"; };
 		44B88FAB1A31082A00D10248 /* WTBMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBMoreViewController.m; sourceTree = "<group>"; };
 		44D6B2891A2666E000CAC42A /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
@@ -215,6 +218,8 @@
 				447AFE6E1A3B7AC100B0F028 /* DDAssertMacros.h */,
 				447AFE6F1A3B7AC100B0F028 /* DDTTYLogger.h */,
 				447AFE701A3B7AC100B0F028 /* DDTTYLogger.m */,
+				447AFE751A3B83D600B0F028 /* DDDispatchQueueLogFormatter.h */,
+				447AFE761A3B83D600B0F028 /* DDDispatchQueueLogFormatter.m */,
 			);
 			name = Logging;
 			path = ../CocoaLumberjack;
@@ -455,6 +460,7 @@
 			files = (
 				44EDD61D1A1673F400DCB65B /* WTBAppDelegate.m in Sources */,
 				444D80EF1A362CE90044201B /* WTBMoveCheckinViewController.m in Sources */,
+				447AFE771A3B83D600B0F028 /* DDDispatchQueueLogFormatter.m in Sources */,
 				44D7B4A41A2EA8BD00D98E92 /* WTBInitialViewController.m in Sources */,
 				44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */,
 				4415BB7C1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.m in Sources */,

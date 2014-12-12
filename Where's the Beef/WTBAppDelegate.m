@@ -14,6 +14,7 @@
 
 #import "DDLog.h"
 #import "DDTTYLogger.h"
+#import "DDDispatchQueueLogFormatter.h"
 
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
@@ -93,7 +94,8 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    [[DDTTYLogger sharedInstance] setColorsEnabled:YES];
+    [DDTTYLogger sharedInstance].colorsEnabled = YES;
+    [DDTTYLogger sharedInstance].logFormatter = [[DDDispatchQueueLogFormatter alloc] init];
 
     // Init Parse
     [Parse setApplicationId:@"SR6puc3yY8fVouL0v8W7Zj7s3e3FugJY3Pljd0aG"
