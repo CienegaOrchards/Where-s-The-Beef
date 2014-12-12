@@ -15,6 +15,8 @@
 #import "DDLog.h"
 #import "DDTTYLogger.h"
 #import "DDDispatchQueueLogFormatter.h"
+#import "LogEntriesLogger.h"
+#import "HelpfulInfoLogFormatter.h"
 
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
@@ -91,18 +93,38 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark - App startup
 
+- (void)initLELogging
+{
+    DDLogInfo(@"Starting logging to LogEntries with token: %@", self.config[@"logEntriesToken"]);
+
+    LogEntriesLogger *logEntriesLogger = [[LogEntriesLogger alloc] initWithLogEntriesToken:self.config[@"logEntriesToken"]];
+    logEntriesLogger.logFormatter = [[HelpfulInfoLogFormatter alloc] init];
+    [DDLog addLogger:logEntriesLogger];
+}
+
+- (void)initLogging
+{
+    [DDTTYLogger sharedInstance].colorsEnabled = YES;
+    [DDTTYLogger sharedInstance].logFormatter = [[HelpfulInfoLogFormatter alloc] init];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+
+    // Initialize LogEntries if we have a token
+    if(self.config[@"logEntriesToken"])
+    {
+        [self initLELogging];
+    }
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    [DDTTYLogger sharedInstance].colorsEnabled = YES;
-    [DDTTYLogger sharedInstance].logFormatter = [[DDDispatchQueueLogFormatter alloc] init];
-
     // Init Parse
     [Parse setApplicationId:@"SR6puc3yY8fVouL0v8W7Zj7s3e3FugJY3Pljd0aG"
                    clientKey:@"zvXGkyWwlAPkvgClTG0QeuIGlV3Pr5PQclm1ETtZ"];
 
     // Use cached config until we read new config
     self.config = [PFConfig currentConfig];
+
+    [self initLogging];
 
     // Twitter init, if we can
     if(self.config[@"twitterConsumerKey"])
@@ -116,12 +138,21 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
             if(error)
             {
                 DDLogWarn(@"Failed to fetch. Using cached config.");
-                if(self.config[@"twitterConsumerKey"] == nil && config[@"twitterConsumerKey"] != nil) // Old config had no twitter info, so init twitter now
+            }
+            else
+            {
+                PFConfig *oldConfig = self.config;
+                self.config = config;
+
+                if(oldConfig[@"twitterConsumerKey"] == nil && config[@"twitterConsumerKey"] != nil) // Old config had no twitter info, so init twitter now
                 {
                     [PFTwitterUtils initializeWithConsumerKey:config[@"twitterConsumerKey"]
                                                consumerSecret:config[@"twitterConsumerSecret"]];
                 }
-                self.config = config;
+                if(oldConfig[@"logEntriesToken"] == nil && config[@"logEntriesToken"] != nil) // Old config had no LogEntries info, so init LogEntries now
+                {
+                    [self initLELogging];
+                }
             }
     }];
 
