@@ -1,0 +1,15 @@
+//
+//  PrefixHeader.pch
+//  Where's the Beef
+//
+//  Created by Craig Hughes on 12/15/14.
+//  Copyright (c) 2014 Craig Hughes. All rights reserved.
+//
+
+#ifndef Where_s_the_Beef_PrefixHeader_pch
+#define Where_s_the_Beef_PrefixHeader_pch
+
+// Disable verbose noisy debugging of lelib internals
+#define LE_DEBUG_LOGS 0
+
+#endif

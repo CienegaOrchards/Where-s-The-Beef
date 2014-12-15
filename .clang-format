@@ -1,0 +1,14 @@
+BasedOnStyle: WebKit
+Language: Cpp
+AllowShortBlocksOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: All
+BinPackParameters: false
+BreakBeforeBraces: Allman
+ContinuationIndentWidth: 8
+IndentCaseLabels: true
+KeepEmptyLinesAtTheStartOfBlocks: false
+MaxEmptyLinesToKeep: 2
+PointerAlignment: Right
+SpaceBeforeParens: Never
+SpaceInEmptyParentheses: false
