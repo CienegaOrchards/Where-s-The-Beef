@@ -89,7 +89,9 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark - QR code capture
 
-- (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection
+- (void)captureOutput:(AVCaptureOutput * __attribute__((unused)))captureOutput
+didOutputMetadataObjects:(NSArray *)metadataObjects
+       fromConnection:(AVCaptureConnection * __attribute__((unused)))connection
 {
     if(metadataObjects.count == 0)
     {

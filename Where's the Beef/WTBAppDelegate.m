@@ -32,17 +32,19 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark - Remote Notifications
 
-- (void)application:(UIApplication *)application
-        didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings
+- (void)application:(UIApplication * __attribute__((unused)))application
+        didRegisterUserNotificationSettings:(UIUserNotificationSettings * __attribute__((unused)))notificationSettings
 {
 }
 
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+- (void)application:(UIApplication * __attribute__((unused)))application
+didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
     DDLogWarn(@"Failed to register: %@", error);
 }
 
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+- (void)application:(UIApplication * __attribute__((unused)))application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 {
     DDLogInfo(@"Did register");
     // Store the deviceToken in the current installation and save it to Parse.
@@ -57,7 +59,8 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     }];
 }
 
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     DDLogInfo(@"Received remote notification: %@", userInfo);
     if(application.applicationState == UIApplicationStateInactive)
@@ -71,15 +74,15 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark - Facebook callbacks
 
-- (BOOL)application:(UIApplication *)application
+- (BOOL)application:(UIApplication * __attribute__((unused)))application
                   openURL:(NSURL *)url
         sourceApplication:(NSString *)sourceApplication
-               annotation:(id)annotation
+               annotation:(id __attribute__((unused)))annotation
 {
     return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication withSession:[PFFacebookUtils session]];
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
+- (void)applicationDidBecomeActive:(UIApplication * __attribute__((unused)))application
 {
     // Clear the badges
     PFInstallation *currentInstallation = [PFInstallation currentInstallation];
@@ -122,7 +125,8 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     }
 }
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (BOOL)application:(UIApplication *)application
+didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Init TestFlight
     [TestFlight takeOff:@"4d1fdb6e-0afc-41ca-bc53-bc08e1eeb168"];
@@ -222,9 +226,9 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark - Handle screen rotation
 
-- (void)application:(UIApplication *)application
+- (void)application:(UIApplication * __attribute__((unused)))application
         willChangeStatusBarOrientation:(UIInterfaceOrientation)newStatusBarOrientation
-                              duration:(NSTimeInterval)duration
+                              duration:(NSTimeInterval __attribute__((unused)))duration
 {
     if(self.previewLayer.connection.isVideoOrientationSupported)
     {

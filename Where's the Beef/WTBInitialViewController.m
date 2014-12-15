@@ -135,7 +135,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark - Login delegates
 
-- (void)logInViewController:(PFLogInViewController *)controller
+- (void)logInViewController:(PFLogInViewController * __attribute__((unused)))controller
                didLogInUser:(PFUser *)user
 {
     DDLogInfo(@"Logged in user: %@", user);
@@ -143,13 +143,13 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 }
 
 // Sent to the delegate when the log in attempt fails.
-- (void)logInViewController:(PFLogInViewController *)logInController
+- (void)logInViewController:(PFLogInViewController * __attribute__((unused)))logInController
     didFailToLogInWithError:(NSError *)error
 {
     DDLogWarn(@"Failed to log in: %@", error);
 }
 
-- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController
+- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController * __attribute__((unused)))logInController
 {
     DDLogError(@"Cancelled somehow??!?");
 }
@@ -157,7 +157,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 #pragma mark - Signup delegates
 
 // Sent to the delegate to determine whether the sign up request should be submitted to the server.
-- (BOOL)signUpViewController:(PFSignUpViewController *)signUpController
+- (BOOL)signUpViewController:(PFSignUpViewController * __attribute__((unused)))signUpController
            shouldBeginSignUp:(NSDictionary *)info
 {
     BOOL informationComplete = YES;
@@ -184,21 +184,21 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 }
 
 // Sent to the delegate when a PFUser is signed up.
-- (void)signUpViewController:(PFSignUpViewController *)signUpController
-               didSignUpUser:(PFUser *)user
+- (void)signUpViewController:(PFSignUpViewController * __attribute__((unused)))signUpController
+               didSignUpUser:(PFUser * __attribute__((unused)))user
 {
     [self dismissViewControllerAnimated:YES completion:nil]; // Dismiss the PFSignUpViewController
 }
 
 // Sent to the delegate when the sign up attempt fails.
-- (void)signUpViewController:(PFSignUpViewController *)signUpController
+- (void)signUpViewController:(PFSignUpViewController * __attribute__((unused)))signUpController
     didFailToSignUpWithError:(NSError *)error
 {
     DDLogWarn(@"Failed to sign up: %@", error);
 }
 
 // Sent to the delegate when the sign up screen is dismissed.
-- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController
+- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController * __attribute__((unused)))signUpController
 {
     DDLogInfo(@"User dismissed the signUpViewController");
 }
