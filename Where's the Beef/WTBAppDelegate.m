@@ -104,11 +104,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 - (void)initLogging
 {
+    // Log in color to XCode console
     [DDTTYLogger sharedInstance].colorsEnabled = YES;
     [DDTTYLogger sharedInstance].logFormatter = [[HelpfulInfoLogFormatter alloc] init];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
 
-    // Initialize LogEntries if we have a token
+    // Initialize LogEntries if we have a token; if not it will be initialized later
     if(self.config[@"logEntriesToken"])
     {
         [self initLELogging];

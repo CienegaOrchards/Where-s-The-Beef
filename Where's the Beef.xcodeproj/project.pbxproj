@@ -20,17 +20,17 @@
 		44160E801A2D605A00A42BD6 /* Beep No.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44160E7E1A2D605A00A42BD6 /* Beep No.mp3 */; };
 		44160E811A2D605A00A42BD6 /* Beep Yes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44160E7F1A2D605A00A42BD6 /* Beep Yes.mp3 */; };
 		444D80EF1A362CE90044201B /* WTBMoveCheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 444D80EE1A362CE90044201B /* WTBMoveCheckinViewController.m */; };
+		4457A1B71A3F8E94007F7887 /* LEBackgroundThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1AB1A3F8E94007F7887 /* LEBackgroundThread.m */; };
+		4457A1B81A3F8E94007F7887 /* lecore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1AD1A3F8E94007F7887 /* lecore.m */; };
+		4457A1B91A3F8E94007F7887 /* LELog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1B01A3F8E94007F7887 /* LELog.m */; };
+		4457A1BA1A3F8E94007F7887 /* LeNetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1B21A3F8E94007F7887 /* LeNetworkStatus.m */; };
+		4457A1BB1A3F8E94007F7887 /* LogFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1B41A3F8E94007F7887 /* LogFile.m */; };
+		4457A1BC1A3F8E94007F7887 /* LogFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1B61A3F8E94007F7887 /* LogFiles.m */; };
 		446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */; };
 		4476EA851A2FBA69000C1375 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4476EA841A2FBA69000C1375 /* FacebookSDK.framework */; };
 		447AFE681A3B7A3C00B0F028 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE661A3B7A3C00B0F028 /* DDLog.m */; };
 		447AFE731A3B7AC100B0F028 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE701A3B7AC100B0F028 /* DDTTYLogger.m */; };
 		447AFE771A3B83D600B0F028 /* DDDispatchQueueLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE761A3B83D600B0F028 /* DDDispatchQueueLogFormatter.m */; };
-		447AFE8A1A3B86CD00B0F028 /* LEBackgroundThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE7E1A3B86CD00B0F028 /* LEBackgroundThread.m */; };
-		447AFE8B1A3B86CD00B0F028 /* lecore.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE801A3B86CD00B0F028 /* lecore.m */; };
-		447AFE8C1A3B86CD00B0F028 /* LELog.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE831A3B86CD00B0F028 /* LELog.m */; };
-		447AFE8D1A3B86CD00B0F028 /* LeNetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE851A3B86CD00B0F028 /* LeNetworkStatus.m */; };
-		447AFE8E1A3B86CD00B0F028 /* LogFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE871A3B86CD00B0F028 /* LogFile.m */; };
-		447AFE8F1A3B86CD00B0F028 /* LogFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE891A3B86CD00B0F028 /* LogFiles.m */; };
 		447AFE931A3B89FE00B0F028 /* LogEntriesLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE921A3B89FE00B0F028 /* LogEntriesLogger.m */; };
 		447AFE991A3B9E6E00B0F028 /* HelpfulInfoLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE981A3B9E6E00B0F028 /* HelpfulInfoLogFormatter.m */; };
 		44B88FAC1A31082A00D10248 /* WTBMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B88FAB1A31082A00D10248 /* WTBMoreViewController.m */; };
@@ -81,6 +81,20 @@
 		44160E7F1A2D605A00A42BD6 /* Beep Yes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beep Yes.mp3"; sourceTree = "<group>"; };
 		444D80ED1A362CE90044201B /* WTBMoveCheckinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBMoveCheckinViewController.h; sourceTree = "<group>"; };
 		444D80EE1A362CE90044201B /* WTBMoveCheckinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBMoveCheckinViewController.m; sourceTree = "<group>"; };
+		4457A1A81A3F8D74007F7887 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		4457A1AA1A3F8E94007F7887 /* LEBackgroundThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEBackgroundThread.h; path = lelib/LEBackgroundThread.h; sourceTree = "<group>"; };
+		4457A1AB1A3F8E94007F7887 /* LEBackgroundThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEBackgroundThread.m; path = lelib/LEBackgroundThread.m; sourceTree = "<group>"; };
+		4457A1AC1A3F8E94007F7887 /* lecore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lecore.h; path = lelib/lecore.h; sourceTree = "<group>"; };
+		4457A1AD1A3F8E94007F7887 /* lecore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = lecore.m; path = lelib/lecore.m; sourceTree = "<group>"; };
+		4457A1AE1A3F8E94007F7887 /* lelib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = lelib.h; path = lelib/lelib.h; sourceTree = "<group>"; };
+		4457A1AF1A3F8E94007F7887 /* LELog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LELog.h; path = lelib/LELog.h; sourceTree = "<group>"; };
+		4457A1B01A3F8E94007F7887 /* LELog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LELog.m; path = lelib/LELog.m; sourceTree = "<group>"; };
+		4457A1B11A3F8E94007F7887 /* LeNetworkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeNetworkStatus.h; path = lelib/LeNetworkStatus.h; sourceTree = "<group>"; };
+		4457A1B21A3F8E94007F7887 /* LeNetworkStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeNetworkStatus.m; path = lelib/LeNetworkStatus.m; sourceTree = "<group>"; };
+		4457A1B31A3F8E94007F7887 /* LogFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogFile.h; path = lelib/LogFile.h; sourceTree = "<group>"; };
+		4457A1B41A3F8E94007F7887 /* LogFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogFile.m; path = lelib/LogFile.m; sourceTree = "<group>"; };
+		4457A1B51A3F8E94007F7887 /* LogFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogFiles.h; path = lelib/LogFiles.h; sourceTree = "<group>"; };
+		4457A1B61A3F8E94007F7887 /* LogFiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogFiles.m; path = lelib/LogFiles.m; sourceTree = "<group>"; };
 		446516C11A269FA500A4B3F5 /* WTBConfirmMeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBConfirmMeatViewController.h; sourceTree = "<group>"; };
 		446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBConfirmMeatViewController.m; sourceTree = "<group>"; };
 		4476EA831A2F9E2F000C1375 /* Where's the Beef.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Where's the Beef.entitlements"; sourceTree = "<group>"; };
@@ -93,19 +107,6 @@
 		447AFE701A3B7AC100B0F028 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
 		447AFE751A3B83D600B0F028 /* DDDispatchQueueLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDDispatchQueueLogFormatter.h; sourceTree = "<group>"; };
 		447AFE761A3B83D600B0F028 /* DDDispatchQueueLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDDispatchQueueLogFormatter.m; sourceTree = "<group>"; };
-		447AFE7D1A3B86CD00B0F028 /* LEBackgroundThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEBackgroundThread.h; sourceTree = "<group>"; };
-		447AFE7E1A3B86CD00B0F028 /* LEBackgroundThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEBackgroundThread.m; sourceTree = "<group>"; };
-		447AFE7F1A3B86CD00B0F028 /* lecore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lecore.h; sourceTree = "<group>"; };
-		447AFE801A3B86CD00B0F028 /* lecore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = lecore.m; sourceTree = "<group>"; };
-		447AFE811A3B86CD00B0F028 /* lelib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lelib.h; sourceTree = "<group>"; };
-		447AFE821A3B86CD00B0F028 /* LELog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LELog.h; sourceTree = "<group>"; };
-		447AFE831A3B86CD00B0F028 /* LELog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LELog.m; sourceTree = "<group>"; };
-		447AFE841A3B86CD00B0F028 /* LeNetworkStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeNetworkStatus.h; sourceTree = "<group>"; };
-		447AFE851A3B86CD00B0F028 /* LeNetworkStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeNetworkStatus.m; sourceTree = "<group>"; };
-		447AFE861A3B86CD00B0F028 /* LogFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogFile.h; sourceTree = "<group>"; };
-		447AFE871A3B86CD00B0F028 /* LogFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogFile.m; sourceTree = "<group>"; };
-		447AFE881A3B86CD00B0F028 /* LogFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogFiles.h; sourceTree = "<group>"; };
-		447AFE891A3B86CD00B0F028 /* LogFiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogFiles.m; sourceTree = "<group>"; };
 		447AFE911A3B89FE00B0F028 /* LogEntriesLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogEntriesLogger.h; sourceTree = "<group>"; };
 		447AFE921A3B89FE00B0F028 /* LogEntriesLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogEntriesLogger.m; sourceTree = "<group>"; };
 		447AFE971A3B9E6E00B0F028 /* HelpfulInfoLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpfulInfoLogFormatter.h; sourceTree = "<group>"; };
@@ -225,6 +226,47 @@
 			name = "Move/Check In UI";
 			sourceTree = "<group>";
 		};
+		4457A1A41A3F8520007F7887 /* LogEntries extensions */ = {
+			isa = PBXGroup;
+			children = (
+				447AFE911A3B89FE00B0F028 /* LogEntriesLogger.h */,
+				447AFE921A3B89FE00B0F028 /* LogEntriesLogger.m */,
+			);
+			name = "LogEntries extensions";
+			path = ../LumberjackLE;
+			sourceTree = SOURCE_ROOT;
+		};
+		4457A1A51A3F8C8B007F7887 /* Helpful Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				447AFE971A3B9E6E00B0F028 /* HelpfulInfoLogFormatter.h */,
+				447AFE981A3B9E6E00B0F028 /* HelpfulInfoLogFormatter.m */,
+			);
+			name = "Helpful Formatter";
+			path = ../LumberjackHelpfulFormatter;
+			sourceTree = SOURCE_ROOT;
+		};
+		4457A1A91A3F8E75007F7887 /* lelib */ = {
+			isa = PBXGroup;
+			children = (
+				4457A1AA1A3F8E94007F7887 /* LEBackgroundThread.h */,
+				4457A1AB1A3F8E94007F7887 /* LEBackgroundThread.m */,
+				4457A1AC1A3F8E94007F7887 /* lecore.h */,
+				4457A1AD1A3F8E94007F7887 /* lecore.m */,
+				4457A1AE1A3F8E94007F7887 /* lelib.h */,
+				4457A1AF1A3F8E94007F7887 /* LELog.h */,
+				4457A1B01A3F8E94007F7887 /* LELog.m */,
+				4457A1B11A3F8E94007F7887 /* LeNetworkStatus.h */,
+				4457A1B21A3F8E94007F7887 /* LeNetworkStatus.m */,
+				4457A1B31A3F8E94007F7887 /* LogFile.h */,
+				4457A1B41A3F8E94007F7887 /* LogFile.m */,
+				4457A1B51A3F8E94007F7887 /* LogFiles.h */,
+				4457A1B61A3F8E94007F7887 /* LogFiles.m */,
+			);
+			name = lelib;
+			path = ../le_ios;
+			sourceTree = SOURCE_ROOT;
+		};
 		446516C01A269F8200A4B3F5 /* Confirm Meat Dialog */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,49 +288,27 @@
 				447AFE701A3B7AC100B0F028 /* DDTTYLogger.m */,
 			);
 			name = "CocoaLumberjack Classes";
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		447AFE791A3B866F00B0F028 /* LogEntries */ = {
-			isa = PBXGroup;
-			children = (
-				447AFE7D1A3B86CD00B0F028 /* LEBackgroundThread.h */,
-				447AFE7E1A3B86CD00B0F028 /* LEBackgroundThread.m */,
-				447AFE7F1A3B86CD00B0F028 /* lecore.h */,
-				447AFE801A3B86CD00B0F028 /* lecore.m */,
-				447AFE811A3B86CD00B0F028 /* lelib.h */,
-				447AFE821A3B86CD00B0F028 /* LELog.h */,
-				447AFE831A3B86CD00B0F028 /* LELog.m */,
-				447AFE841A3B86CD00B0F028 /* LeNetworkStatus.h */,
-				447AFE851A3B86CD00B0F028 /* LeNetworkStatus.m */,
-				447AFE861A3B86CD00B0F028 /* LogFile.h */,
-				447AFE871A3B86CD00B0F028 /* LogFile.m */,
-				447AFE881A3B86CD00B0F028 /* LogFiles.h */,
-				447AFE891A3B86CD00B0F028 /* LogFiles.m */,
-			);
-			name = LogEntries;
-			path = lelib;
-			sourceTree = "<group>";
+			path = ../CocoaLumberjack/Classes;
+			sourceTree = SOURCE_ROOT;
 		};
 		447AFE7A1A3B868200B0F028 /* Logging */ = {
 			isa = PBXGroup;
 			children = (
+				4457A1A91A3F8E75007F7887 /* lelib */,
+				4457A1A51A3F8C8B007F7887 /* Helpful Formatter */,
+				4457A1A41A3F8520007F7887 /* LogEntries extensions */,
+				4457A1BD1A3F990C007F7887 /* TestFlight Logging */,
 				447AFE641A3B79C100B0F028 /* CocoaLumberjack Classes */,
 			);
 			name = Logging;
-			path = ../CocoaLumberjack;
-			sourceTree = SOURCE_ROOT;
+			path = "Where's the Beef";
+			sourceTree = "<group>";
 		};
 		447AFE9A1A3B9EE400B0F028 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				447AFE751A3B83D600B0F028 /* DDDispatchQueueLogFormatter.h */,
 				447AFE761A3B83D600B0F028 /* DDDispatchQueueLogFormatter.m */,
-				447AFE791A3B866F00B0F028 /* LogEntries */,
-				447AFE911A3B89FE00B0F028 /* LogEntriesLogger.h */,
-				447AFE921A3B89FE00B0F028 /* LogEntriesLogger.m */,
-				447AFE971A3B9E6E00B0F028 /* HelpfulInfoLogFormatter.h */,
-				447AFE981A3B9E6E00B0F028 /* HelpfulInfoLogFormatter.m */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,13 +354,12 @@
 		44EDD6161A1673F400DCB65B /* Where's the Beef */ = {
 			isa = PBXGroup;
 			children = (
-				447AFE7A1A3B868200B0F028 /* Logging */,
-				44160E791A2D246800A42BD6 /* Resources */,
 				4415BB791A2E5594007FF7CD /* App */,
 				44B88FA91A31081000D10248 /* More... UI */,
 				44D6B28B1A2696B200CAC42A /* Eat/Take UI */,
 				444D80EC1A362CC50044201B /* Move/Check In UI */,
 				44EDD6171A1673F400DCB65B /* Supporting Files */,
+				44160E791A2D246800A42BD6 /* Resources */,
 			);
 			path = "Where's the Beef";
 			sourceTree = "<group>";
@@ -351,6 +370,7 @@
 				4476EA831A2F9E2F000C1375 /* Where's the Beef.entitlements */,
 				44EDD6181A1673F400DCB65B /* Info.plist */,
 				44EDD6191A1673F400DCB65B /* main.m */,
+				4457A1A81A3F8D74007F7887 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -528,23 +548,23 @@
 			files = (
 				44EDD61D1A1673F400DCB65B /* WTBAppDelegate.m in Sources */,
 				447AFE931A3B89FE00B0F028 /* LogEntriesLogger.m in Sources */,
+				4457A1BB1A3F8E94007F7887 /* LogFile.m in Sources */,
+				4457A1B81A3F8E94007F7887 /* lecore.m in Sources */,
 				444D80EF1A362CE90044201B /* WTBMoveCheckinViewController.m in Sources */,
 				447AFE771A3B83D600B0F028 /* DDDispatchQueueLogFormatter.m in Sources */,
+				4457A1B91A3F8E94007F7887 /* LELog.m in Sources */,
 				44D7B4A41A2EA8BD00D98E92 /* WTBInitialViewController.m in Sources */,
-				447AFE8A1A3B86CD00B0F028 /* LEBackgroundThread.m in Sources */,
-				447AFE8C1A3B86CD00B0F028 /* LELog.m in Sources */,
-				447AFE8E1A3B86CD00B0F028 /* LogFile.m in Sources */,
 				44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */,
 				447AFE991A3B9E6E00B0F028 /* HelpfulInfoLogFormatter.m in Sources */,
 				4415BB7C1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.m in Sources */,
-				447AFE8F1A3B86CD00B0F028 /* LogFiles.m in Sources */,
+				4457A1BC1A3F8E94007F7887 /* LogFiles.m in Sources */,
 				446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */,
 				447AFE681A3B7A3C00B0F028 /* DDLog.m in Sources */,
+				4457A1B71A3F8E94007F7887 /* LEBackgroundThread.m in Sources */,
+				4457A1BA1A3F8E94007F7887 /* LeNetworkStatus.m in Sources */,
 				447AFE731A3B7AC100B0F028 /* DDTTYLogger.m in Sources */,
 				44B88FAC1A31082A00D10248 /* WTBMoreViewController.m in Sources */,
-				447AFE8B1A3B86CD00B0F028 /* lecore.m in Sources */,
 				44EDD61A1A1673F400DCB65B /* main.m in Sources */,
-				447AFE8D1A3B86CD00B0F028 /* LeNetworkStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +637,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -647,6 +668,7 @@
 					"$(PROJECT_DIR)",
 					/Users/craig/Documents/FacebookSDK,
 				);
+				GCC_PREFIX_HEADER = "Where's the Beef/PrefixHeader.pch";
 				INFOPLIST_FILE = "Where's the Beef/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -702,6 +724,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -759,6 +782,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -789,6 +813,7 @@
 					"$(PROJECT_DIR)",
 					/Users/craig/Documents/FacebookSDK,
 				);
+				GCC_PREFIX_HEADER = "Where's the Beef/PrefixHeader.pch";
 				INFOPLIST_FILE = "Where's the Beef/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -805,6 +830,7 @@
 					"$(PROJECT_DIR)",
 					/Users/craig/Documents/FacebookSDK,
 				);
+				GCC_PREFIX_HEADER = "Where's the Beef/PrefixHeader.pch";
 				INFOPLIST_FILE = "Where's the Beef/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
