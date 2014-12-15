@@ -20,12 +20,14 @@
 		44160E801A2D605A00A42BD6 /* Beep No.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44160E7E1A2D605A00A42BD6 /* Beep No.mp3 */; };
 		44160E811A2D605A00A42BD6 /* Beep Yes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44160E7F1A2D605A00A42BD6 /* Beep Yes.mp3 */; };
 		444D80EF1A362CE90044201B /* WTBMoveCheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 444D80EE1A362CE90044201B /* WTBMoveCheckinViewController.m */; };
+		4457A19F1A3F8453007F7887 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4457A19E1A3F8453007F7887 /* libTestFlight.a */; };
 		4457A1B71A3F8E94007F7887 /* LEBackgroundThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1AB1A3F8E94007F7887 /* LEBackgroundThread.m */; };
 		4457A1B81A3F8E94007F7887 /* lecore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1AD1A3F8E94007F7887 /* lecore.m */; };
 		4457A1B91A3F8E94007F7887 /* LELog.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1B01A3F8E94007F7887 /* LELog.m */; };
 		4457A1BA1A3F8E94007F7887 /* LeNetworkStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1B21A3F8E94007F7887 /* LeNetworkStatus.m */; };
 		4457A1BB1A3F8E94007F7887 /* LogFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1B41A3F8E94007F7887 /* LogFile.m */; };
 		4457A1BC1A3F8E94007F7887 /* LogFiles.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1B61A3F8E94007F7887 /* LogFiles.m */; };
+		4457A1C01A3F996D007F7887 /* TestFlightLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1BF1A3F996D007F7887 /* TestFlightLogger.m */; };
 		446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */; };
 		4476EA851A2FBA69000C1375 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4476EA841A2FBA69000C1375 /* FacebookSDK.framework */; };
 		447AFE681A3B7A3C00B0F028 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE661A3B7A3C00B0F028 /* DDLog.m */; };
@@ -81,6 +83,10 @@
 		44160E7F1A2D605A00A42BD6 /* Beep Yes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Beep Yes.mp3"; sourceTree = "<group>"; };
 		444D80ED1A362CE90044201B /* WTBMoveCheckinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBMoveCheckinViewController.h; sourceTree = "<group>"; };
 		444D80EE1A362CE90044201B /* WTBMoveCheckinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBMoveCheckinViewController.m; sourceTree = "<group>"; };
+		4457A19E1A3F8453007F7887 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libTestFlight.a; path = ../TestFlightSDK3/libTestFlight.a; sourceTree = "<group>"; };
+		4457A1A11A3F84A1007F7887 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		4457A1A21A3F84A1007F7887 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		4457A1A31A3F84A1007F7887 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
 		4457A1A81A3F8D74007F7887 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		4457A1AA1A3F8E94007F7887 /* LEBackgroundThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LEBackgroundThread.h; path = lelib/LEBackgroundThread.h; sourceTree = "<group>"; };
 		4457A1AB1A3F8E94007F7887 /* LEBackgroundThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LEBackgroundThread.m; path = lelib/LEBackgroundThread.m; sourceTree = "<group>"; };
@@ -95,6 +101,8 @@
 		4457A1B41A3F8E94007F7887 /* LogFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogFile.m; path = lelib/LogFile.m; sourceTree = "<group>"; };
 		4457A1B51A3F8E94007F7887 /* LogFiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LogFiles.h; path = lelib/LogFiles.h; sourceTree = "<group>"; };
 		4457A1B61A3F8E94007F7887 /* LogFiles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LogFiles.m; path = lelib/LogFiles.m; sourceTree = "<group>"; };
+		4457A1BE1A3F996D007F7887 /* TestFlightLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlightLogger.h; sourceTree = "<group>"; };
+		4457A1BF1A3F996D007F7887 /* TestFlightLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFlightLogger.m; sourceTree = "<group>"; };
 		446516C11A269FA500A4B3F5 /* WTBConfirmMeatViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBConfirmMeatViewController.h; sourceTree = "<group>"; };
 		446516C21A269FA500A4B3F5 /* WTBConfirmMeatViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBConfirmMeatViewController.m; sourceTree = "<group>"; };
 		4476EA831A2F9E2F000C1375 /* Where's the Beef.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Where's the Beef.entitlements"; sourceTree = "<group>"; };
@@ -153,6 +161,7 @@
 				4415BB821A2E613C007FF7CD /* CoreGraphics.framework in Frameworks */,
 				4415BB801A2E6130007FF7CD /* CFNetwork.framework in Frameworks */,
 				4415BB7E1A2E612B007FF7CD /* AudioToolbox.framework in Frameworks */,
+				4457A19F1A3F8453007F7887 /* libTestFlight.a in Frameworks */,
 				44EDD6471A16765B00DCB65B /* Parse.framework in Frameworks */,
 				44EDD6451A16765B00DCB65B /* Bolts.framework in Frameworks */,
 				4476EA851A2FBA69000C1375 /* FacebookSDK.framework in Frameworks */,
@@ -226,6 +235,17 @@
 			name = "Move/Check In UI";
 			sourceTree = "<group>";
 		};
+		4457A1A01A3F8473007F7887 /* TestFlight */ = {
+			isa = PBXGroup;
+			children = (
+				4457A1A11A3F84A1007F7887 /* TestFlight.h */,
+				4457A1A21A3F84A1007F7887 /* TestFlight+AsyncLogging.h */,
+				4457A1A31A3F84A1007F7887 /* TestFlight+ManualSessions.h */,
+			);
+			name = TestFlight;
+			path = ../TestFlightSDK3;
+			sourceTree = SOURCE_ROOT;
+		};
 		4457A1A41A3F8520007F7887 /* LogEntries extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +285,16 @@
 			);
 			name = lelib;
 			path = ../le_ios;
+			sourceTree = SOURCE_ROOT;
+		};
+		4457A1BD1A3F990C007F7887 /* TestFlight Logging */ = {
+			isa = PBXGroup;
+			children = (
+				4457A1BE1A3F996D007F7887 /* TestFlightLogger.h */,
+				4457A1BF1A3F996D007F7887 /* TestFlightLogger.m */,
+			);
+			name = "TestFlight Logging";
+			path = ../LumberjackTestFlight;
 			sourceTree = SOURCE_ROOT;
 		};
 		446516C01A269F8200A4B3F5 /* Confirm Meat Dialog */ = {
@@ -335,6 +365,8 @@
 		44EDD60B1A1673F400DCB65B = {
 			isa = PBXGroup;
 			children = (
+				4457A1A01A3F8473007F7887 /* TestFlight */,
+				447AFE7A1A3B868200B0F028 /* Logging */,
 				44EDD6161A1673F400DCB65B /* Where's the Beef */,
 				44EDD6331A1673F400DCB65B /* Where's the Beef Tests */,
 				44EDD6151A1673F400DCB65B /* Products */,
@@ -396,6 +428,7 @@
 		44EDD6401A16761300DCB65B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4457A19E1A3F8453007F7887 /* libTestFlight.a */,
 				4476EA841A2FBA69000C1375 /* FacebookSDK.framework */,
 				44D7B4A71A2EAE5000D98E92 /* Accounts.framework */,
 				44D7B4A51A2EAE4A00D98E92 /* Social.framework */,
@@ -561,6 +594,7 @@
 				446516C31A269FA500A4B3F5 /* WTBConfirmMeatViewController.m in Sources */,
 				447AFE681A3B7A3C00B0F028 /* DDLog.m in Sources */,
 				4457A1B71A3F8E94007F7887 /* LEBackgroundThread.m in Sources */,
+				4457A1C01A3F996D007F7887 /* TestFlightLogger.m in Sources */,
 				4457A1BA1A3F8E94007F7887 /* LeNetworkStatus.m in Sources */,
 				447AFE731A3B7AC100B0F028 /* DDTTYLogger.m in Sources */,
 				44B88FAC1A31082A00D10248 /* WTBMoreViewController.m in Sources */,
@@ -671,6 +705,10 @@
 				GCC_PREFIX_HEADER = "Where's the Beef/PrefixHeader.pch";
 				INFOPLIST_FILE = "Where's the Beef/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/craig/code/TestFlightSDK3,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -816,6 +854,10 @@
 				GCC_PREFIX_HEADER = "Where's the Beef/PrefixHeader.pch";
 				INFOPLIST_FILE = "Where's the Beef/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/craig/code/TestFlightSDK3,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -833,6 +875,10 @@
 				GCC_PREFIX_HEADER = "Where's the Beef/PrefixHeader.pch";
 				INFOPLIST_FILE = "Where's the Beef/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/craig/code/TestFlightSDK3,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
