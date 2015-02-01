@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C78c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C106a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -137,6 +137,10 @@
                             <imageView userInteractionEnabled="NO" alpha="0.20000000298023224" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dusty Road" translatesAutoresizingMaskIntoConstraints="NO" id="5FJ-YR-uQE" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <view alpha="0.20000000298023224" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8w-xL-DJr">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.99215686270000003" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Move/Check In" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUe-WW-bi2" userLabel="Title">
                                 <rect key="frame" x="183" y="28" width="234.5" height="42.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -182,16 +186,20 @@
                         <constraints>
                             <constraint firstItem="x9u-EH-OSN" firstAttribute="top" secondItem="mdf-LL-5Qh" secondAttribute="bottom" constant="8" symbolic="YES" id="4ed-H8-rUr"/>
                             <constraint firstItem="mdf-LL-5Qh" firstAttribute="trailing" secondItem="fE4-S1-gZB" secondAttribute="trailingMargin" id="Eew-pD-vsr"/>
+                            <constraint firstItem="w8w-xL-DJr" firstAttribute="top" secondItem="fE4-S1-gZB" secondAttribute="top" id="Fyk-IB-oTe"/>
                             <constraint firstItem="5FJ-YR-uQE" firstAttribute="bottom" secondItem="fE4-S1-gZB" secondAttribute="bottomMargin" id="MQM-1g-AP3"/>
                             <constraint firstItem="5FJ-YR-uQE" firstAttribute="leading" secondItem="fE4-S1-gZB" secondAttribute="leading" id="Mwz-mG-6DD"/>
                             <constraint firstItem="hCR-y1-fgt" firstAttribute="top" secondItem="OUe-WW-bi2" secondAttribute="bottom" constant="8" symbolic="YES" id="PgG-gn-efj"/>
+                            <constraint firstAttribute="bottom" secondItem="w8w-xL-DJr" secondAttribute="bottom" id="QOu-1x-xDZ"/>
                             <constraint firstAttribute="trailing" secondItem="5FJ-YR-uQE" secondAttribute="trailing" id="W8E-9n-yRc"/>
                             <constraint firstItem="mdf-LL-5Qh" firstAttribute="top" secondItem="hCR-y1-fgt" secondAttribute="bottom" constant="8" symbolic="YES" id="XyZ-Go-L2h"/>
                             <constraint firstItem="mdf-LL-5Qh" firstAttribute="leading" secondItem="fE4-S1-gZB" secondAttribute="leadingMargin" id="aaf-Ne-IaY"/>
                             <constraint firstItem="hCR-y1-fgt" firstAttribute="centerX" secondItem="OUe-WW-bi2" secondAttribute="centerX" id="dC7-aV-ia4"/>
                             <constraint firstItem="5FJ-YR-uQE" firstAttribute="top" secondItem="fE4-S1-gZB" secondAttribute="topMargin" id="m4E-jp-s4d"/>
+                            <constraint firstItem="w8w-xL-DJr" firstAttribute="leading" secondItem="fE4-S1-gZB" secondAttribute="leading" id="onl-N7-M0z"/>
                             <constraint firstAttribute="centerX" secondItem="OUe-WW-bi2" secondAttribute="centerX" id="s7x-4A-u9b"/>
                             <constraint firstAttribute="centerY" secondItem="OUe-WW-bi2" secondAttribute="centerY" id="tr9-I3-SFc"/>
+                            <constraint firstAttribute="trailing" secondItem="w8w-xL-DJr" secondAttribute="trailing" id="vA0-Jd-Dei"/>
                             <constraint firstItem="OUe-WW-bi2" firstAttribute="top" secondItem="22Q-qQ-avK" secondAttribute="bottom" constant="8" symbolic="YES" id="waz-Ir-qvq"/>
                         </constraints>
                         <variation key="default">
@@ -280,7 +288,13 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TurkeyBarn" translatesAutoresizingMaskIntoConstraints="NO" id="mLA-Zl-ZNR" userLabel="Background">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <view alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUG-md-ta9">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Eat/Take" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5" userLabel="Title">
                                 <rect key="frame" x="233" y="28" width="134.5" height="42.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -326,11 +340,15 @@
                             <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
                             <constraint firstItem="zEq-FU-wV5" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="8" symbolic="YES" id="Wqz-2r-5Oy"/>
                             <constraint firstItem="mLA-Zl-ZNR" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" id="Yx7-rF-U45"/>
+                            <constraint firstAttribute="trailing" secondItem="RUG-md-ta9" secondAttribute="trailing" id="kiF-mE-5qA"/>
                             <constraint firstItem="mLA-Zl-ZNR" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="lPn-1S-OH4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="MyC-3D-2od" secondAttribute="trailing" id="mz1-ad-w6Y"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="RUG-md-ta9" secondAttribute="bottom" id="nmX-ZQ-5ga"/>
+                            <constraint firstItem="RUG-md-ta9" firstAttribute="top" secondItem="QS5-Rx-YEW" secondAttribute="topMargin" id="nmy-xm-gUs"/>
                             <constraint firstItem="MyC-3D-2od" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="pXs-Bm-0b5"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="RUG-md-ta9" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leading" id="s8J-pn-wSF"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
