@@ -103,26 +103,8 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
         PFLogInViewController *logInViewController = [[MyLogInViewController alloc] init];
         logInViewController.delegate = self; // Set ourselves as the delegate
         logInViewController.delegate = self;
-        PFLogInFields allowTwitter = (WTB_APP_CONFIG[@"twitterConsumerKey"] != nil ? PFLogInFieldsTwitter : 0);
-        logInViewController.fields = PFLogInFieldsUsernameAndPassword |
-        PFLogInFieldsLogInButton |
-        PFLogInFieldsSignUpButton |
-        PFLogInFieldsPasswordForgotten |
-        allowTwitter |
-        PFLogInFieldsFacebook;
+        logInViewController.fields = PFLogInFieldsFacebook;
         logInViewController.facebookPermissions = @[ @"email", @"public_profile" ];
-
-        // Create the sign up view controller
-        PFSignUpViewController *signUpViewController = [[MySignUpViewController alloc] init];
-        signUpViewController.delegate = self; // Set ourselves as the delegate
-        signUpViewController.fields = PFSignUpFieldsEmail |
-        PFSignUpFieldsSignUpButton |
-        PFSignUpFieldsDismissButton |
-        PFSignUpFieldsUsernameAndPassword;
-
-
-        // Assign our sign up controller to be displayed from the login controller
-        logInViewController.signUpController = signUpViewController;
 
         // Present the log in view controller
         [self presentViewController:logInViewController animated:YES completion:NULL];
