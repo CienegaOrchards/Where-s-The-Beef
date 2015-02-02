@@ -208,7 +208,10 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     {
         // handle error
     }
-    [self.captureSession addInput:captureDeviceInput];
+    else
+    {
+        [self.captureSession addInput:captureDeviceInput];
+    }
 
     // Create preview layer
     self.previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:WTB_CAPTURE_SESSION];
