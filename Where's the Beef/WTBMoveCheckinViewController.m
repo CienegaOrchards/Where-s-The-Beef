@@ -167,11 +167,21 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
                     if(meat)
                     {
                         meat[@"freezer"] = self.freezer;
-                        DDLogVerbose(@"Going to save");
                         [meat saveEventually:^(BOOL succeeded, NSError *saveError) {
-                            DDLogVerbose(@"Save returned: %d, %@", succeeded, saveError);
+                            NSString *displayName = NSLocalizedString(@"Unknown User", nil);
+
+                            if([PFUser currentUser])
+                            {
+                                displayName = [PFUser currentUser][@"realname"];
+                                if(!displayName)
+                                {
+                                    displayName = [PFUser currentUser].username;
+                                }
+                            }
+                            
                             if(succeeded)
                             {
+                                DDLogInfo(@"Meat %@ moved to freezer %@ by %@", meat, freezer, displayName);
                                 [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepYes];
                                 dispatch_async(dispatch_get_main_queue(), ^{
                                     self.statusLabel.text = desc;

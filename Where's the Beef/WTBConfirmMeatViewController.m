@@ -8,6 +8,10 @@
 
 #import "WTBConfirmMeatViewController.h"
 
+#import "DDLog.h"
+
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+
 @interface WTBConfirmMeatViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *speciesLabel;
@@ -60,6 +64,8 @@
 
     self.meat[@"location"] = [NSString stringWithFormat:@"Eaten by %@", displayName];
     self.meat[@"freezer"] = [NSNull null];
+
+    DDLogInfo(@"Meat %@ removed/eaten by %@", self.meat, displayName);
 
     [self.meat saveEventually];
 
