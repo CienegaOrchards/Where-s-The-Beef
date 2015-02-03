@@ -35,7 +35,6 @@
 		447AFE931A3B89FE00B0F028 /* LogEntriesLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE921A3B89FE00B0F028 /* LogEntriesLogger.m */; };
 		447AFE991A3B9E6E00B0F028 /* HelpfulInfoLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 447AFE981A3B9E6E00B0F028 /* HelpfulInfoLogFormatter.m */; };
 		44B88FAC1A31082A00D10248 /* WTBMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44B88FAB1A31082A00D10248 /* WTBMoreViewController.m */; };
-		44D6B28A1A2666E000CAC42A /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44D6B2891A2666E000CAC42A /* FontAwesome.otf */; };
 		44D6B28E1A26970500CAC42A /* WTBEatTakeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D6B28D1A26970500CAC42A /* WTBEatTakeViewController.m */; };
 		44D7B4A41A2EA8BD00D98E92 /* WTBInitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44D7B4A31A2EA8BD00D98E92 /* WTBInitialViewController.m */; };
 		44D7B4A61A2EAE4A00D98E92 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44D7B4A51A2EAE4A00D98E92 /* Social.framework */; };
@@ -54,6 +53,7 @@
 		44EDD64A1A16765B00DCB65B /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EDD6431A16765B00DCB65B /* ParseFacebookUtils.framework */; };
 		44EDD64B1A16765B00DCB65B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EDD6441A16765B00DCB65B /* ParseUI.framework */; };
 		44EDD64C1A16765B00DCB65B /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44EDD6441A16765B00DCB65B /* ParseUI.framework */; };
+		44F4AAE11A81921B004632E6 /* FontAwesome.otf in Resources */ = {isa = PBXBuildFile; fileRef = 44F4AAE01A81921B004632E6 /* FontAwesome.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,7 +115,6 @@
 		447AFE981A3B9E6E00B0F028 /* HelpfulInfoLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpfulInfoLogFormatter.m; sourceTree = "<group>"; };
 		44B88FAA1A31082A00D10248 /* WTBMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBMoreViewController.h; sourceTree = "<group>"; };
 		44B88FAB1A31082A00D10248 /* WTBMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBMoreViewController.m; sourceTree = "<group>"; };
-		44D6B2891A2666E000CAC42A /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 		44D6B28C1A26970500CAC42A /* WTBEatTakeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBEatTakeViewController.h; sourceTree = "<group>"; };
 		44D6B28D1A26970500CAC42A /* WTBEatTakeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBEatTakeViewController.m; sourceTree = "<group>"; };
 		44D7B4A21A2EA8BD00D98E92 /* WTBInitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBInitialViewController.h; sourceTree = "<group>"; };
@@ -137,6 +136,7 @@
 		44EDD6421A16765B00DCB65B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		44EDD6431A16765B00DCB65B /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		44EDD6441A16765B00DCB65B /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		44F4AAE01A81921B004632E6 /* FontAwesome.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,21 +194,13 @@
 		44160E791A2D246800A42BD6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				44F4AAE01A81921B004632E6 /* FontAwesome.otf */,
 				44160E7B1A2D249300A42BD6 /* Sounds */,
 				44EDD6241A1673F400DCB65B /* Main.storyboard */,
 				44EDD6271A1673F400DCB65B /* Images.xcassets */,
 				44EDD6291A1673F400DCB65B /* LaunchScreen.xib */,
-				44160E7A1A2D248A00A42BD6 /* Fonts */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		44160E7A1A2D248A00A42BD6 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				44D6B2891A2666E000CAC42A /* FontAwesome.otf */,
-			);
-			name = Fonts;
 			sourceTree = "<group>";
 		};
 		44160E7B1A2D249300A42BD6 /* Sounds */ = {
@@ -512,7 +504,7 @@
 			files = (
 				44EDD6261A1673F400DCB65B /* Main.storyboard in Resources */,
 				44EDD62B1A1673F400DCB65B /* LaunchScreen.xib in Resources */,
-				44D6B28A1A2666E000CAC42A /* FontAwesome.otf in Resources */,
+				44F4AAE11A81921B004632E6 /* FontAwesome.otf in Resources */,
 				44160E801A2D605A00A42BD6 /* Beep No.mp3 in Resources */,
 				44EDD6281A1673F400DCB65B /* Images.xcassets in Resources */,
 				44160E811A2D605A00A42BD6 /* Beep Yes.mp3 in Resources */,

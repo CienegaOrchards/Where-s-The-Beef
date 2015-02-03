@@ -14,12 +14,12 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 @interface WTBConfirmMeatViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *speciesLabel;
 @property (weak, nonatomic) IBOutlet UILabel *cutLabel;
 @property (weak, nonatomic) IBOutlet UILabel *quantityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *scannedIDLabel;
 @property (weak, nonatomic) IBOutlet UILabel *valueLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *speciesImage;
 
 @end
 
@@ -29,7 +29,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 {
     [super viewWillAppear:animated];
 
-    self.speciesLabel.text = self.cut[@"species"];
+    self.speciesImage.image = [UIImage imageNamed:self.cut[@"species"]];
     self.cutLabel.text = self.cut[@"cut"];
     self.quantityLabel.text = [NSString stringWithFormat:@"%@ %@", self.meat[@"units"], self.cut[@"units"]];
     self.scannedIDLabel.text = self.meat.objectId;
