@@ -8,8 +8,6 @@
 
 #import "WTBAppDelegate.h"
 
-#import "TestFlight.h"
-
 @import Parse;
 @import Twitter;
 #import <ParseFacebookUtils/PFFacebookUtils.h>
@@ -18,7 +16,6 @@
 #import "DDTTYLogger.h"
 #import "DDDispatchQueueLogFormatter.h"
 #import "LogEntriesLogger.h"
-#import "TestFlightLogger.h"
 #import "HelpfulInfoLogFormatter.h"
 
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
@@ -115,9 +112,6 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
     [DDTTYLogger sharedInstance].logFormatter = [[HelpfulInfoLogFormatter alloc] init];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
 
-    // Log to TestFlight in case of crashes
-    [DDLog addLogger:[[TestFlightLogger alloc] init]];
-
     // Initialize LogEntries if we have a token; if not it will be initialized later
     if(self.config[@"logEntriesToken"])
     {
@@ -128,9 +122,6 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Init TestFlight
-    [TestFlight takeOff:@"4d1fdb6e-0afc-41ca-bc53-bc08e1eeb168"];
-
     // Init Parse
     [Parse setApplicationId:@"SR6puc3yY8fVouL0v8W7Zj7s3e3FugJY3Pljd0aG"
                    clientKey:@"zvXGkyWwlAPkvgClTG0QeuIGlV3Pr5PQclm1ETtZ"];
