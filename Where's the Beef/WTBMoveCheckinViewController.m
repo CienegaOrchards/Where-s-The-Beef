@@ -166,19 +166,20 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
                     DDLogVerbose(@"Get meat returned: %@, %@", meat, meatError);
                     if(meat)
                     {
-                        meat[@"freezer"] = self.freezer;
-                        [meat saveEventually:^(BOOL succeeded, NSError *saveError) {
-                            NSString *displayName = NSLocalizedString(@"Unknown User", nil);
+                        NSString *displayName = NSLocalizedString(@"Unknown User", nil);
 
-                            if([PFUser currentUser])
+                        if([PFUser currentUser])
+                        {
+                            displayName = [PFUser currentUser][@"realname"];
+                            if(!displayName)
                             {
-                                displayName = [PFUser currentUser][@"realname"];
-                                if(!displayName)
-                                {
-                                    displayName = [PFUser currentUser].username;
-                                }
+                                displayName = [PFUser currentUser].username;
                             }
-                            
+                        }
+                        
+                        meat[@"freezer"] = self.freezer;
+                        meat[@"location"] = [NSString stringWithFormat:@"Moved by %@", displayName];
+                        [meat saveEventually:^(BOOL succeeded, NSError *saveError) {
                             if(succeeded)
                             {
                                 DDLogInfo(@"Meat %@ moved to freezer %@ by %@", meat, freezer, displayName);
