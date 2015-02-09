@@ -89,6 +89,42 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark - QR code capture
 
+- (void)pulseHighlightWidth
+{
+    CABasicAnimation *color = [CABasicAnimation animationWithKeyPath:@"borderColor"];
+    color.toValue   = (id)[UIColor blackColor].CGColor;
+
+    CABasicAnimation *width = [CABasicAnimation animationWithKeyPath:@"borderWidth"];
+    width.toValue   = [NSNumber numberWithDouble:self.highlightView.bounds.size.width/2.0];
+
+    CAAnimationGroup *both = [CAAnimationGroup animation];
+    both.duration   = 0.25;
+    both.animations = @[color, width];
+    both.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    both.delegate = self;
+
+    [self.highlightView.layer addAnimation:both forKey:@"color and width"];
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    (void)anim;
+    (void)flag; // ignore
+    CABasicAnimation *color = [CABasicAnimation animationWithKeyPath:@"borderColor"];
+    color.toValue   = (id)[UIColor redColor].CGColor;
+
+    CABasicAnimation *width = [CABasicAnimation animationWithKeyPath:@"borderWidth"];
+    width.toValue   = @3.0;
+
+    CAAnimationGroup *both = [CAAnimationGroup animation];
+    both.duration   = 0.25;
+    both.animations = @[color, width];
+    both.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+
+    [self.highlightView.layer addAnimation:both forKey:@"color and width"];
+}
+
+
 - (void)captureOutput:(AVCaptureOutput * __attribute__((unused)))captureOutput
 didOutputMetadataObjects:(NSArray *)metadataObjects
        fromConnection:(AVCaptureConnection * __attribute__((unused)))connection
@@ -127,6 +163,7 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
         if(err)
         {
             [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
+            [self pulseHighlightWidth];
             DDLogError(@"Error: %@\nWith: %@", err, barcode.stringValue);
             self.statusLabel.text = NSLocalizedString(@"Error parsing JSON", nil);
             self.statusLabel.hidden = NO;
@@ -151,6 +188,7 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
         if(meat)
         {
             [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepYes];
+            [self pulseHighlightWidth];
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self performSegueWithIdentifier:@"ConfirmMeat" sender:meat];
             });
@@ -158,6 +196,7 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
         else if(error)
         {
             [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
+            [self pulseHighlightWidth];
             if(error.code == kPFErrorObjectNotFound)
             {
                 DDLogError(@"Uh oh, could not find meat: %@", objID);
