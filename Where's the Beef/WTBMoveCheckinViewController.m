@@ -86,6 +86,41 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 #pragma mark - QR code capture
 
+- (void)pulseHighlightWidth
+{
+    CABasicAnimation *color = [CABasicAnimation animationWithKeyPath:@"borderColor"];
+    color.toValue   = (id)[UIColor blackColor].CGColor;
+
+    CABasicAnimation *width = [CABasicAnimation animationWithKeyPath:@"borderWidth"];
+    width.toValue   = [NSNumber numberWithDouble:self.highlightView.bounds.size.width/2.0];
+
+    CAAnimationGroup *both = [CAAnimationGroup animation];
+    both.duration   = 0.25;
+    both.animations = @[color, width];
+    both.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    both.delegate = self;
+    
+    [self.highlightView.layer addAnimation:both forKey:@"color and width"];
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag
+{
+    (void)anim;
+    (void)flag; // ignore
+    CABasicAnimation *color = [CABasicAnimation animationWithKeyPath:@"borderColor"];
+    color.toValue   = (id)[UIColor redColor].CGColor;
+
+    CABasicAnimation *width = [CABasicAnimation animationWithKeyPath:@"borderWidth"];
+    width.toValue   = @3.0;
+
+    CAAnimationGroup *both = [CAAnimationGroup animation];
+    both.duration   = 0.25;
+    both.animations = @[color, width];
+    both.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+
+    [self.highlightView.layer addAnimation:both forKey:@"color and width"];
+}
+
 - (void)captureOutput:(AVCaptureOutput * __attribute__((unused)))captureOutput
 didOutputMetadataObjects:(NSArray *)metadataObjects
        fromConnection:(AVCaptureConnection * __attribute__((unused)))connection
@@ -124,6 +159,8 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
         if(err)
         {
             [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
+            [self pulseHighlightWidth];
+
             DDLogError(@"Error: %@\nWith: %@", err, barcode.stringValue);
             self.statusLabel.text = NSLocalizedString(@"Error parsing JSON", nil);
             self.statusLabel.hidden = NO;
@@ -141,12 +178,12 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
     DDLogVerbose(@"Scanned: %@ - %@",objID, desc);
     // First, check if we're scanning a freezer
     PFQuery *query = [PFQuery queryWithClassName:@"Freezer"];
-    DDLogVerbose(@"Get freezer attempt");
     [query getObjectInBackgroundWithId:objID block:^(PFObject *freezer, NSError *error) {
-        DDLogVerbose(@"Get freezer returned: %@, %@", freezer, error);
         if(freezer)
         {
+            DDLogInfo(@"Moving to freezer %@: %@ - %@", freezer.objectId, freezer[@"location"], freezer[@"identifier"]);
             [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepYes];
+            [self pulseHighlightWidth];
             self.freezer = freezer;
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.freezerLabel.text = [NSString stringWithFormat:@"%@ - %@", freezer[@"location"], freezer[@"identifier"]];
@@ -161,9 +198,7 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
             if(self.freezer) // Might be scanning meat into the freezer
             {
                 PFQuery *meatQuery = [PFQuery queryWithClassName:@"Meat"];
-                DDLogVerbose(@"Get meat attempt");
                 [meatQuery getObjectInBackgroundWithId:objID block:^(PFObject *meat, NSError *meatError) {
-                    DDLogVerbose(@"Get meat returned: %@, %@", meat, meatError);
                     if(meat)
                     {
                         NSString *displayName = NSLocalizedString(@"Unknown User", nil);
@@ -182,8 +217,9 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
                         [meat saveEventually:^(BOOL succeeded, NSError *saveError) {
                             if(succeeded)
                             {
-                                DDLogInfo(@"Meat %@ moved to freezer %@ by %@", meat, freezer, displayName);
+                                DDLogInfo(@"Meat %@ moved to freezer %@ by %@", meat.objectId, self.freezer.objectId, displayName);
                                 [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepYes];
+                                [self pulseHighlightWidth];
                                 dispatch_async(dispatch_get_main_queue(), ^{
                                     self.statusLabel.text = desc;
                                     self.statusLabel.highlighted = NO;
@@ -192,6 +228,7 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
                             else if(saveError)
                             {
                                 [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
+                                [self pulseHighlightWidth];
                                 if(saveError.code == kPFErrorObjectNotFound)
                                 {
                                     DDLogWarn(@"Uh oh, could not find meat: %@", objID);
@@ -225,6 +262,7 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
                     else if(meatError)
                     {
                         [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
+                        [self pulseHighlightWidth];
                         if(meatError.code == kPFErrorObjectNotFound)
                         {
                             DDLogWarn(@"Uh oh, could not find meat: %@", objID);
@@ -258,6 +296,7 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
             else
             {
                 [((WTBAppDelegate *)[UIApplication sharedApplication].delegate).soundPlayer playSound:WTBSoundIDScanBeepNo];
+                [self pulseHighlightWidth];
                 if(error.code == kPFErrorObjectNotFound)
                 {
                     DDLogWarn(@"Uh oh, could not find freezer: %@", objID);

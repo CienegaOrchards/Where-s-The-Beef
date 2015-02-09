@@ -65,7 +65,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     self.meat[@"location"] = [NSString stringWithFormat:@"Eaten by %@", displayName];
     self.meat[@"freezer"] = [NSNull null];
 
-    DDLogInfo(@"Meat %@ removed/eaten by %@", self.meat, displayName);
+    DDLogInfo(@"Meat %@ removed/eaten by %@", self.meat.objectId, displayName);
 
     [self.meat saveEventually];
 
