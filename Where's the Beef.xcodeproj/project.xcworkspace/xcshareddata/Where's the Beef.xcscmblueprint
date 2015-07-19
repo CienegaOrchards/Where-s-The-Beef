@@ -1,0 +1,51 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4BDDD0E94F0306DD84689A69252B19EAD4CAF0AA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "35B5C9A93714EC9BEB56BAE809C5551E5C66E52D" : 0,
+    "296CA164B5C8BE88F1C032488219EE8959049C68" : 0,
+    "D67D94001F778EDA83309745E00393ABF9B4C0FA" : 0,
+    "905D2F7D547F0E04767B149CE933E4679D5726EA" : 0,
+    "4BDDD0E94F0306DD84689A69252B19EAD4CAF0AA" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0711169D-D401-40E0-ADCA-2D464C3558DF",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "35B5C9A93714EC9BEB56BAE809C5551E5C66E52D" : "CocoaLumberjack\/",
+    "296CA164B5C8BE88F1C032488219EE8959049C68" : "LumberjackHelpfulFormatter\/",
+    "D67D94001F778EDA83309745E00393ABF9B4C0FA" : "le_ios\/",
+    "905D2F7D547F0E04767B149CE933E4679D5726EA" : "LumberjackLE\/",
+    "4BDDD0E94F0306DD84689A69252B19EAD4CAF0AA" : "Where's_the_Beef\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Where's the Beef",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Where's the Beef.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:hughescr\/LumberjackHelpfulFormatter.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "296CA164B5C8BE88F1C032488219EE8959049C68"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:hughescr\/CocoaLumberjack.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "35B5C9A93714EC9BEB56BAE809C5551E5C66E52D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:CienegaOrchards\/Where-s-The-Beef.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4BDDD0E94F0306DD84689A69252B19EAD4CAF0AA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:hughescr\/LumberjackLE.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "905D2F7D547F0E04767B149CE933E4679D5726EA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:hughescr\/le_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D67D94001F778EDA83309745E00393ABF9B4C0FA"
+    }
+  ]
+}

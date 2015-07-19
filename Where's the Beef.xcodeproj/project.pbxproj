@@ -457,7 +457,7 @@
 		44EDD60C1A1673F400DCB65B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Craig Hughes";
 				TargetAttributes = {
 					44EDD6131A1673F400DCB65B = {
@@ -673,6 +673,7 @@
 					"$(inherited)",
 					/Users/craig/code/TestFlightSDK3,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cienegaorchards.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -690,6 +691,7 @@
 				);
 				INFOPLIST_FILE = "Where's the BeefTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cienegaorchards.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Where's the Beef.app/Where's the Beef";
@@ -725,6 +727,7 @@
 				COMPRESS_PNG_FILES = NO;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -825,6 +828,7 @@
 					"$(inherited)",
 					/Users/craig/code/TestFlightSDK3,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cienegaorchards.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -849,6 +853,7 @@
 					"$(inherited)",
 					/Users/craig/code/TestFlightSDK3,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cienegaorchards.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -870,6 +875,7 @@
 				);
 				INFOPLIST_FILE = "Where's the BeefTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cienegaorchards.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Where's the Beef.app/Where's the Beef";
@@ -887,6 +893,7 @@
 				);
 				INFOPLIST_FILE = "Where's the BeefTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.cienegaorchards.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Where's the Beef.app/Where's the Beef";
