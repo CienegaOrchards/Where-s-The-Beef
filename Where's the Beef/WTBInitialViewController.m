@@ -16,6 +16,8 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 @import Parse;
 @import ParseUI;
+@import ParseFacebookUtilsV4;
+@import FBSDKCoreKit;
 
 
 #pragma mark - Customized Login View
@@ -97,12 +99,23 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 #pragma mark - Check login status and login if necessary
 - (void)checkLoggedIn
 {
+    FBSDKGraphRequest *request = [[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:nil];
+    [request startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection __unused, id result __unused, NSError *error) {
+        if (!error) {
+            // handle successful response
+        } else if ([[error userInfo][@"error"][@"type"] isEqualToString: @"OAuthException"]) { // Since the request failed, we can check if it was due to an invalid session
+            DDLogInfo(@"The facebook session was invalidated");
+            [PFFacebookUtils unlinkUserInBackground:[PFUser currentUser]];
+        } else {
+            DDLogWarn(@"Some other error: %@", error);
+        }
+    }];
+
     // Present login view controller
-    if (![PFUser currentUser]) { // No user logged in
+    if (![PFUser currentUser] || ![PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) { // No user logged in
                                  // Create the log in view controller
         PFLogInViewController *logInViewController = [[MyLogInViewController alloc] init];
         logInViewController.delegate = self; // Set ourselves as the delegate
-        logInViewController.delegate = self;
         logInViewController.fields = PFLogInFieldsFacebook;
         logInViewController.facebookPermissions = @[ @"email", @"public_profile" ];
 
