@@ -65,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		440B21BB1BBC972F0048C353 /* CocoaLumberjack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CocoaLumberjack.h; sourceTree = "<group>"; };
 		4415BB7A1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTBSoundLoaderPlayer.h; sourceTree = "<group>"; };
 		4415BB7B1A2E55C7007FF7CD /* WTBSoundLoaderPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTBSoundLoaderPlayer.m; sourceTree = "<group>"; };
 		4415BB7D1A2E612B007FF7CD /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -313,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				447AFE9A1A3B9EE400B0F028 /* Extensions */,
+				440B21BB1BBC972F0048C353 /* CocoaLumberjack.h */,
 				447AFE651A3B7A3C00B0F028 /* DDLog.h */,
 				447AFE661A3B7A3C00B0F028 /* DDLog.m */,
 				447AFE671A3B7A3C00B0F028 /* DDLogMacros.h */,

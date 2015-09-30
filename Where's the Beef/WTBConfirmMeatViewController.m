@@ -8,9 +8,9 @@
 
 #import "WTBConfirmMeatViewController.h"
 
-#import "DDLog.h"
+#import "CocoaLumberjack.h"
 
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+static const int ddLogLevel = DDLogLevelVerbose;
 
 @interface WTBConfirmMeatViewController ()
 

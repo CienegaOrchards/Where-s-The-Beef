@@ -13,13 +13,14 @@
 @import ParseFacebookUtilsV4;
 @import ParseTwitterUtils;
 
-#import "DDLog.h"
+#import "CocoaLumberjack.h"
+
 #import "DDTTYLogger.h"
 #import "DDDispatchQueueLogFormatter.h"
 #import "LogEntriesLogger.h"
 #import "HelpfulInfoLogFormatter.h"
 
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+static const int ddLogLevel = DDLogLevelVerbose;
 
 @interface WTBAppDelegate ()
 
