@@ -10,8 +10,8 @@
 
 #import "WTBAppDelegate.h"
 
-#import "DDLog.h"
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+#import "CocoaLumberjack.h"
+static const int ddLogLevel = DDLogLevelVerbose;
 
 @import Parse;
 

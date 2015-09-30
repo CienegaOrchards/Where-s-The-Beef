@@ -8,17 +8,19 @@
 
 #import "WTBAppDelegate.h"
 
-@import Parse;
 @import Twitter;
-#import <ParseFacebookUtils/PFFacebookUtils.h>
+@import FBSDKCoreKit;
+@import ParseFacebookUtilsV4;
+@import ParseTwitterUtils;
 
-#import "DDLog.h"
+#import "CocoaLumberjack.h"
+
 #import "DDTTYLogger.h"
 #import "DDDispatchQueueLogFormatter.h"
 #import "LogEntriesLogger.h"
 #import "HelpfulInfoLogFormatter.h"
 
-static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+static const int ddLogLevel = DDLogLevelVerbose;
 
 @interface WTBAppDelegate ()
 
@@ -70,12 +72,15 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
 
 #pragma mark - Facebook callbacks
 
-- (BOOL)application:(UIApplication * __attribute__((unused)))application
+- (BOOL)application:(UIApplication * )application
                   openURL:(NSURL *)url
         sourceApplication:(NSString *)sourceApplication
-               annotation:(id __attribute__((unused)))annotation
+               annotation:(id)annotation
 {
-    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication withSession:[PFFacebookUtils session]];
+    return [[FBSDKApplicationDelegate sharedInstance] application:application
+                                                          openURL:url
+                                                sourceApplication:sourceApplication
+                                                       annotation:annotation];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication * __attribute__((unused)))application
@@ -89,8 +94,7 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
     }
 
     // Logs 'install' and 'app activate' App Events.
-    [FBAppEvents activateApp];
-    [FBAppCall handleDidBecomeActiveWithSession:[PFFacebookUtils session]];
+    [FBSDKAppEvents activateApp];
 }
 
 #pragma mark - App startup
@@ -161,7 +165,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
     }];
 
     // Init FB
-    [PFFacebookUtils initializeFacebook];
+    [PFFacebookUtils initializeFacebookWithApplicationLaunchOptions:launchOptions];
 
     if(application.applicationState != UIApplicationStateBackground)
     {
