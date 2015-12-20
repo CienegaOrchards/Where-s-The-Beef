@@ -19,14 +19,14 @@
 		44160E801A2D605A00A42BD6 /* Beep No.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44160E7E1A2D605A00A42BD6 /* Beep No.mp3 */; };
 		44160E811A2D605A00A42BD6 /* Beep Yes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 44160E7F1A2D605A00A42BD6 /* Beep Yes.mp3 */; };
 		442B59541BBC845700FE7BE0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B59531BBC845700FE7BE0 /* libz.tbd */; };
-		442B59561BBC857000FE7BE0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B59551BBC857000FE7BE0 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
-		442B595C1BBC884600FE7BE0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B59581BBC884600FE7BE0 /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
-		442B595D1BBC884600FE7BE0 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B59591BBC884600FE7BE0 /* ParseFacebookUtilsV4.framework */; settings = {ASSET_TAGS = (); }; };
-		442B595E1BBC884600FE7BE0 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B595A1BBC884600FE7BE0 /* ParseUI.framework */; settings = {ASSET_TAGS = (); }; };
-		442B59621BBC886F00FE7BE0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B59611BBC886F00FE7BE0 /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
-		442B59641BBC898000FE7BE0 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B59631BBC898000FE7BE0 /* ParseTwitterUtils.framework */; settings = {ASSET_TAGS = (); }; };
+		442B59561BBC857000FE7BE0 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B59551BBC857000FE7BE0 /* FBSDKCoreKit.framework */; };
+		442B595C1BBC884600FE7BE0 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B59581BBC884600FE7BE0 /* Parse.framework */; };
+		442B595D1BBC884600FE7BE0 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B59591BBC884600FE7BE0 /* ParseFacebookUtilsV4.framework */; };
+		442B595E1BBC884600FE7BE0 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B595A1BBC884600FE7BE0 /* ParseUI.framework */; };
+		442B59621BBC886F00FE7BE0 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B59611BBC886F00FE7BE0 /* Bolts.framework */; };
+		442B59641BBC898000FE7BE0 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B59631BBC898000FE7BE0 /* ParseTwitterUtils.framework */; };
 		442B59661BBC89FC00FE7BE0 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B59651BBC89FC00FE7BE0 /* libsqlite3.tbd */; };
-		442B59681BBC8A1800FE7BE0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B59671BBC8A1800FE7BE0 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
+		442B59681BBC8A1800FE7BE0 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 442B59671BBC8A1800FE7BE0 /* FBSDKLoginKit.framework */; };
 		444D80EF1A362CE90044201B /* WTBMoveCheckinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 444D80EE1A362CE90044201B /* WTBMoveCheckinViewController.m */; };
 		4457A1B71A3F8E94007F7887 /* LEBackgroundThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1AB1A3F8E94007F7887 /* LEBackgroundThread.m */; };
 		4457A1B81A3F8E94007F7887 /* lecore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4457A1AD1A3F8E94007F7887 /* lecore.m */; };
@@ -267,7 +267,7 @@
 				447AFE921A3B89FE00B0F028 /* LogEntriesLogger.m */,
 			);
 			name = "LogEntries extensions";
-			path = ../LumberjackLE;
+			path = ../../hughescr/LumberjackLE;
 			sourceTree = SOURCE_ROOT;
 		};
 		4457A1A51A3F8C8B007F7887 /* Helpful Formatter */ = {
@@ -277,7 +277,7 @@
 				447AFE981A3B9E6E00B0F028 /* HelpfulInfoLogFormatter.m */,
 			);
 			name = "Helpful Formatter";
-			path = ../LumberjackHelpfulFormatter;
+			path = ../../hughescr/LumberjackHelpfulFormatter;
 			sourceTree = SOURCE_ROOT;
 		};
 		4457A1A91A3F8E75007F7887 /* lelib */ = {
@@ -298,7 +298,7 @@
 				4457A1B61A3F8E94007F7887 /* LogFiles.m */,
 			);
 			name = lelib;
-			path = ../le_ios;
+			path = ../../hughescr/le_ios;
 			sourceTree = SOURCE_ROOT;
 		};
 		446516C01A269F8200A4B3F5 /* Confirm Meat Dialog */ = {
@@ -323,7 +323,7 @@
 				447AFE701A3B7AC100B0F028 /* DDTTYLogger.m */,
 			);
 			name = "CocoaLumberjack Classes";
-			path = ../CocoaLumberjack/Classes;
+			path = ../../hughescr/CocoaLumberjack/Classes;
 			sourceTree = SOURCE_ROOT;
 		};
 		447AFE7A1A3B868200B0F028 /* Logging */ = {
@@ -674,6 +674,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = AppStore;
@@ -682,8 +683,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -692,14 +691,9 @@
 				GCC_PREFIX_HEADER = "Where's the Beef/PrefixHeader.pch";
 				INFOPLIST_FILE = "Where's the Beef/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/craig/code/TestFlightSDK3,
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cienegaorchards.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = AppStore;
 		};
@@ -772,6 +766,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -821,6 +816,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -828,8 +824,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -838,14 +832,9 @@
 				GCC_PREFIX_HEADER = "Where's the Beef/PrefixHeader.pch";
 				INFOPLIST_FILE = "Where's the Beef/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/craig/code/TestFlightSDK3,
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cienegaorchards.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -853,8 +842,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -863,14 +850,9 @@
 				GCC_PREFIX_HEADER = "Where's the Beef/PrefixHeader.pch";
 				INFOPLIST_FILE = "Where's the Beef/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					/Users/craig/code/TestFlightSDK3,
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.cienegaorchards.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
